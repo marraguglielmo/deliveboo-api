@@ -25,16 +25,8 @@ class Helper
         return $slug;
     }
 
-    public static function formatDate($data)
+    public static function generateEmail($name)
     {
-        $date = date_create($data);
-        return $date_format = date_format($date, 'd/m/Y');
-    }
-
-    public static function generateGithubUrl(Faker $faker)
-    {
-        $username = $faker->userName;
-        $repository = $faker->word . '-' . $faker->word;
-        return "https://github.com/{$username}/{$repository}";
+        return strtolower(str_replace(" ", "", $name)) . '@gmail.com';
     }
 }
