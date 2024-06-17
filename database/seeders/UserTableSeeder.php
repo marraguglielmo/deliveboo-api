@@ -20,10 +20,10 @@ class UserTableSeeder extends Seeder
 
         foreach ($restaurants as $restaurant) {
             $new_user = new User();
-            $new_user->name = "admin";
-            $new_user->surname = "admin";
+            $new_user->name = "user";
+            $new_user->surname = "user";
             $new_user->email = Helper::generateEmail($restaurant['business_name'], Restaurant::class);
-            $new_user->password = Hash::make("admin123");
+            $new_user->password = Hash::make("user123");
             $new_user->vat_number = "12345678910";
             $new_user->save();
         }

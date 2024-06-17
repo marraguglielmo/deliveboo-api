@@ -1,0 +1,32 @@
+.main-wrapper {
+    height: calc(100vh - 75px);
+
+    aside {
+        width: 250px;
+        padding: 20px;
+        background-color: $color-primary;
+        flex-shrink: 0;
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                color: white;
+                line-height: 2rem;
+                padding: 8px;
+                border-radius: 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    margin-left: 10px;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+}
