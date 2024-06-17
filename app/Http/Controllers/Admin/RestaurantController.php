@@ -26,8 +26,11 @@ class RestaurantController extends Controller
     {
         $route = route('admin.restaurants.store');
         $title = 'Crea un nuovo ristorante';
+        $types = Type::all();
         $method = 'POST';
-        return view('admin.restaurants.create-edit', compact('route', 'title', 'method'));
+        $restaurant = null;
+        $submit = 'Crea';
+        return view('admin.restaurants.create-edit', compact('route', 'types', 'submit', 'title', 'restaurant', 'method'));
     }
 
     /**
@@ -53,8 +56,10 @@ class RestaurantController extends Controller
     {
         $route = route('admin.restaurants.update', $restaurant);
         $title = 'Modifica ristorante';
+        $types = Type::all();
         $method = 'PUT';
-        return view('admin.restaurants.create-edit', compact('route', 'title', 'method'));
+        $submit = 'Aggiorna';
+        return view('admin.restaurants.create-edit', compact('route', 'types', 'title', 'submit', 'restaurant', 'method'));
     }
 
     /**
