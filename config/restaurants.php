@@ -7,11 +7,11 @@ return [
         "phone_number" => "0234637286",
         "image" => "https://images.unsplash.com/photo-1579751626657-72bc17010498?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "types" => ["pizzeria"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Margherita Classica",
                 "price" => 6.50,
-                "description" => ["pomodoro", "mozzarella", "basilico"],
+                "ingredients" => ["pomodoro", "mozzarella", "basilico"],
                 "image" => "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 "available" => true
 
@@ -19,7 +19,7 @@ return [
             [
                 "name" => "Quattro Stagioni",
                 "price" => 8.50,
-                "description" => ["pomodoro", "mozzarella", "funghi", "prosciutto cotto", "olive", "carciofi"],
+                "ingredients" => ["pomodoro", "mozzarella", "funghi", "prosciutto cotto", "olive", "carciofi"],
                 "image" => "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 "available" => true
 
@@ -27,7 +27,7 @@ return [
             [
                 "name" => "Calzone Ripieno",
                 "price" => 7.00,
-                "description" => ["pomodoro", "mozzarella", "ricotta", "salame", "basilico"],
+                "ingredients" => ["pomodoro", "mozzarella", "ricotta", "salame", "basilico"],
                 "image" => "https://images.unsplash.com/photo-1641244999574-5afea228bd26?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 "available" => false
             ],
@@ -39,11 +39,11 @@ return [
         "phone_number" => "0254457286",
         "image" => "https://images.unsplash.com/photo-1569230516306-5a8cb5586399?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "types" => ["pizzeria"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Pizza al Tartufo",
                 "price" => 18.50,
-                "description" => ["mozzarella", "tartufo"],
+                "ingredients" => ["mozzarella", "tartufo"],
                 "image" => "https://images.unsplash.com/photo-1566843972223-8fc2316bfa9e?q=80&w=2022&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 "available" => true
 
@@ -51,7 +51,7 @@ return [
             [
                 "name" => "Pizza Prosciutto e Funghi",
                 "price" => 9.00,
-                "description" => ["pomodoro", "mozzarella", "funghi", "prosciutto cotto"],
+                "ingredients" => ["pomodoro", "mozzarella", "funghi", "prosciutto cotto"],
                 "image" => "https://plus.unsplash.com/premium_photo-1663858366999-aa1ce123a972?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 "available" => true
 
@@ -59,7 +59,7 @@ return [
             [
                 "name" => "Pizza Diavola",
                 "price" => 8.50,
-                "description" => ["pomodoro", "mozzarella", "salame piccante"],
+                "ingredients" => ["pomodoro", "mozzarella", "salame piccante"],
                 "image" => "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 "available" => true
             ],
@@ -71,11 +71,11 @@ return [
         "phone_number" => "0254857262",
         "image" => "https://images.unsplash.com/photo-1617655699589-64375e5ad9a5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "types" => ["pizzeria"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Pizza Marinara",
                 "price" => 8.50,
-                "description" => ["pomodoro", "origano"],
+                "ingredients" => ["pomodoro", "origano"],
                 "image" => "",
                 "available" => true
 
@@ -83,7 +83,7 @@ return [
             [
                 "name" => "Pizza Capricciosa",
                 "price" => 9.00,
-                "description" => ["pomodoro", "mozzarella", "prosciutto cotto", "funghi", "olive", "carciofini"],
+                "ingredients" => ["pomodoro", "mozzarella", "prosciutto cotto", "funghi", "olive", "carciofini"],
                 "image" => "",
                 "available" => true
 
@@ -91,7 +91,7 @@ return [
             [
                 "name" => "Pizza Quattro Formaggi",
                 "price" => 8.50,
-                "description" => ["pomodoro", "mozzarella", "salame piccante"],
+                "ingredients" => ["pomodoro", "mozzarella", "salame piccante"],
                 "image" => "",
                 "available" => true
             ],
@@ -103,11 +103,11 @@ return [
         "phone_number" => "0289857262",
         "image" => "",
         "types" => ["pizzeria"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Pizza Salsiccia e Friarielli",
                 "price" => 9.50,
-                "description" => ["mozzarella", "salsiccia", "friarielli"],
+                "ingredients" => ["mozzarella", "salsiccia", "friarielli"],
                 "image" => "",
                 "available" => true
 
@@ -115,7 +115,7 @@ return [
             [
                 "name" => "Pizza Ortolana",
                 "price" => 8.00,
-                "description" => ["pomodoro", "mozzarella", "zucchine", "melanzane", "peperoni"],
+                "ingredients" => ["pomodoro", "mozzarella", "zucchine", "melanzane", "peperoni"],
                 "image" => "",
                 "available" => true
 
@@ -123,7 +123,7 @@ return [
             [
                 "name" => "Pizza Bufalina",
                 "price" => 8.50,
-                "description" => ["pomodoro", "mozzarella", "basilico"],
+                "ingredients" => ["pomodoro", "mozzarella", "basilico"],
                 "image" => "",
                 "available" => false
             ],
@@ -135,11 +135,11 @@ return [
         "phone_number" => "02898572376",
         "image" => "",
         "types" => ["cinese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Pollo al Limone",
                 "price" => 7.00,
-                "description" => ["pollo", "limone", "zenzero", "salsa di soia", "aceto di riso", "cipollotto"],
+                "ingredients" => ["pollo", "limone", "zenzero", "salsa di soia", "aceto di riso", "cipollotto"],
                 "image" => "",
                 "available" => true
 
@@ -147,7 +147,7 @@ return [
             [
                 "name" => "Maiale in Agrodolce",
                 "price" => 8.50,
-                "description" => ["maiale", "aceto di riso", "salsa di soia", "peperoni", "ananas"],
+                "ingredients" => ["maiale", "aceto di riso", "salsa di soia", "peperoni", "ananas"],
                 "image" => "",
                 "available" => true
 
@@ -155,7 +155,7 @@ return [
             [
                 "name" => "Riso alla Cantonese",
                 "price" => 5.50,
-                "description" => ["riso", "uova", "carote", "piselli", "cipollotto", "salsa di soia"],
+                "ingredients" => ["riso", "uova", "carote", "piselli", "cipollotto", "salsa di soia"],
                 "image" => "",
                 "available" => false
             ],
@@ -167,11 +167,11 @@ return [
         "phone_number" => "02898572479",
         "image" => "",
         "types" => ["cinese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Anatra alla Pechinese",
                 "price" => 12.50,
-                "description" => ["anatra", "miele", "sake", "zenzero", "cipolla verde", "zucchero di canna"],
+                "ingredients" => ["anatra", "miele", "sake", "zenzero", "cipolla verde", "zucchero di canna"],
                 "image" => "",
                 "available" => true
 
@@ -179,7 +179,7 @@ return [
             [
                 "name" => "Gamberi in Salsa Piccante",
                 "price" => 10.00,
-                "description" => ["gamberi", "peperoncino", "aglio", "salsa di soia", "ketchup"],
+                "ingredients" => ["gamberi", "peperoncino", "aglio", "salsa di soia", "ketchup"],
                 "image" => "",
                 "available" => true
 
@@ -187,7 +187,7 @@ return [
             [
                 "name" => "Zuppa di Wonton",
                 "price" => 6.50,
-                "description" => ["pasta di wonton", "carne di maiale", "gamberetti", "cipolla verde", "zenzero", "salsa di soia"],
+                "ingredients" => ["pasta di wonton", "carne di maiale", "gamberetti", "cipolla verde", "zenzero", "salsa di soia"],
                 "image" => "",
                 "available" => false
             ],
@@ -199,11 +199,11 @@ return [
         "phone_number" => "02896562469",
         "image" => "",
         "types" => ["cinese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Manzo con Broccoli",
                 "price" => 14.50,
-                "description" => ["carne di manzo", "broccoli", "salsa di soia", "olio di sesamo", "brodo di carne"],
+                "ingredients" => ["carne di manzo", "broccoli", "salsa di soia", "olio di sesamo", "brodo di carne"],
                 "image" => "",
                 "available" => true
 
@@ -211,7 +211,7 @@ return [
             [
                 "name" => "Noodles alla Piastra",
                 "price" => 6.00,
-                "description" => ["noodles", "gamberetti", "carote", "peperoni", "cavolo", "germogli di soia", "salsa di soia", "zenzero"],
+                "ingredients" => ["noodles", "gamberetti", "carote", "peperoni", "cavolo", "germogli di soia", "salsa di soia", "zenzero"],
                 "image" => "",
                 "available" => true
 
@@ -219,7 +219,7 @@ return [
             [
                 "name" => "Pollo Kung Pao",
                 "price" => 6.50,
-                "description" => ["pollo", "arachidi", "peperoncino", "cipolla", "peperone verde", "aceto di riso"],
+                "ingredients" => ["pollo", "arachidi", "peperoncino", "cipolla", "peperone verde", "aceto di riso"],
                 "image" => "",
                 "available" => true
             ],
@@ -231,11 +231,11 @@ return [
         "phone_number" => "02876587469",
         "image" => "",
         "types" => ["cinese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Riso Saltato con Gamberi",
                 "price" => 4.50,
-                "description" => ["riso", "gamberi", "piselli", "carote", "uova", "cipolla"],
+                "ingredients" => ["riso", "gamberi", "piselli", "carote", "uova", "cipolla"],
                 "image" => "",
                 "available" => false
 
@@ -243,7 +243,7 @@ return [
             [
                 "name" => "Involtini Primavera",
                 "price" => 5.00,
-                "description" => ["carne di maiale", "cavolo cinese", "carote", "funghi shiitake", "germogli di soia", "cipolla verde", "salsa di soia"],
+                "ingredients" => ["carne di maiale", "cavolo cinese", "carote", "funghi shiitake", "germogli di soia", "cipolla verde", "salsa di soia"],
                 "image" => "",
                 "available" => true
 
@@ -251,7 +251,7 @@ return [
             [
                 "name" => "Pollo al Curry",
                 "price" => 6.50,
-                "description" => ["pollo", "cipolla", "zenzero", "pomodori", "latte di cocco", "pasta di curry", "peperoni", "patate", "carote", "coriandolo"],
+                "ingredients" => ["pollo", "cipolla", "zenzero", "pomodori", "latte di cocco", "pasta di curry", "peperoni", "patate", "carote", "coriandolo"],
                 "image" => "",
                 "available" => true
             ],
@@ -263,11 +263,11 @@ return [
         "phone_number" => "02848587769",
         "image" => "",
         "types" => ["giapponese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Sushi Misto",
                 "price" => 21.50,
-                "description" => ["riso", "gamberi", "salmone", "tonno", "avocado", "alga nori", "wasabi", "zenzero marinato"],
+                "ingredients" => ["riso", "gamberi", "salmone", "tonno", "avocado", "alga nori", "wasabi", "zenzero marinato"],
                 "image" => "",
                 "available" => false
 
@@ -275,7 +275,7 @@ return [
             [
                 "name" => "Sashimi di Tonno",
                 "price" => 6.00,
-                "description" => ["tonno", "wasabi", "zenzero marinato", "salsa di soia"],
+                "ingredients" => ["tonno", "wasabi", "zenzero marinato", "salsa di soia"],
                 "image" => "",
                 "available" => true
 
@@ -283,7 +283,7 @@ return [
             [
                 "name" => "Uramaki California",
                 "price" => 8.00,
-                "description" => ["riso", "salmone", "avocado", "surimi", "cetriolo", "semi di sesamo"],
+                "ingredients" => ["riso", "salmone", "avocado", "surimi", "cetriolo", "semi di sesamo"],
                 "image" => "",
                 "available" => true
             ],
@@ -295,11 +295,11 @@ return [
         "phone_number" => "02848584888",
         "image" => "",
         "types" => ["giapponese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Tempura di Gamberi",
                 "price" => 6.00,
-                "description" => ["gamberi", "tempura", "salsa tempura"],
+                "ingredients" => ["gamberi", "tempura", "salsa tempura"],
                 "image" => "",
                 "available" => true
 
@@ -307,7 +307,7 @@ return [
             [
                 "name" => "Ramen al Miso",
                 "price" => 12.50,
-                "description" => ["bordo vegetale", "miso", "zenzero", "salsa di soia", "mirin", "tare", "noodles", "tofu", "uovo sodo", "alga nori", "funghi shiitake"],
+                "ingredients" => ["bordo vegetale", "miso", "zenzero", "salsa di soia", "mirin", "tare", "noodles", "tofu", "uovo sodo", "alga nori", "funghi shiitake"],
                 "image" => "",
                 "available" => true
 
@@ -315,7 +315,7 @@ return [
             [
                 "name" => "Yakitori di Pollo",
                 "price" => 8.00,
-                "description" => ["pollo", "salsa teriyaki", "sake", "zenzero", "cipollotto"],
+                "ingredients" => ["pollo", "salsa teriyaki", "sake", "zenzero", "cipollotto"],
                 "image" => "",
                 "available" => true
             ],
@@ -327,11 +327,11 @@ return [
         "phone_number" => "02848697888",
         "image" => "",
         "types" => ["giapponese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Ramen di Maiale",
                 "price" => 14.50,
-                "description" => ["brodo di maiale", "chashu", "noodles", "uovo", "bambù"],
+                "ingredients" => ["brodo di maiale", "chashu", "noodles", "uovo", "bambù"],
                 "image" => "",
                 "available" => true
 
@@ -339,7 +339,7 @@ return [
             [
                 "name" => "Gyoza",
                 "price" => 9.50,
-                "description" => ["carne di maiale macinata", "cavolo cinese", "cipollotto", "salsa di soia", "zenzero"],
+                "ingredients" => ["carne di maiale macinata", "cavolo cinese", "cipollotto", "salsa di soia", "zenzero"],
                 "image" => "",
                 "available" => true
 
@@ -347,7 +347,7 @@ return [
             [
                 "name" => "Tempura di Verdure",
                 "price" => 6.00,
-                "description" => ["zucchine", "carote", "tempura", "salsa tempura"],
+                "ingredients" => ["zucchine", "carote", "tempura", "salsa tempura"],
                 "image" => "",
                 "available" => true
             ],
@@ -359,11 +359,11 @@ return [
         "phone_number" => "02823997888",
         "image" => "",
         "types" => ["giapponese"],
-        "foods" => [
+        "dishes" => [
             [
                 "name" => "Sushi Nigiri",
                 "price" => 5.50,
-                "description" => ["riso", "salmone", "wasabi"],
+                "ingredients" => ["riso", "salmone", "wasabi"],
                 "image" => "",
                 "available" => true
 
@@ -371,7 +371,7 @@ return [
             [
                 "name" => "Chirashi Don",
                 "price" => 9.50,
-                "description" => ["riso", "salmone", "tonno", "uova di salmone", "tamago", "alga nori", "shiso"],
+                "ingredients" => ["riso", "salmone", "tonno", "uova di salmone", "tamago", "alga nori", "shiso"],
                 "image" => "",
                 "available" => true
 
@@ -379,7 +379,7 @@ return [
             [
                 "name" => "Uramaki Philadelphia",
                 "price" => 6.00,
-                "description" => ["riso", "salmone", "avocado", "philadelphia", "alga nori"],
+                "ingredients" => ["riso", "salmone", "avocado", "philadelphia", "alga nori"],
                 "image" => "",
                 "available" => true
             ],

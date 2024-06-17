@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('foods', function (Blueprint $table) {
+        Schema::table('dishes', function (Blueprint $table) {
             $table->unsignedBigInteger('restaurant_id')->nullable()->after('id');
             $table->foreign('restaurant_id')
                 ->references('id')
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('foods', function (Blueprint $table) {
+        Schema::table('dishes', function (Blueprint $table) {
             $table->dropForeign(['restaurant_id']);
             $table->dropColumn('restaurant_id');
         });
