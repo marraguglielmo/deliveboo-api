@@ -3,11 +3,11 @@
         <ul>
             <li>
                 <i class="fa-solid fa-house"></i>
-                <a href="#">Home</a>
+                <a href="{{ route('admin.home') }}">Home</a>
             </li>
             <li>
                 <i class="fa-solid fa-utensils"></i>
-                <a href="#">Lista ristoranti</a>
+                <a href="{{ route('admin.restaurants.index') }}">Lista ristoranti</a>
             </li>
             <li>
                 <i class="fa-solid fa-plus"></i>
