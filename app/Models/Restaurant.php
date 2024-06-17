@@ -20,6 +20,10 @@ class Restaurant extends Model
         return $this->hasMany(Food::class);
     }
 
+    public function types()
+    {
+        return $this->belongsToMany(Type::class);
+    }
     // protected $fillable
 
 }
