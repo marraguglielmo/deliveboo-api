@@ -1,0 +1,35 @@
+.btn-custom {
+    &-primary {
+        background-color: $color-primary;
+        color: white;
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+            background-color: darken($color-primary, 8%);
+            color: white;
+        }
+    }
+    &-secondary {
+        background-color: $color-secondary;
+        color: white;
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+            background-color: darken($color-secondary, 8%);
+            color: white;
+        }
+    }
+    &-tertiary {
+        background-color: $color-tertiary;
+        color: white;
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+            background-color: darken($color-tertiary, 8%);
+            color: white;
+        }
+    }
+}

@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RestaurantRequest;
 use Illuminate\Http\Request;
 use App\Models\Restaurant;
 use App\Models\Type;
 use App\Models\User;
+use App\Functions\Helper;
+use Illuminate\Support\Facades\Auth;
 
 class RestaurantController extends Controller
 {
@@ -36,17 +39,31 @@ class RestaurantController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(RestaurantRequest $request)
     {
-        //
+        $form_data = $request->all();
+
+        $form_data['slug'] = Helper::generateSlug($form_data['business_name'], Restaurant::class);
+        $form_data['user_id'] = Auth::id();
+
+        $new_restaurant = new Restaurant();
+
+        $new_restaurant->fill($form_data);
+        $new_restaurant->save();
+
+        if (array_key_exists('types', $form_data)) {
+            $new_restaurant->types()->attach($form_data['types']);
+        }
+
+        return redirect()->route('admin.restaurants.index', $new_restaurant)->with('success', 'Il ristorante ' . $new_restaurant->business_name . ' è stato inserito correttamente');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Restaurant $restaurant)
     {
-        //
+        return view('admin.restaurants.show', compact('restaurant'));
     }
 
     /**
@@ -65,9 +82,25 @@ class RestaurantController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(RestaurantRequest $request, Restaurant $restaurant)
     {
-        //
+        $form_data = $request->all();
+
+        if ($form_data['business_name'] !== $restaurant->business_name) {
+            $form_data['slug'] = Helper::generateSlug($form_data['business_name'], Restaurant::class);
+        } else {
+            $form_data['slug'] = $restaurant->slug;
+        }
+
+        $restaurant->update($form_data);
+
+        if (array_key_exists('types', $form_data)) {
+            $restaurant->types()->sync($form_data['types']);
+        } else {
+            $restaurant->types()->detach();
+        }
+
+        return redirect()->route('admin.restaurants.index', $restaurant)->with('success', 'Il ristorante ' . $restaurant->business_name . ' è stato modificato correttamente');
     }
 
     /**
