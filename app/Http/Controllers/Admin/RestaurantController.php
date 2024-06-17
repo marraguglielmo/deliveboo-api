@@ -24,7 +24,10 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        //
+        $route = route('admin.restaurants.store');
+        $title = 'Crea un nuovo ristorante';
+        $method = 'POST';
+        return view('admin.restaurants.create-edit', compact('route', 'title', 'method'));
     }
 
     /**
@@ -46,9 +49,12 @@ class RestaurantController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Restaurant $restaurant)
     {
-        //
+        $route = route('admin.restaurants.update', $restaurant);
+        $title = 'Modifica ristorante';
+        $method = 'PUT';
+        return view('admin.restaurants.create-edit', compact('route', 'title', 'method'));
     }
 
     /**
@@ -64,6 +70,12 @@ class RestaurantController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $restaurant = Restaurant::find($id);
+        if ($restaurant) {
+            $restaurant->delete();
+            return redirect()->route('admin.restaurants.index')->with('success', 'Ristorante eliminato correttamente');
+        } else {
+            return redirect()->route('admin.restaurants.index')->with('error', 'Ristorante non trovato');
+        }
     }
 }

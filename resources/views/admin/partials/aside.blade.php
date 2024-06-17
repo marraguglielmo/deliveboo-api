@@ -11,7 +11,7 @@
             </li>
             <li>
                 <i class="fa-solid fa-plus"></i>
-                <a href="#">Aggiungi ristorante</a>
+                <a href="{{ route('admin.restaurants.create') }}">Aggiungi ristorante</a>
             </li>
             <li>
                 <i class="fa-solid fa-list-ul"></i>

@@ -1,15 +1,20 @@
 @extends('layouts.admin')
 @section('content')
     <h1>Ristoranti</h1>
-    <table>
+
+
+
+
+
+
+    <table class="table">
         <thead>
             <tr>
-                <th>Nome</th>
-                <th>Indirizzo</th>
-                <th>Telefono</th>
-                <th>Partita IVA</th>
-                <th>Modifica</th>
-                <th>Elimina</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Indirizzo</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Partita IVA</th>
+                <th scope="col">Azioni</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +25,7 @@
                     <td>{{ $restaurant->phone }}</td>
                     <td>{{ $restaurant->piva }}</td>
                     <td>
-                        <a href="{{ route('admin.restaurants.edit', ['restaurant' => $restaurant->id]) }}">Modifica</a>
+                        <a href="{{ route('admin.restaurants.edit', $restaurant) }}">Modifica</a>
                     </td>
                     <td>
                         <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->id]) }}"
@@ -33,4 +38,5 @@
                 </tr>
             @endforeach
         </tbody>
-    @endsection
+    </table>
+@endsection
