@@ -12,8 +12,8 @@
             @method($method)
             <div class="mb-3">
                 <label for="name" class="form-label">Nome Piatto</label>
-                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                    name="name" value="{{ old('name', $dish?->name) }}">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
+                    value="{{ old('name', $dish?->name) }}">
 
                 @error('name')
                     <small id="name" class="invalid-feedback">
@@ -24,8 +24,9 @@
 
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
-                <input type="number" min="0" step=".5" class="form-control @error('price') is-invalid @enderror" id="price"
-                    name="price" value="{{ old('price', $dish?->price) }}">
+                <input type="number" min="0" step=".5"
+                    class="form-control @error('price') is-invalid @enderror" id="price" name="price"
+                    value="{{ old('price', $dish?->price) }}">
 
                 @error('price')
                     <small id="price" class="invalid-feedback">
