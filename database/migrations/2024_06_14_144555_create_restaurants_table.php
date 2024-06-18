@@ -16,8 +16,11 @@ return new class extends Migration
             $table->string('business_name');
             $table->string('slug')->unique();
             $table->string('email');
+            $table->string('original_image')->nullable();
+            $table->string('image')->nullable();
             $table->string('address');
             $table->string('phone_number', 15);
+            $table->string('vat_number', 11);
             $table->timestamps();
         });
     }
