@@ -69,7 +69,7 @@
                             <div class="mb-4 row">
                                 <label for="image" class="form-label col-md-4">Immagine</label>
                                 <div class="col-md-6">
-                                    <input class="form-control" type="file" id="image" multiple>
+                                    <input class="form-control" type="file" id="image" name="image">
                                 </div>
 
                             </div>

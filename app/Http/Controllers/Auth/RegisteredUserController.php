@@ -15,6 +15,7 @@ use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 use App\Models\Type;
 use App\Functions\Helper;
+use Illuminate\Support\Facades\Storage;
 
 class RegisteredUserController extends Controller
 {
@@ -65,6 +66,14 @@ class RegisteredUserController extends Controller
             'phone_number' => $request->phone_number,
             'address' => $request->address,
         ]);
+
+        if ($request->hasFile('image')) {
+            $path = Storage::put('uploads', $request->image);
+            $original_name = $request->file('image')->getClientOriginalName();
+            $new_restaurant->image = $path;
+            $new_restaurant->original_image = $original_name;
+        };
+
 
         // Salvataggio del nuovo ristorante associato all'utente
         $user->restaurant()->save($new_restaurant);
