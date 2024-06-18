@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Restaurant;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Models\Type;
+use App\Functions\Helper;
 
 class RegisteredUserController extends Controller
 {
@@ -20,7 +23,9 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $types = Type::all();
+
+        return view('auth.register', compact('types'));
     }
 
     /**
@@ -30,23 +35,41 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'surname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
-            'vat_number' => ['required', 'string', 'max:11'],
-            'phone_number' => ['string', 'max:15'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+        $request->validate(
+            [
+                'business_name' => ['required', 'string', 'max:255'],
+                'types' => ['required'],
+                'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
+                'image' => ['image', 'mimes:jpg, png, webp', 'max:20480'],
+                'vat_number' => ['required', 'string', 'max:11'],
+                'phone_number' => ['string', 'max:15'],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+                'address' => ['required', 'min:8', 'max:255']
+            ],
+            []
+        );
 
         $user = User::create([
             'name' => $request->name,
-            'surname' => $request->surname,
             'email' => $request->email,
-            'vat_number' => $request->vat_number,
-            'phone_number' => $request->phone_number,
             'password' => Hash::make($request->password),
         ]);
+
+        $new_restaurant = new Restaurant([
+            'business_name' => $request->business_name,
+            'slug' => Helper::generateSlug($request->business_name, Restaurant::class),
+            'types' => $request->types,
+            'email' => $request->email,
+            'image' => $request->image,
+            'vat_number' => $request->vat_number,
+            'phone_number' => $request->phone_number,
+            'address' => $request->address,
+        ]);
+
+        // Salvataggio del nuovo ristorante associato all'utente
+        $user->restaurant()->save($new_restaurant);
+
+        $new_restaurant->types()->attach($request->types);
 
         event(new Registered($user));
 

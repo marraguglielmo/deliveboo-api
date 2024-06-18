@@ -12,7 +12,7 @@ class Restaurant extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(User::class);
     }
 
     public function dishes()
@@ -25,5 +25,5 @@ class Restaurant extends Model
         return $this->belongsToMany(Type::class);
     }
 
-    protected $fillable = ['business_name', 'slug', 'email', 'address', 'phone_number', 'user_id'];
+    protected $fillable = ['business_name', 'slug', 'email', 'address', 'phone_number', 'user_id', 'vat_number'];
 }
