@@ -34,7 +34,7 @@
                             <div class="d-flex">
                                 <a href="{{ route('admin.restaurants.show', $restaurant) }}">
                                     <button class="btn btn-custom-primary">
-                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-utensils"></i>
                                     </button>
                                 </a>
                                 <a class="mx-2" href="{{ route('admin.restaurants.edit', $restaurant) }}">
