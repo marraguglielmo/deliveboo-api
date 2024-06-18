@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Dish;
 use App\Functions\Helper;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class RestaurantController extends Controller
 {
@@ -57,7 +58,9 @@ class RestaurantController extends Controller
             $new_restaurant->types()->attach($form_data['types']);
         }
 
-        return redirect()->route('admin.restaurants.index', $new_restaurant)->with('success', 'Il ristorante ' . $new_restaurant->business_name . ' è stato inserito correttamente');
+
+
+        return redirect()->route('admin.dishes.index', $new_restaurant)->with('success', 'Il ristorante ' . $new_restaurant->business_name . ' è stato inserito correttamente');
     }
 
     /**
