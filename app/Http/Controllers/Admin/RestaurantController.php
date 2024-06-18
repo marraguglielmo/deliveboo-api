@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Restaurant;
 use App\Models\Type;
 use App\Models\User;
+use App\Models\Dish;
 use App\Functions\Helper;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,6 +20,7 @@ class RestaurantController extends Controller
     public function index()
     {
         $restaurants = auth()->user()->restaurants;
+
         return view('admin.restaurants.index', compact('restaurants'));
     }
 
@@ -63,7 +65,8 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        return view('admin.restaurants.show', compact('restaurant'));
+        $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+        return view('admin.restaurants.show', compact('restaurant', 'dishes'));
     }
 
     /**

@@ -15,22 +15,46 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Piatto</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Disponibilità</th>
+                    <th scope="col">Azioni</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
+                @foreach ($dishes as $dish)
+                    <tr>
+                        <th scope="row">{{ $dish->name }}</th>
+                        <td>{{ $dish->price }}</td>
+                        <td>{{ $dish->description }}</td>
+                        <td>{{ $dish->available }}</td>
+                        <td>
+                            <div class="d-flex">
+                                <a href="{{ route('admin.restaurants.show', $restaurant) }}">
+                                    <button class="btn btn-custom-primary">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </a>
+                                <a class="mx-2" href="{{ route('admin.restaurants.edit', $restaurant) }}">
+                                    <button class="btn btn-custom-secondary">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </button>
+                                </a>
+                                <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->id]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-custom-tertiary"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
 
-        <a href="#" class="btn btn-primary">Aggiungi piatto</a>
+        <a href="{{ route('admin.dishes.create', $restaurant) }}" class="btn btn-primary">Aggiungi piatto</a>
     </div>
 @endsection
