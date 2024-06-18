@@ -79,8 +79,13 @@ class DishController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Dish $dish)
     {
-        //
+        $dish = Dish::find($dish->id);
+        if ($dish) {
+            $restaurant_id = $dish->restaurant_id;
+            $dish->delete();
+            return redirect()->route('admin.restaurants.show', $restaurant_id)->with('success', 'Il piatto ' . $dish->name . ' è stato eliminato correttamente');
+        }
     }
 }
