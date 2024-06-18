@@ -9,6 +9,7 @@ use App\Models\Dish;
 use App\Models\Restaurant;
 use App\Models\Type;
 use App\Functions\Helper;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class DishController extends Controller
@@ -40,16 +41,15 @@ class DishController extends Controller
     public function store(DishRequest $request)
     {
         $form_data = $request->all();
-        $restaurants = Restaurant::all();
+        $form_data['available'] = $request->has('available') ? 1 : 0;
         $form_data['slug'] = Helper::generateSlug($form_data['name'], Dish::class);
-        $form_data['restaurant_id'] = 10;
+        $form_data['restaurant_id'] = Auth::id();
 
         $new_dish = new Dish();
-
         $new_dish->fill($form_data);
         $new_dish->save();
 
-        return redirect()->route('admin.restaurants.show', 10)->with('success', 'Il piatto ' . $new_dish->name . ' è stato inserito correttamente');
+        return redirect()->route('admin.restaurants.show', $form_data['restaurant_id'])->with('success', 'Il piatto ' . $new_dish->name . ' è stato inserito correttamente');
     }
 
     /**

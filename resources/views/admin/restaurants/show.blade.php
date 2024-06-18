@@ -31,18 +31,17 @@
                         <td>{{ $dish->available }}</td>
                         <td>
                             <div class="d-flex">
-                                <a href="{{ route('admin.restaurants.show', $restaurant) }}">
+                                <a href="{{ route('admin.dishes.show', $dish) }}">
                                     <button class="btn btn-custom-primary">
                                         <i class="fa-solid fa-eye"></i>
                                     </button>
                                 </a>
-                                <a class="mx-2" href="{{ route('admin.restaurants.edit', $restaurant) }}">
+                                <a class="mx-2" href="{{ route('admin.dishes.edit', $dish) }}">
                                     <button class="btn btn-custom-secondary">
                                         <i class="fa-solid fa-pencil"></i>
                                     </button>
                                 </a>
-                                <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->id]) }}"
-                                    method="POST">
+                                <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-custom-tertiary"><i
@@ -55,6 +54,7 @@
             </tbody>
         </table>
 
-        <a href="{{ route('admin.dishes.create', $restaurant) }}" class="btn btn-primary">Aggiungi piatto</a>
+        <a href="{{ route('admin.dishes.create', ['restaurant' => $restaurant->id]) }}" class="btn btn-primary">Aggiungi
+            piatto</a>
     </div>
 @endsection
