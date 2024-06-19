@@ -28,46 +28,33 @@ class DishOrderTableSeeder extends Seeder
             $order->dishes()->attach($dish_id);
         } */
 
-        foreach ( $orders as $order){
+        foreach ($orders as $order) {
             $restaurant_id = Restaurant::inRandomOrder()->first()->id;
 
-            $quantity = 0;
-            $total_price = 0;
+            $dish_id_array = [];
 
-            for ($i = 0; $i < 4; $i++){
+            while (count($dish_id_array) < 2) {
                 $dish_id = Dish::where('restaurant_id', $restaurant_id)->inRandomOrder()->first()->id;
 
-                $dish_price = Dish::where('id', $dish_id)->first()->value('price');
+                if (!in_array($dish_id, $dish_id_array)) {
+                    $dish_id_array[] = $dish_id;
 
-                $dish_id_array[] = $dish_id;
+                    $dish_price = Dish::where('id', $dish_id)->first()->value('price');
 
-                if(in_array($dish_id, $dish_id_array)){
-                    $quantity++;
+                    $quantity = mt_rand(1, 5);
+                    $total_price = $quantity * $dish_price;
+
+                    DB::table('dish_order')->insert([
+
+                        'dish_id' => $dish_id,
+                        'order_id' => $order->id,
+
+                        'total_price' => $total_price,
+                        'quantity' => $quantity,
+
+                    ]);
                 }
-
-                $total_price = $quantity * $dish_price;
-
-                DB::table('dish_order')->insert([
-
-                    'dish_id' => $dish_id,
-                    'order_id' => $order->id,
-
-                    'total_price' => $total_price,
-                    'quantity' => $quantity,
-
-                ]);
             }
-                // dd($total_price);
-
-
-            // $new_order = new DishOrder();
-            // $new_order->quantity = $quantity;
-            // $new_order->total_price = $total_price;
-            // $new_order->save();
-
-            $order->dishes()->attach($dish_id);
         }
-
     }
 }
-
