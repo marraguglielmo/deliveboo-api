@@ -5,8 +5,12 @@
         <h1>Home Admin</h1>
         <div class="row">
             <div class="col">
-                <div class="card m-auto" style="width: 65%;">
-                    <img src="{{ $restaurant->image }}" class="card-img-top" alt="...">
+                <div class="card m-auto w-50">
+                    @if ($restaurant->image)
+                        <img src="{{ $restaurant->image }}" class="card-img-top" alt="{{ $restaurant->business_name }}">
+                    @else
+                        <img src="{{ Vite::asset('resources/img/placeholder.jpg') }}">
+                    @endif
                     <div class="card-body">
                         <h3 class="card-title">{{ $restaurant->business_name }}</h3>
                         <p class="card-text">{{ $restaurant->email }}</p>

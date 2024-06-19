@@ -25,7 +25,6 @@ class DishRequest extends FormRequest
             'name' => 'required|min:2|max:255',
             'price' => 'required|min:3|max:10',
             'description' => 'required',
-            // 'available' => 'boolean',
         ];
     }
 

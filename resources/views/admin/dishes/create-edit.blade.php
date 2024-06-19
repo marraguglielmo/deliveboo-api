@@ -7,7 +7,7 @@
     </h1>
     <div class="container">
 
-        <form action="{{ $route }}" method="POST">
+        <form action="{{ $route }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method($method)
             <div class="mb-3">

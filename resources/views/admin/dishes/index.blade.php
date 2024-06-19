@@ -3,6 +3,17 @@
 @section('content')
     <div class="container d-flex flex-column align-items-center">
 
+        @if (session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
+            </div>
+        @endif
+        @if (session('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+
 
         <table class="table table-hover">
             <thead>
@@ -20,14 +31,17 @@
                     <tr>
                         <th scope="row">
                             <div class="img-box">
+
                                 @if ($dish->image)
-                                    <img src="{{ asset('storage/' . $dish->image) }}" alt="{{ $dish->name }}">
-                                @elseif ($dish->image)
-                                    <img src="{{ $dish->image }} " alt="{{ $dish->name }}">
+                                    @if (Str::startsWith($dish->image, ['http://', 'https://']))
+                                        <img src="{{ $dish->image }}" alt="{{ $dish->name }}">
+                                    @else
+                                        <img src="{{ asset('storage/' . $dish->image) }}" alt="{{ $dish->name }}">
+                                    @endif
                                 @else
-                                    <img src="{{ Vite::asset('public/storage/img/placeholder.jpg') }}"
-                                        alt="{{ $dish->name }}">
+                                    <img src="{{ Vite::asset('resources/img/placeholder.jpg') }}">
                                 @endif
+
                             </div>
                         </th>
                         <th scope="row">{{ $dish->name }}</th>
@@ -38,7 +52,7 @@
                             <div class="d-flex">
                                 <a href="{{ route('admin.dishes.show', $dish) }}">
                                     <button class="btn btn-custom-primary">
-                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-info"></i>
                                     </button>
                                 </a>
                                 <a class="mx-2" href="{{ route('admin.dishes.edit', $dish) }}">
