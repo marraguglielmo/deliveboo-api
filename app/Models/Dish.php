@@ -16,7 +16,7 @@ class Dish extends Model
 
     public function orders()
     {
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Order::class)->withPivot('quantity', 'total_price');
     }
 
     protected $fillable = ['name', 'slug', 'price', 'available', 'description', 'image', 'original_image', 'restaurant_id'];

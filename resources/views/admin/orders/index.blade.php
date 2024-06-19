@@ -38,7 +38,7 @@
                         <td>
                             <ul>
                                 @foreach ($order->dishes as $dish)
-                                    <li> {{ $dish->name }}</li>
+                                    <li> {{ $dish->name }} | {{ $dish->pivot->quantity }}</li>
                                 @endforeach
                             </ul>
                         </td>
