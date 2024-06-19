@@ -106,7 +106,6 @@ class DishController extends Controller
             $form_data['image'] = $image_path;
             $form_data['original_image'] = $original_name;
         }
-        // dd($form_data);
 
         $dish->update($form_data);
 
