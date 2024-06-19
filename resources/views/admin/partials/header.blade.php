@@ -13,7 +13,7 @@
             {{-- Right-side --}}
             <div class="d-flex justify-content-between align-items-center px-2">
                 <div class="mx-3"><i class="fa-solid fa-user-shield"></i> {{ Auth::user()->name }} |
-                    {{ Auth::user()->vat_number }}</div>
+                    {{ Auth::user()->restaurant->vat_number }}</div>
 
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf

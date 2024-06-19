@@ -64,9 +64,15 @@ class DishController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Dish $dish)
     {
-        //
+        $restaurant_id = Auth::user()->restaurant->id;
+
+        if ($restaurant_id !== $dish->restaurant_id) {
+            abort('404');
+        }
+
+        return view('admin.dishes.show', compact('dish'));
     }
 
     /**

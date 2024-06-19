@@ -11,7 +11,13 @@
                     @else
                         <img src="{{ Vite::asset('resources/img/placeholder.jpg') }}">
                     @endif
+
                     <div class="card-body">
+
+                        @foreach ($restaurant->types as $type)
+                            <span class="badge text-bg-primary">{{ $type->name }}</span>
+                        @endforeach
+
                         <h3 class="card-title">{{ $restaurant->business_name }}</h3>
                         <p class="card-text">{{ $restaurant->email }}</p>
                         <p class="card-text">{{ $restaurant->address }}</p>
