@@ -62,7 +62,7 @@
             <div class="mb-3">
                 <div class="form-check form-switch">
                     <input name="available" class="form-check-input" type="checkbox" role="switch" id="available"
-                        value="{{ old('available') }}" @if ($dish->available) checked @endif>
+                        value="{{ old('available') }}" @if ($dish?->available) checked @endif>
                     <label class="form-check-label" for="available">Disponibile</label>
                 </div>
             </div>

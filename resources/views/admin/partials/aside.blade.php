@@ -15,7 +15,7 @@
             </li>
             <li>
                 <i class="fa-solid fa-list-ul"></i>
-                <a href="#">I tuoi ordini</a>
+                <a href="{{ route('admin.dish-orders') }}">I tuoi ordini</a>
             </li>
             <li>
                 <i class="fa-solid fa-chart-simple"></i>

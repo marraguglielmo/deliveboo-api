@@ -25,9 +25,13 @@ Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
-        //Rotte CRUD per la risorsa Restaurant
-        Route::resource('restaurants', RestaurantController::class);
+        // Rotte CRUD
+        // Route::resource('restaurants', RestaurantController::class);
         Route::resource('dishes', DishController::class);
+        // Rotte custom
+        Route::get('orders', [DishController::class, 'dishOrders'])->name('dish-orders');
+
+
     });
 
 Route::middleware('auth')->group(function () {
