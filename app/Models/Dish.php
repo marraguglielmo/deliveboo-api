@@ -19,5 +19,5 @@ class Dish extends Model
         return $this->belongsToMany(Order::class);
     }
 
-    protected $fillable = ['name', 'slug', 'price', 'available', 'description', 'restaurant_id'];
+    protected $fillable = ['name', 'slug', 'price', 'available', 'description', 'image', 'original_image', 'restaurant_id'];
 }

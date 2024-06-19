@@ -48,13 +48,24 @@
             </div>
 
             <div class="mb-3">
+                <label for="image" class="form-label">Foto piatto</label>
+                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
+                    name="image" value="{{ old('image', $dish?->description) }}">
+
+                @error('image')
+                    <small id="image" class="invalid-feedback">
+                        {{ $message }}
+                    </small>
+                @enderror
+            </div>
+
+            <div class="mb-3">
                 <div class="form-check form-switch">
                     <input name="available" class="form-check-input" type="checkbox" role="switch" id="available" checked>
                     <label class="form-check-label" for="available">Disponibile</label>
                 </div>
             </div>
 
-            <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
             <button type="submit" class="btn btn-primary">{{ $submit }}</button>
         </form>
     </div>
