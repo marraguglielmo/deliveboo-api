@@ -18,7 +18,7 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Nome</th>
+                    <th scope="col">NomE</th>
                     <th scope="col">Indirizzo</th>
                     <th scope="col">Telefono</th>
                     <th scope="col">Azioni</th>
