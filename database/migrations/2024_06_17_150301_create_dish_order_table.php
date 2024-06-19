@@ -23,6 +23,8 @@ return new class extends Migration
                 ->references('id')
                 ->on('orders')
                 ->cascadeOnDelete();
+            $table->tinyInteger('quantity')->nullable();
+            $table->decimal('total_price')->nullable();
         });
     }
 
