@@ -25,6 +25,12 @@ class TypeTableSeeder extends Seeder
             'thailandese',
             'francese',
             'spagnolo',
+            'italiano',
+            'poke',
+            'etiope',
+            'greco',
+            'libanese',
+            'kebab'
         ];
         foreach ($types as $type) {
             $new_type = new Type();

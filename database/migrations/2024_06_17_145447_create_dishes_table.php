@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('price', 5, 2)->unsigned();
             $table->text('description');
             $table->text('image')->nullable();
+            $table->text('original_image')->nullable();
             $table->boolean('available')->default(true);
             $table->timestamps();
         });

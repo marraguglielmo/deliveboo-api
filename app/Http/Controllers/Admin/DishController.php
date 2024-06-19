@@ -49,7 +49,6 @@ class DishController extends Controller
 
         if (array_key_exists('image', $form_data)) {
             $image_path = Storage::put('uploads', $form_data['image']);
-
             $original_name = $request->file('image')->getClientOriginalName();
             $form_data['image'] = $image_path;
             $form_data['original_image'] = $original_name;
@@ -120,9 +119,8 @@ class DishController extends Controller
     {
         $dish = Dish::find($dish->id);
         if ($dish) {
-            $restaurant_id = $dish->restaurant_id;
             $dish->delete();
-            return redirect()->route('admin.restaurants.show', $restaurant_id)->with('success', 'Il piatto ' . $dish->name . ' è stato eliminato correttamente');
+            return redirect()->route('admin.dishes.index')->with('success', 'Il piatto ' . $dish->name . ' è stato eliminato correttamente');
         }
     }
 }
