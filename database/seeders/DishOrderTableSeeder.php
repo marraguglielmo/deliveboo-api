@@ -17,20 +17,10 @@ class DishOrderTableSeeder extends Seeder
      */
     public function run(): void
     {
-        // $dish = Dish::all();
         $orders = Order::all();
-
-        /* for ($i = 0; $i < 50; $i++) {
-
-            $order = Order::inRandomOrder()->first();
-            $dish_id = Dish::inRandomOrder()->first()->id;
-
-            $order->dishes()->attach($dish_id);
-        } */
 
         foreach ($orders as $order) {
             $restaurant_id = Restaurant::inRandomOrder()->first()->id;
-
             $dish_id_array = [];
 
             while (count($dish_id_array) < 2) {

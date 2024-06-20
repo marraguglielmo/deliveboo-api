@@ -5,15 +5,6 @@
 
         <h1>I miei ordini</h1>
 
-        {{-- @foreach ($dishes as $dish)
-            @foreach ($dish->orders as $order)
-
-                <p>{{ $order }}</p>
-
-            @endforeach
-        @endforeach --}}
-
-
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -25,15 +16,14 @@
                     <th scope="col">Dettaglio</th>
                 </tr>
             </thead>
-            <tbody>
 
+            <tbody>
                 @foreach ($orders as $order)
                     <tr>
                         <th scope="row">{{ $order->updated_at }}</th>
                         <td>{{ $order->name }}</td>
                         <td>{{ $order->surname }}</td>
                         <td>{{ $order->total_price }}</td>
-
 
                         <td>
                             <ul>
