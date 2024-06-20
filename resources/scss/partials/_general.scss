@@ -16,8 +16,17 @@ a {
     }
 }
 
-table {
-    tr {
-        vertical-align: middle;
+.table-custom {
+    thead {
+        th {
+            background-color: $color-primary;
+            color: white;
+            text-align: center;
+        }
+    }
+    tbody {
+        td {
+            vertical-align: middle;
+        }
     }
 }

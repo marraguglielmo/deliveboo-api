@@ -1,17 +1,13 @@
 @extends('layouts.admin')
 @section('content')
-    <h1>
-
-        {{ $title }}
-
-    </h1>
     <div class="container">
+        <h2 class="text-center">{{ $title }} {{ $dish?->name }}</h2>
 
-        <form action="{{ $route }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ $route }}" method="POST" enctype="multipart/form-data" class="mx-5">
             @csrf
             @method($method)
             <div class="mb-3">
-                <label for="name" class="form-label">Nome Piatto</label>
+                <label for="name" class="form-label">Nome piatto</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
                     value="{{ old('name', $dish?->name) }}">
 
@@ -36,7 +32,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="description" class="form-label">Descrizione</label>
+                <label for="description" class="form-label">Ingredienti (<span class="fst-italic">separati da
+                        "-"</span>)</label>
                 <input type="text" class="form-control @error('description') is-invalid @enderror" id="description"
                     name="description" value="{{ old('description', $dish?->description) }}">
 
@@ -67,7 +64,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">{{ $submit }}</button>
+            <button type="submit" class="btn btn-custom-primary" id="btn-add">{{ $submit }}</button>
         </form>
     </div>
 @endsection

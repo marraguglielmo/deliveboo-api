@@ -3,9 +3,9 @@
 @section('content')
     <div class="container d-flex flex-column align-items-center">
 
-        <h1>I miei ordini</h1>
+        <h2>Lista ordini</h2>
 
-        <table class="table table-hover">
+        <table class="table table-hover table-custom">
             <thead>
                 <tr>
                     <th scope="col">Data</th>
@@ -18,7 +18,7 @@
             </thead>
 
             <tbody>
-                @foreach ($orders as $order)
+                @forelse ($orders as $order)
                     <tr>
                         <th scope="row">{{ $order->updated_at }}</th>
                         <td>{{ $order->name }}</td>
@@ -43,8 +43,13 @@
                             </div>
                         </td>
                     </tr>
-                @endforeach
+                @empty
+                    <div class="alert alert-danger" role="alert">
+                        Nessun ordine in archivio
+                    </div>
+                @endforelse
             </tbody>
         </table>
+
     </div>
 @endsection
