@@ -33,10 +33,10 @@ class DishController extends Controller
     public function create(Dish $dish)
     {
         $route = route('admin.dishes.store');
-        $title = 'Crea un nuovo piatto';
+        $title = 'Aggiungi un piatto al menu';
         $dish = null;
         $method = 'POST';
-        $submit = 'Crea';
+        $submit = 'Aggiungi';
         return view('admin.dishes.create-edit', compact('route', 'submit', 'title', 'method', 'dish'));
     }
 
@@ -83,10 +83,16 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
+        $restaurant_id = Auth::user()->restaurant->id;
+
+        if ($restaurant_id !== $dish->restaurant_id) {
+            abort('404');
+        }
+
         $route = route('admin.dishes.update', $dish);
-        $title = 'Modifica piatto';
+        $title = 'Modifica il piatto';
         $method = 'PUT';
-        $submit = 'Aggiorna';
+        $submit = 'Modifica';
         return view('admin.dishes.create-edit', compact('route', 'submit', 'title', 'method', 'dish'));
     }
 
@@ -141,7 +147,6 @@ class DishController extends Controller
         $orders = Order::whereHas('dishes', function ($query) {
             $query->where('restaurant_id', Auth::user()->id);
         })->with('dishes')->get();
-
 
         return view('admin.orders.index', compact('orders'));
     }

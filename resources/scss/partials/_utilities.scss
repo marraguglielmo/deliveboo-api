@@ -33,3 +33,24 @@
         }
     }
 }
+
+#btn-width {
+    width: 200px;
+}
+
+#btn-add {
+    width: 100px;
+}
+
+.badge-custom {
+    &-secondary {
+        background-color: $color-secondary;
+        color: white;
+        font-size: 0.8rem;
+    }
+}
+
+.form-check-input:checked {
+    background-color: $color-primary;
+    border-color: $color-primary;
+}

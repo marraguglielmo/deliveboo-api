@@ -3,35 +3,35 @@
 @section('content')
     <div class="container d-flex flex-column align-items-center">
 
+        {{-- Gestione messaggi di errore/successo all'inserimento/modifica/eliminazione dei piatti --}}
         @if (session('error'))
             <div class="alert alert-danger" role="alert">
                 {{ session('error') }}
             </div>
         @endif
         @if (session('success'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-light" role="alert">
                 {{ session('success') }}
             </div>
         @endif
 
-
-        <table class="table table-hover">
+        <table class="table table-hover table-custom my-4">
             <thead>
                 <tr>
                     <th scope="col">Immagine</th>
                     <th scope="col">Piatto</th>
-                    <th scope="col">Prezzo</th>
+                    <th scope="col">Prezzo (&euro;)</th>
                     <th scope="col">Descrizione</th>
                     <th scope="col">Disponibilità</th>
                     <th scope="col">Azioni</th>
                 </tr>
             </thead>
+
             <tbody>
                 @foreach ($dishes as $dish)
                     <tr>
-                        <th scope="row">
+                        <td>
                             <div class="img-box">
-
                                 @if ($dish->image)
                                     @if (Str::startsWith($dish->image, ['http://', 'https://']))
                                         <img src="{{ $dish->image }}" alt="{{ $dish->name }}">
@@ -41,13 +41,18 @@
                                 @else
                                     <img src="{{ Vite::asset('resources/img/placeholder.jpg') }}">
                                 @endif
-
                             </div>
-                        </th>
-                        <th scope="row">{{ $dish->name }}</th>
-                        <td>{{ $dish->price }}</td>
+                        </td>
+
+                        <td>{{ $dish->name }}</td>
+                        <td>{{ str_replace('.', ',', $dish->price) }}</td>
                         <td>{{ $dish->description }}</td>
-                        <td>{{ $dish->available }}</td>
+                        <td class="text-center">
+                            @if ($dish->available)
+                                <i class="fa-solid fa-check text-success fs-5"></i>
+                            @else
+                                <i class="fa-solid fa-xmark text-danger fs-5"></i>
+                            @endif
                         <td>
                             <div class="d-flex">
                                 <a href="{{ route('admin.dishes.show', $dish) }}">
@@ -73,7 +78,6 @@
             </tbody>
         </table>
 
-        <a href="{{ route('admin.dishes.create') }}" class="btn btn-primary">Aggiungi
-            piatto</a>
+        <a href="{{ route('admin.dishes.create') }}" class="btn btn-custom-primary w-auto">Aggiungi piatto</a>
     </div>
 @endsection
