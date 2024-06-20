@@ -1,3 +1,7 @@
+@php
+    use App\Functions\Helper;
+@endphp
+
 @extends('layouts.admin')
 
 @section('content')
@@ -20,7 +24,7 @@
             <tbody>
                 @forelse ($orders as $order)
                     <tr>
-                        <th scope="row">{{ $order->updated_at }}</th>
+                        <td scope="row">{{ Helper::formatDate($order->updated_at) }}</td>
                         <td>{{ $order->name }}</td>
                         <td>{{ $order->surname }}</td>
                         <td>{{ $order->total_price }}</td>

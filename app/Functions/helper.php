@@ -29,4 +29,10 @@ class Helper
     {
         return strtolower(str_replace(" ", "", $name)) . '@gmail.com';
     }
+
+    public static function formatDate($data)
+    {
+        $date = date_create($data);
+        return $date_format = date_format($date, 'd/m/Y - h:m');
+    }
 }
