@@ -1,0 +1,17 @@
+.card {
+    .card-img-box {
+        height: 300px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .badge-container {
+        text-align: right;
+        margin-bottom: 0;
+    }
+}
