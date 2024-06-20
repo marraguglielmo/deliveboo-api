@@ -31,6 +31,7 @@
                                 </div>
                             </div>
                             {{-- nome utente --}}
+
                             {{-- nome ristorante --}}
                             <div class="mb-4 row">
                                 <label for="business_name"
@@ -156,7 +157,7 @@
                                 <div class="col-md-6">
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" autocomplete="email" required>
+                                        value="{{ old('email') }}" autocomplete="email">
 
                                     <small id="error-email" class="text-danger fw-semibold"></small>
 
@@ -280,25 +281,25 @@
             errorPasswordConfirm.innerHTML = '';
 
             // controlli nome
-            if (name.value.length === 0) {
+            if (name.value.trim().length === 0) {
                 errorName.innerHTML = 'Il campo Nome è obbligatorio';
                 name.classList.add('is-invalid');
-            } else if (name.value.length < 4) {
+            } else if (name.value.trim().length < 4) {
                 errorName.innerHTML = 'Il campo Nome deve avere almeno 4 caratteri';
                 name.classList.add('is-invalid');
-            } else if (name.value.length > 50) {
+            } else if (name.value.trim().length > 50) {
                 errorName.innerHTML = 'Il campo Nome non deve avere più di 50 caratteri';
                 name.classList.add('is-invalid');
             }
 
             // controlli nome ristorante
-            if (businessName.value.length === 0) {
+            if (businessName.value.trim().length === 0) {
                 errorBusinessName.innerHTML = 'Il campo Nome Ristorante è obbligatorio';
                 businessName.classList.add('is-invalid');
-            } else if (businessName.value.length < 4) {
+            } else if (businessName.value.trim().length < 4) {
                 errorBusinessName.innerHTML = 'Il campo Nome Ristorante deve avere almeno 4 caratteri';
                 businessName.classList.add('is-invalid');
-            } else if (businessName.value.length > 50) {
+            } else if (businessName.value.trim().length > 50) {
                 errorBusinessName.innerHTML = 'Il campo Nome Ristorante non deve avere più di 50 caratteri';
                 businessName.classList.add('is-invalid');
             }
@@ -331,6 +332,9 @@
             if (file) {
                 if (!allowedTypes.includes(file.type)) {
                     errorImage.innerHTML = 'I formati consentiti sono: png, jpg, jpeg, webp'
+                    image.classList.add('is-invalid');
+                } else if (file.size > maxSize) {
+                    errorImage.innerHTML = 'La dimensione massima del file è 20 mb';
                     image.classList.add('is-invalid');
                 } else {
                     errorImage.innerHTML = ''
