@@ -114,7 +114,9 @@
                                 <div class="col-md-6">
                                     <input id="phone_number" type="text"
                                         class="form-control @error('phone_number') is-invalid @enderror" name="phone_number"
-                                        value="{{ old('phone_number') }}" autocomplete="phone_number" autofocus required>
+                                        value="{{ old('phone_number') }}" autocomplete="phone_number" autofocus>
+
+                                    <small id="error-phone_number" class="text-danger fw-semibold"></small>
 
                                     @error('phone_number')
                                         <span class="invalid-feedback" role="alert">
@@ -133,7 +135,9 @@
                                 <div class="col-md-6">
                                     <input id="vat_number" type="text"
                                         class="form-control @error('vat_number') is-invalid @enderror" name="vat_number"
-                                        value="{{ old('vat_number') }}" autocomplete="vat_number" required>
+                                        value="{{ old('vat_number') }}" autocomplete="vat_number">
+
+                                    <small id="error-vat_number" class="text-danger fw-semibold"></small>
 
                                     @error('vat_number')
                                         <span class="invalid-feedback" role="alert">
@@ -144,6 +148,7 @@
                             </div>
                             {{-- vat --}}
 
+                            {{-- email --}}
                             <div class="mb-4 row">
                                 <label for="email"
                                     class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
@@ -153,6 +158,8 @@
                                         class="form-control @error('email') is-invalid @enderror" name="email"
                                         value="{{ old('email') }}" autocomplete="email" required>
 
+                                    <small id="error-email" class="text-danger fw-semibold"></small>
+
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -160,7 +167,9 @@
                                     @enderror
                                 </div>
                             </div>
+                            {{-- email --}}
 
+                            {{-- password --}}
                             <div class="mb-4 row">
                                 <label for="password"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -168,7 +177,9 @@
                                 <div class="col-md-6">
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
-                                        autocomplete="password" required>
+                                        autocomplete="password">
+                                    {{-- TODO: REQUISITI VERDE/ROSSO --}}
+                                    <small id="error-password" class="text-danger fw-semibold"></small>
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -177,25 +188,33 @@
                                     @enderror
                                 </div>
                             </div>
+                            {{-- password --}}
 
 
+                            {{-- confirm password --}}
                             <div class="mb-4 row">
                                 <label for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password') }}</label>
+
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
-                                        name="password_confirmation" autocomplete="new-password" required>
+                                        name="password_confirmation" autocomplete="new-password">
+
+                                    <small id="error-password_confirm" class="text-danger fw-semibold"></small>
                                 </div>
                             </div>
+                            {{-- confirm password --}}
 
+                            {{-- btn register --}}
                             <div class="mb-4 row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary btn-register">
-                                        {{ __('Register') }}
+                                        {{ __('Registrati') }}
                                     </button>
                                 </div>
                             </div>
+                            {{-- btn register --}}
                         </form>
                     </div>
                 </div>
@@ -223,6 +242,20 @@
         // indirizzo
         const address = document.getElementById('address');
         const errorAddress = document.getElementById('error-address');
+        // telefono
+        const phoneNumber = document.getElementById('phone_number');
+        const errorPhoneNumber = document.getElementById('error-phone_number');
+        // PIVA
+        const vatNumber = document.getElementById('vat_number');
+        const errorVatNumber = document.getElementById('error-vat_number');
+        // email
+        const email = document.getElementById('email');
+        const errorEmail = document.getElementById('error-email');
+        // password
+        const password = document.getElementById('password')
+        const errorPassword = document.getElementById('error-password');
+        const passwordConfirm = document.getElementById('password-confirm')
+        const errorPasswordConfirm = document.getElementById('error-password_confirm');
 
 
         btnRegister.addEventListener('click', function(event) {
@@ -235,6 +268,16 @@
             errorAddress.innerHTML = '';
             address.classList.remove('is-invalid');
             file = image.files[0];
+            phoneNumber.classList.remove('is-invalid');
+            errorPhoneNumber.innerHTML = '';
+            vatNumber.classList.remove('is-invalid');
+            errorVatNumber.innerHTML = '';
+            email.classList.remove('is-invalid');
+            errorEmail.innerHTML = '';
+            password.classList.remove('is-invalid');
+            errorPassword.innerHTML = '';
+            passwordConfirm.classList.remove('is-invalid');
+            errorPasswordConfirm.innerHTML = '';
 
             // controlli nome
             if (name.value.length === 0) {
@@ -309,7 +352,68 @@
             }
 
             // controlli telefono
+            if (phoneNumber.value.trim().length === 0) {
+                errorPhoneNumber.innerHTML = 'Il campo Telefono è obbligatorio';
+                phoneNumber.classList.add('is-invalid');
+            } else if (!/^\d+$/.test(phoneNumber.value)) {
+                errorPhoneNumber.innerHTML = 'Il campo Telefono può contenere solo numeri';
+                phoneNumber.classList.add('is-invalid');
+            } else if (phoneNumber.value.trim().length < 11) {
+                errorPhoneNumber.innerHTML = 'Il campo Telefono non deve avere meno di 11 numeri';
+                phoneNumber.classList.add('is-invalid');
+            } else if (phoneNumber.value.trim().length > 11) {
+                errorPhoneNumber.innerHTML = 'Il campo Telefono non deve avere più di 11 numeri';
+                phoneNumber.classList.add('is-invalid');
+            }
 
+            // controlli PIVA
+            if (vatNumber.value.trim().length === 0) {
+                errorVatNumber.innerHTML = 'Il campo P.IVA è obbligatorio';
+                vatNumber.classList.add('is-invalid');
+            } else if (vatNumber.value.trim().length < 11) {
+                errorVatNumber.innerHTML = 'Il campo P.IVA non deve avere meno di 11 numeri';
+                vatNumber.classList.add('is-invalid');
+            } else if (vatNumber.value.trim().length > 11) {
+                errorVatNumber.innerHTML = 'Il campo P.IVA non deve avere più di 11 numeri';
+                vatNumber.classList.add('is-invalid');
+            }
+
+            // controlli email
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email.value.trim().length === 0) {
+                errorEmail.innerHTML = 'Il campo Email è obbligatorio';
+                email.classList.add('is-invalid');
+            } else if (!emailPattern.test(email.value)) {
+                errorEmail.innerHTML = 'Inserisci un indirizzo email valido';
+                email.classList.add('is-invalid');
+            } else if (email.value.trim().length > 50) {
+                errorEmail.innerHTML = 'Il campo Email non deve essere più lungo di 50 caratteri';
+                email.classList.add('is-invalid');
+            }
+
+            // controlli password
+            let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+
+            if (password.value.trim().length === 0) {
+                errorPassword.innerHTML = 'Il campo Password è obbligatorio';
+                password.classList.add('is-invalid')
+            } else if (!passwordPattern.test(password.value)) {
+                errorPassword.innerHTML =
+                    'La password deve contenere almeno 8 caratteri, un numero e un carattere speciale';
+                password.classList.add('is-invalid')
+            } else if (password.value !== passwordConfirm.value) {
+                errorPassword.innerHTML =
+                    'Le password non coincidono';
+                password.classList.add('is-invalid')
+                passwordConfirm.classList.add('is-invalid')
+            }
+
+            // controlli conferma password
+            if (passwordConfirm.value.trim().length === 0) {
+                errorPasswordConfirm.innerHTML = 'Il campo Conferma Password è obbligatorio';
+                passwordConfirm.classList.add('is-invalid')
+            }
 
         })
     </script>
