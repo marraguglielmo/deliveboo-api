@@ -6,7 +6,7 @@ return [
         "address" => "Via Balestrieri 6",
         "phone_number" => "0234637286",
         "image" => "https://images.unsplash.com/photo-1579751626657-72bc17010498?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["pizzeria", "italiano"],
+        "types" => ["pizzeria"],
         "dishes" => [
             [
                 "name" => "Margherita Classica",
@@ -134,7 +134,7 @@ return [
         "address" => "Via Paolo Sarpi 3",
         "phone_number" => "02898572376",
         "image" => "",
-        "types" => ["cinese"],
+        "types" => ["cinese", "italiano"],
         "dishes" => [
             [
                 "name" => "Pollo al Limone",

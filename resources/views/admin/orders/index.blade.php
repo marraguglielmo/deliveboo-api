@@ -28,7 +28,7 @@
                         <td>
                             <ul>
                                 @foreach ($order->dishes as $dish)
-                                    <li> {{ $dish->name }} | {{ $dish->pivot->quantity }}</li>
+                                    <li> {{ $dish->name }} x {{ $dish->pivot->quantity }}</li>
                                 @endforeach
                             </ul>
                         </td>
