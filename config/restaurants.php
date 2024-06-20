@@ -38,7 +38,7 @@ return [
         "address" => "Via Giotto 22",
         "phone_number" => "0254457286",
         "image" => "https://images.unsplash.com/photo-1569230516306-5a8cb5586399?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["pizzeria"],
+        "types" => ["pizzeria", "italiano"],
         "dishes" => [
             [
                 "name" => "Pizza al Tartufo",
@@ -70,7 +70,7 @@ return [
         "address" => "Viale Piave 38",
         "phone_number" => "0254857262",
         "image" => "https://images.unsplash.com/photo-1617655699589-64375e5ad9a5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["pizzeria"],
+        "types" => ["pizzeria", "italiano"],
         "dishes" => [
             [
                 "name" => "Pizza Marinara",
@@ -102,7 +102,7 @@ return [
         "address" => "Via Savona 23",
         "phone_number" => "0289857262",
         "image" => "",
-        "types" => ["pizzeria"],
+        "types" => ["pizzeria", "italiano"],
         "dishes" => [
             [
                 "name" => "Pizza Salsiccia e Friarielli",
@@ -134,7 +134,7 @@ return [
         "address" => "Via Paolo Sarpi 3",
         "phone_number" => "02898572376",
         "image" => "",
-        "types" => ["cinese"],
+        "types" => ["cinese", "italiano"],
         "dishes" => [
             [
                 "name" => "Pollo al Limone",

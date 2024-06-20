@@ -11,6 +11,7 @@ use App\Models\Type;
 use App\Functions\Helper;
 use App\Models\Order;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -134,23 +135,13 @@ class DishController extends Controller
 
     /* FUNZIONI CUSTOM */
 
-    public function dishOrders(){
+    public function dishOrders()
+    {
 
-        /* $dishes = Dish::where('restaurant_id', Auth::user()->restaurant->id)->with('orders')->get();
-        $orders = Order::with('dishes')->where('restaurant_id', Auth::user()->restaurant->id)->get(); */
+        $orders = Order::whereHas('dishes', function ($query) {
+            $query->where('restaurant_id', Auth::user()->id);
+        })->with('dishes')->get();
 
-        $restaurantId = Auth::user()->restaurant->id;
-
-        // Recupero gli ordini che appartengono ai piatti di questo ristorante
-        // $orders = Order::whereHas('dishes', function ($query) use ($restaurantId) {
-        //     $query->where('restaurant_id', $restaurantId);
-        // })->with('dishes')->orderBy('created_at', 'desc')->get();
-
-        $orders = Order::whereHas('dishes', function ($query) use ($restaurantId) {
-            $query->where('restaurant_id', $restaurantId);
-        })->with(['dishes' => function ($query) {
-            $query->withPivot('quantity', 'total_price');
-        }])->orderBy('created_at', 'desc')->get();
 
         return view('admin.orders.index', compact('orders'));
     }

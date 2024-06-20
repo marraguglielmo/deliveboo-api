@@ -17,57 +17,34 @@ class DishOrderTableSeeder extends Seeder
      */
     public function run(): void
     {
-        // $dish = Dish::all();
         $orders = Order::all();
 
-        /* for ($i = 0; $i < 50; $i++) {
-
-            $order = Order::inRandomOrder()->first();
-            $dish_id = Dish::inRandomOrder()->first()->id;
-
-            $order->dishes()->attach($dish_id);
-        } */
-
-        foreach ( $orders as $order){
+        foreach ($orders as $order) {
             $restaurant_id = Restaurant::inRandomOrder()->first()->id;
+            $dish_id_array = [];
 
-            $quantity = 0;
-            $total_price = 0;
-
-            for ($i = 0; $i < 4; $i++){
+            while (count($dish_id_array) < 2) {
                 $dish_id = Dish::where('restaurant_id', $restaurant_id)->inRandomOrder()->first()->id;
 
-                $dish_price = Dish::where('id', $dish_id)->first()->value('price');
+                if (!in_array($dish_id, $dish_id_array)) {
+                    $dish_id_array[] = $dish_id;
 
-                $dish_id_array[] = $dish_id;
+                    $dish_price = Dish::where('id', $dish_id)->first()->value('price');
 
-                if(in_array($dish_id, $dish_id_array)){
-                    $quantity++;
+                    $quantity = mt_rand(1, 5);
+                    $total_price = $quantity * $dish_price;
+
+                    DB::table('dish_order')->insert([
+
+                        'dish_id' => $dish_id,
+                        'order_id' => $order->id,
+
+                        'total_price' => $total_price,
+                        'quantity' => $quantity,
+
+                    ]);
                 }
-
-                $total_price = $quantity * $dish_price;
-
-                DB::table('dish_order')->insert([
-
-                    'dish_id' => $dish_id,
-                    'order_id' => $order->id,
-
-                    'total_price' => $total_price,
-                    'quantity' => $quantity,
-
-                ]);
             }
-                // dd($total_price);
-
-
-            // $new_order = new DishOrder();
-            // $new_order->quantity = $quantity;
-            // $new_order->total_price = $total_price;
-            // $new_order->save();
-
-            $order->dishes()->attach($dish_id);
         }
-
     }
 }
-
