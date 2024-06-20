@@ -3,55 +3,63 @@ body{
 }
 
 .login_container{
-    .card-body{
-        background: lighten($color-primary, 10%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        form{
+    .card{
+        border: none !important;
+        overflow: hidden;
+        .card-body{
+            background: lighten($color-primary, 10%);
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            width: 80%;
-            input[type="email"],
-            input[type="password"]{
-                height: 100%;
-                // margin: 0 auto;
-                border-radius: 0px;
-                border: none;
-                outline: none;
-                box-shadow: none;
-                padding-left: 0;
-            }
-            .row{
-                .col-md-12{
-                    margin: 0 auto;
-                    overflow: hidden;
-                    // border: 1px solid red;
-                    max-height: 50px;
-                    .input-box{
-                        width: 70%;
-                        height: 100%;
-                        border-radius: 5px;
+            align-items: center;
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 80%;
+                input[type="email"],
+                input[type="password"]{
+                    height: 100%;
+                    // margin: 0 auto;
+                    border-radius: 0px;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    padding-left: 0;
+                }
+                .row{
+                    .col-md-12{
+                        margin: 0 auto;
                         overflow: hidden;
-                    }
-                    .input-icon{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background: white;
-                        color: lighten($color-primary, 10%);
-                        display: inline-block;
-                        padding: 10px 15px;
-                    }
-                    &.btn-container{
-                        button{
-                            background: darken($color-primary, 10%);
-                            border: none;
+                        // border: 1px solid red;
+                        max-height: 50px;
+                        .input-box{
+                            width: 70%;
+                            height: 100%;
+                            border-radius: 5px;
+                            overflow: hidden;
+                        }
+                        .input-icon{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: white;
+                            color: lighten($color-primary, 10%);
+                            display: inline-block;
+                            padding: 10px 15px;
+                        }
+                        &.btn-container{
+                            button{
+                                background: darken($color-primary, 10%);
+                                border: none;
+                                &:hover{
+                                    background: darken($color-primary, 20%);
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
+
 }
