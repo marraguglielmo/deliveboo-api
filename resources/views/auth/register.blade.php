@@ -14,7 +14,8 @@
                             {{-- nome utente --}}
                             <div class="mb-4 row">
                                 <label for="name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Nome utente') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Nome utente') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
@@ -35,7 +36,8 @@
                             {{-- nome ristorante --}}
                             <div class="mb-4 row">
                                 <label for="business_name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Nome ristorante') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Nome ristorante') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
                                 <div class="col-md-6">
                                     <input id="business_name" type="text"
@@ -56,7 +58,7 @@
 
                             {{-- tipologie --}}
                             <div class="row row-cols-2 mb-3 ">
-                                <div class="col-md-4">Tipologie</div>
+                                <div class="col-md-4">Tipologie<span class="input-required fw-bold">*</span></div>
                                 <div class="btn-group col-6 flex-wrap" role="group">
                                     @foreach ($types as $type)
                                         <input value="{{ $type->id }}" type="checkbox" class="btn-check"
@@ -88,7 +90,8 @@
                             {{-- indirizzo --}}
                             <div class="mb-4 row">
                                 <label for="address"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Indirizzo') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Indirizzo') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
                                 <div class="col-md-6">
                                     <input id="address" type="text"
@@ -110,7 +113,8 @@
                             {{-- telefono --}}
                             <div class="mb-4 row">
                                 <label for="phone_number"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
                                 <div class="col-md-6">
                                     <input id="phone_number" type="text"
@@ -131,7 +135,8 @@
                             {{-- vat --}}
                             <div class="mb-4 row">
                                 <label for="vat_number"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('P.IVA') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('P.IVA') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
                                 <div class="col-md-6">
                                     <input id="vat_number" type="text"
@@ -152,7 +157,8 @@
                             {{-- email --}}
                             <div class="mb-4 row">
                                 <label for="email"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
@@ -173,7 +179,8 @@
                             {{-- password --}}
                             <div class="mb-4 row">
                                 <label for="password"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Password') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -195,7 +202,8 @@
                             {{-- confirm password --}}
                             <div class="mb-4 row">
                                 <label for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password') }}</label>
+                                    class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password') }}<span
+                                        class="input-required fw-bold">*</span></label>
 
 
                                 <div class="col-md-6">

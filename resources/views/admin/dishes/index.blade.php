@@ -20,7 +20,7 @@
                 <tr>
                     <th scope="col">Immagine</th>
                     <th scope="col">Piatto</th>
-                    <th scope="col">Prezzo (&euro;)</th>
+                    <th scope="col" class="text-nowrap">Prezzo (&euro;)</th>
                     <th scope="col">Descrizione</th>
                     <th scope="col">Disponibilità</th>
                     <th scope="col">Azioni</th>
