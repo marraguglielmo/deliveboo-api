@@ -268,7 +268,7 @@
 
 
         btnRegister.addEventListener('click', function(event) {
-            event.preventDefault;
+            event.preventDefault();
             errorName.innerHTML = '';
             name.classList.remove('is-invalid');
             errorBusinessName.innerHTML = '';
