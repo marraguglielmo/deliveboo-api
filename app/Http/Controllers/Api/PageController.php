@@ -42,7 +42,7 @@ class PageController extends Controller
             }
 
             foreach ($restaurant->dishes as $dish) {
-                if (Str::startsWith($dish, ['http://', 'https://'])) {
+                if (Str::startsWith($dish->image, ['http://', 'https://'])) {
                     $dish->image = $dish->image;
                 } else if ($dish->image) {
                     $dish->image = Storage::url($dish->image);
