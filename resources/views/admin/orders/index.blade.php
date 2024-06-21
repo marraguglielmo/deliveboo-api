@@ -17,7 +17,7 @@
                     <th scope="col">Cognome</th>
                     <th scope="col">Prezzo Totale</th>
                     <th scope="col">Piatti</th>
-                    <th scope="col">Dettaglio</th>
+                    {{-- <th scope="col">Dettaglio</th> --}}
                 </tr>
             </thead>
 
@@ -37,7 +37,7 @@
                             </ul>
                         </td>
 
-                        <td>
+                        {{-- <td>
                             <div class="d-flex">
                                 <a href="#">
                                     <button class="btn btn-custom-primary">
@@ -45,7 +45,7 @@
                                     </button>
                                 </a>
                             </div>
-                        </td>
+                        </td> --}}
                     </tr>
                 @empty
                     <div class="alert alert-danger" role="alert">
