@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Restaurant;
 use App\Models\Type;
+use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
@@ -30,9 +31,9 @@ class PageController extends Controller
         if ($restaurant) {
             $success = true;
             if ($restaurant->image) {
-                $restaurant->image = asset('storage/' . $restaurant->image);
+                $restaurant->image = Storage::url($restaurant->image);
             } else {
-                $restaurant->image = asset('resources/img/placeholder.jpg');
+                $restaurant->image = Storage::url('resources/img/placeholder.jpg');
             }
         } else {
             $success = false;
