@@ -1,21 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid login_container mt-4 vh-100 d-flex justify-content-center align-items-center">
+    <div class="container-fluid login_container d-flex flex-column justify-content-center align-items-center h-100 vh-100">
+        <div class="row justify-content-center mb-2 w-100">
+            <div class="btn-container text-end col-md-8">
+                <a href="{{ env('APP_FRONTEND_URL') }}" class="btn btn-primary py-2 px-3">Vai al sito
+                    pubblico</a>
+            </div>
+        </div>
         <div class="row justify-content-center w-100">
             <div class="col-md-8">
                 <div class="card">
 
-                    <div class="card-body py-5">
+                    <div class="card-body h-100">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="input-box">
                                 <div class="mb-4 row">
-                                    {{-- <label for="email"
-                                        class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> --}}
 
-                                    <div class="col-md-12 d-flex align-items-center justify-content-center">
+                                    <div class="col-md-12 input-col d-flex align-items-center justify-content-center">
 
+                                        {{-- email --}}
                                         <div class="input-box d-flex align-items-center justify-content-center">
                                             <div class="input-icon">
                                                 <i class="fa-solid fa-envelope"></i>
@@ -31,16 +36,16 @@
                                                 </span>
                                             @enderror
                                         </div>
+                                        {{-- email --}}
 
                                     </div>
                                 </div>
 
                                 <div class="mb-4 row">
-                                    {{-- <label for="password"
-                                        class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label> --}}
 
-                                    <div class="col-md-12 d-flex align-items-center justify-content-center">
+                                    <div class="col-md-12 input-col d-flex align-items-center justify-content-center">
 
+                                        {{-- password --}}
                                         <div class="input-box d-flex align-items-center justify-content-center">
 
 
@@ -57,22 +62,31 @@
                                                 </span>
                                             @enderror
                                         </div>
+                                        {{-- password --}}
                                     </div>
                                 </div>
                             </div>
 
 
                             <div class="row">
-                                <div class="col-md-12 btn-container d-flex">
-                                    <button type="submit" class="btn btn-primary m-auto">
-                                        {{ __('Login') }}
-                                    </button>
+                                <div class="col-md-12 btn-container">
+                                    <div class="d-flex flex-column">
 
-                                    {{-- @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
-                                        </a>
-                                    @endif --}}
+                                        <button type="submit" class="btn btn-primary m-auto mb-3">
+                                            {{ __('Login') }}
+                                        </button>
+                                        <div class="m-auto text-center">
+                                            <p class="mb-1 text-white">Non hai un account?</p>
+                                            <a href="{{ route('register') }}" class="btn btn-primary m-auto">
+                                                {{ __('Crea nuovo account') }}
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+
                                 </div>
                             </div>
                         </form>
