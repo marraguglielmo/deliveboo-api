@@ -21,3 +21,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/restaurants', [PageController::class, 'index']);
 Route::get('/types', [PageController::class, 'getTypes']);
+
+Route::get('/restaurant-by-slug/{slug}', [PageController::class, 'getRestaurantBySlug']);

@@ -23,4 +23,20 @@ class PageController extends Controller
         $types = Type::all();
         return response()->json(compact('success', 'types'));
     }
+
+    public function getRestaurantBySlug($slug)
+    {
+        $restaurant = Restaurant::where('slug', $slug)->with('dishes', 'types')->first();
+        if ($restaurant) {
+            $success = true;
+            if ($restaurant->image) {
+                $restaurant->image = asset('storage/' . $restaurant->image);
+            } else {
+                $restaurant->image = asset('resources/img/placeholder.jpg');
+            }
+        } else {
+            $success = false;
+        }
+        return response()->json(compact('success', 'restaurant'));
+    }
 }
