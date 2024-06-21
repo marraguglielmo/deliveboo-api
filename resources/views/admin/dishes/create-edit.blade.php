@@ -107,7 +107,6 @@
 
 
         btnCreate.addEventListener('click', function(event) {
-            event.preventDefault();
             console.log(errorName);
             errorName.innerHTML = '';
             name.classList.remove('is-invalid');
