@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mt-4">
+    <div class="container register-container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -57,14 +57,14 @@
                             {{-- nome ristorante --}}
 
                             {{-- tipologie --}}
-                            <div class="row row-cols-2 mb-3 ">
+                            <div class="row row-cols-2 mb-3 row-types">
                                 <div class="col-md-4">Tipologie<span class="input-required fw-bold">*</span></div>
                                 <div class="btn-group col-6 flex-wrap" role="group">
                                     @foreach ($types as $type)
                                         <input value="{{ $type->id }}" type="checkbox" class="btn-check"
                                             id="type{{ $type->id }}" name="types[]"
                                             @if ($errors->any() && in_array($type->id, old('types', []))) checked @endif>
-                                        <label class="btn btn-outline-primary m-1 rounded-2 w-25"
+                                        <label class="btn m-1 rounded-2 w-25"
                                             for="type{{ $type->id }}">{{ $type->name }}</label>
                                     @endforeach
 
@@ -72,7 +72,6 @@
                                         <small id="error-types" class="text-danger fw-semibold"></small>
                                     </div>
                                 </div>
-
                             </div>
                             {{-- tipologie --}}
 
