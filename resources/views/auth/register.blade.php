@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container register-container mt-4">
+    <div class="container register-container mt-4 mb-4">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -216,7 +216,7 @@
 
                             {{-- btn register --}}
                             <div class="mb-4 row mb-0">
-                                <div class="col-md-6 offset-md-4">
+                                <div class="col-md-12 d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary btn-register">
                                         {{ __('Registrati') }}
                                     </button>
