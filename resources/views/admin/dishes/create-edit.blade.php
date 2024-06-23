@@ -107,7 +107,8 @@
 
 
         btnCreate.addEventListener('click', function(event) {
-            console.log(errorName);
+            // event.preventDefault();
+            // FIXME:STAMPA VALIDAZIONE
             errorName.innerHTML = '';
             name.classList.remove('is-invalid');
             errorPrice.innerHTML = '';
