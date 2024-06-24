@@ -55,4 +55,51 @@ class PageController extends Controller
         }
         return response()->json(compact('success', 'restaurant'));
     }
+
+    public function getClientToken()
+    {
+        $success = false;
+        $gateway = new \Braintree\Gateway([
+            'environment' => env('BRAINTREE_ENV'),
+            'merchantId' => env("BRAINTREE_MERCHANT_ID"),
+            'publicKey' => env("BRAINTREE_PUBLIC_KEY"),
+            'privateKey' => env("BRAINTREE_PRIVATE_KEY")
+        ]);
+        $clientToken = $gateway->clientToken()->generate();
+        if ($clientToken) {
+            $success = true;
+        }
+
+        return response()->json(compact('success', 'clientToken'));
+    }
+
+    public function paymentRequest(Request $request)
+    {
+        $form_data = $request->all();
+        $nonceFromTheClient = $form_data["payment_method_nonce"];
+
+        $gateway = new \Braintree\Gateway([
+            'environment' => env('BRAINTREE_ENV'),
+            'merchantId' => env("BRAINTREE_MERCHANT_ID"),
+            'publicKey' => env("BRAINTREE_PUBLIC_KEY"),
+            'privateKey' => env("BRAINTREE_PRIVATE_KEY")
+        ]);
+
+        if ($nonceFromTheClient != null) {
+
+            $result = $gateway->transaction()->sale([
+                'amount' => '10.00',
+                'paymentMethodNonce' => $nonceFromTheClient,
+                'options' => [
+                    'submitForSettlement' => True
+                ]
+            ]);
+
+            if ($result->success) {
+                return view('thankyoupage');
+            } else {
+                return view('rejectpayment');
+            }
+        }
+    }
 }
