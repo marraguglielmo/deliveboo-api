@@ -224,6 +224,9 @@
                             </div>
                             {{-- btn register --}}
                         </form>
+                        <div>
+                            <p><span class="input-required">*</span> campi obbligatori</p>
+                        </div>
                     </div>
                 </div>
             </div>
