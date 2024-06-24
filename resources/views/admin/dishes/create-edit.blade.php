@@ -82,8 +82,11 @@
                 </div>
             </div>
             {{-- disponibile --}}
+            <div class="d-flex justify-content-between align-items-center">
 
-            <button type="submit" class="btn btn-custom-primary" id="btn-add">{{ $submit }}</button>
+                <button type="submit" class="btn btn-custom-primary" id="btn-add">{{ $submit }}</button>
+                <p><span class="input-required">*</span> campi obbligatori</p>
+            </div>
         </form>
     </div>
 
@@ -107,7 +110,7 @@
 
 
         btnCreate.addEventListener('click', function(event) {
-            // event.preventDefault();
+            event.preventDefault();
             // FIXME:STAMPA VALIDAZIONE
             errorName.innerHTML = '';
             name.classList.remove('is-invalid');
