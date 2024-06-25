@@ -23,3 +23,6 @@ Route::get('/restaurants', [PageController::class, 'index']);
 Route::get('/types', [PageController::class, 'getTypes']);
 
 Route::get('/restaurant-by-slug/{slug}', [PageController::class, 'getRestaurantBySlug']);
+
+Route::get('/get-client-token', [PageController::class, 'getClientToken']);
+Route::post('/payment-request', [PageController::class, 'paymentRequest']);
