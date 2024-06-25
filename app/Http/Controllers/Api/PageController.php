@@ -78,6 +78,7 @@ class PageController extends Controller
     {
         $form_data = $request->all();
         $nonceFromTheClient = $form_data["payment_method_nonce"];
+        $total_amount = $form_data['total_order'];
 
         $gateway = new \Braintree\Gateway([
             'environment' => env('BRAINTREE_ENV'),
@@ -89,7 +90,7 @@ class PageController extends Controller
         if ($nonceFromTheClient != null) {
 
             $result = $gateway->transaction()->sale([
-                'amount' => '10.00',
+                'amount' => $total_amount,
                 'paymentMethodNonce' => $nonceFromTheClient,
                 'options' => [
                     'submitForSettlement' => True
