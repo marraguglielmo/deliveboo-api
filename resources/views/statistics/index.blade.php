@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Order Statistics</title>
+    <title>Order Statistics ciao</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
