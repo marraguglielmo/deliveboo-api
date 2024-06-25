@@ -30,7 +30,7 @@
             <tbody>
                 @foreach ($dishes as $dish)
                     <tr class="text-center">
-                        <td class="d-flex justify-content-center">
+                        <td>
                             <div class="img-box">
                                 @if ($dish->image)
                                     @if (Str::startsWith($dish->image, ['http://', 'https://']))
