@@ -289,13 +289,13 @@
 
             // controlli nome
             if (name.value.trim().length === 0) {
-                errorName.innerHTML = 'Il campo Nome è obbligatorio';
+                errorName.innerHTML = 'Il campo Nome Utente è obbligatorio';
                 name.classList.add('is-invalid');
             } else if (name.value.trim().length < 4) {
-                errorName.innerHTML = 'Il campo Nome deve avere almeno 4 caratteri';
+                errorName.innerHTML = 'Il campo Nome Utente deve avere almeno 4 caratteri';
                 name.classList.add('is-invalid');
             } else if (name.value.trim().length > 50) {
-                errorName.innerHTML = 'Il campo Nome non deve avere più di 50 caratteri';
+                errorName.innerHTML = 'Il campo Nome Utente non deve avere più di 50 caratteri';
                 name.classList.add('is-invalid');
             }
 
