@@ -15,7 +15,7 @@ class OrderStatisticsController extends Controller
     {
         // Recupera il numero di ordini per ristorante per ogni mese usando Eloquent
         $orders = Order::with('dishes')
-            ->selectRaw('dishes.restaurant_id, MONTH(orders.created_at) as month, COUNT(orders.id) as total_orders')
+            ->selectRaw('dishes.restaurant_id, MONTH(orders.date) as month, COUNT(orders.id) as total_orders')
             ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
             ->join('dishes', 'dish_order.dish_id', '=', 'dishes.id')
             ->groupBy('dishes.restaurant_id', 'month')

@@ -14,5 +14,5 @@ class Order extends Model
         return $this->belongsToMany(Dish::class)->withPivot('quantity', 'total_price');
     }
 
-    protected $fillable = ['shipping_price', 'total_price', 'payment_method', 'name', 'surname', 'email', 'phone_number', 'address', 'note'];
+    protected $fillable = ['shipping_price', 'total_price', 'payment_method', 'name', 'surname', 'email', 'phone_number', 'address', 'note', 'date'];
 }
