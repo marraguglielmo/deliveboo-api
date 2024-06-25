@@ -6,17 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\DishController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\OrderStatisticsController;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 
@@ -26,12 +16,10 @@ Route::middleware(['auth', 'verified'])
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
         // Rotte CRUD
-        // Route::resource('restaurants', RestaurantController::class);
+        Route::resource('restaurants', RestaurantController::class);
         Route::resource('dishes', DishController::class);
         // Rotte custom
         Route::get('orders', [DishController::class, 'dishOrders'])->name('dish-orders');
-
-
     });
 
 Route::middleware('auth')->group(function () {
@@ -39,5 +27,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/statistics', [OrderStatisticsController::class, 'index'])->name('statistics.index');
+
 
 require __DIR__ . '/auth.php';
