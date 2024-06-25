@@ -7,6 +7,7 @@ use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\DishController;
 use App\Http\Controllers\Admin\DishOrdersController;
+use App\Http\Controllers\Admin\OrderStatisticsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,7 @@ Route::middleware(['auth', 'verified'])
         Route::resource('dishes', DishController::class);
         Route::resource('orders', DishOrdersController::class);
         // Rotte custom
-
+        Route::get('/statistics', [OrderStatisticsController::class, 'index'])->name('statistics.index');
     });
 
 Route::middleware('auth')->group(function () {
@@ -40,4 +41,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require DIR . '/auth.php';
+require __DIR__ . '/auth.php';
