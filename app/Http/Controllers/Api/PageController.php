@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Restaurant;
 use App\Models\Type;
@@ -101,5 +102,30 @@ class PageController extends Controller
                 return view('rejectpayment');
             }
         }
+    }
+
+    public function store(Request $request)
+    {
+        $order_data = $request->all();
+
+        $order_data['shipping_price'] = 0;
+
+        $order_data['payment_method'] = "card";
+
+        $total_price_wip = 0;
+
+        for ($i = 0; $i < count($order_data['cart']); $i++) {
+            $total_price_wip += ($order_data['cart'][$i]['price'] * $order_data['cart'][$i]['quantity']);
+        }
+
+        $order_data['total_price'] = $total_price_wip;
+
+        $new_order = new Order();
+        $new_order->fill($order_data);
+        $new_order->save();
+
+        $success = true;
+
+        return response()->json(compact('order_data', 'success'));
     }
 }
