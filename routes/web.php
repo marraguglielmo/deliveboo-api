@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\DishController;
+use App\Http\Controllers\Admin\DishOrdersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,8 @@ Route::middleware(['auth', 'verified'])
         // Rotte CRUD
         // Route::resource('restaurants', RestaurantController::class);
         Route::resource('dishes', DishController::class);
+        Route::resource('orders', DishOrdersController::class);
         // Rotte custom
-        Route::get('orders', [DishController::class, 'dishOrders'])->name('dish-orders');
-
 
     });
 

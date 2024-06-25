@@ -29,8 +29,8 @@
 
             <tbody>
                 @foreach ($dishes as $dish)
-                    <tr>
-                        <td>
+                    <tr class="text-center">
+                        <td class="d-flex justify-content-center">
                             <div class="img-box">
                                 @if ($dish->image)
                                     @if (Str::startsWith($dish->image, ['http://', 'https://']))
@@ -46,15 +46,18 @@
 
                         <td>{{ $dish->name }}</td>
                         <td>{{ str_replace('.', ',', $dish->price) }}</td>
-                        <td>{{ $dish->description }}</td>
+                        <td class="text-start">{{ $dish->description }}</td>
+
                         <td class="text-center">
                             @if ($dish->available)
                                 <i class="fa-solid fa-check text-success fs-5"></i>
                             @else
                                 <i class="fa-solid fa-xmark text-danger fs-5"></i>
                             @endif
+                        </td>
+
                         <td>
-                            <div class="d-flex">
+                            <div class="d-flex justify-content-center">
                                 <a href="{{ route('admin.dishes.show', $dish) }}">
                                     <button class="btn btn-custom-primary">
                                         <i class="fa-solid fa-info"></i>
@@ -68,8 +71,9 @@
                                 <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-custom-tertiary"><i
-                                            class="fa-solid fa-trash"></i></button>
+                                    <button type="submit" class="btn btn-custom-tertiary">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
                                 </form>
                             </div>
                         </td>
