@@ -24,6 +24,7 @@ class DishController extends Controller
     public function index()
     {
         $dishes = Dish::where('restaurant_id', Auth::user()->restaurant->id)->get();
+
         return view('admin.dishes.index', compact('dishes'));
     }
 
@@ -37,6 +38,7 @@ class DishController extends Controller
         $dish = null;
         $method = 'POST';
         $submit = 'Aggiungi';
+
         return view('admin.dishes.create-edit', compact('route', 'submit', 'title', 'method', 'dish'));
     }
 
@@ -93,6 +95,7 @@ class DishController extends Controller
         $title = 'Modifica il piatto';
         $method = 'PUT';
         $submit = 'Modifica';
+
         return view('admin.dishes.create-edit', compact('route', 'submit', 'title', 'method', 'dish'));
     }
 
@@ -112,7 +115,6 @@ class DishController extends Controller
 
         $form_data['available'] = $request->has('available') ? 1 : 0;
 
-
         if (array_key_exists('image', $form_data)) {
             $image_path = Storage::put('uploads', $form_data['image']);
 
@@ -123,7 +125,6 @@ class DishController extends Controller
 
         $dish->update($form_data);
 
-
         return redirect()->route('admin.dishes.index', $dish)->with('success', 'Il piatto ' . $dish->name . ' è stato modificato correttamente');
     }
 
@@ -133,6 +134,7 @@ class DishController extends Controller
     public function destroy(Dish $dish)
     {
         $dish = Dish::find($dish->id);
+
         if ($dish) {
             $dish->delete();
             return redirect()->route('admin.dishes.index')->with('success', 'Il piatto ' . $dish->name . ' è stato eliminato correttamente');
@@ -141,13 +143,4 @@ class DishController extends Controller
 
     /* FUNZIONI CUSTOM */
 
-    public function dishOrders()
-    {
-
-        $orders = Order::whereHas('dishes', function ($query) {
-            $query->where('restaurant_id', Auth::user()->id);
-        })->with('dishes')->get();
-
-        return view('admin.orders.index', compact('orders'));
-    }
 }
