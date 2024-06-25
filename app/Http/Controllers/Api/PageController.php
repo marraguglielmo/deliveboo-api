@@ -120,7 +120,7 @@ class PageController extends Controller
 
         $order_data['total_price'] = $total_price_wip;
 
-        $order_data['date'] = $order_data['updated_at'];
+        $order_data['date'] = now();
 
         $new_order = new Order();
         $new_order->fill($order_data);
