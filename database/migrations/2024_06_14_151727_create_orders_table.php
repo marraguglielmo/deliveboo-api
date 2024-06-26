@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('address');
             $table->text('note')->nullable();
             $table->dateTime('date');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

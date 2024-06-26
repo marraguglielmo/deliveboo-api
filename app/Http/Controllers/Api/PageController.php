@@ -9,6 +9,7 @@ use App\Models\Restaurant;
 use App\Models\Type;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
@@ -79,6 +80,7 @@ class PageController extends Controller
         $form_data = $request->all();
         $nonceFromTheClient = $form_data["payment_method_nonce"];
         $total_amount = $form_data['total_order'];
+        $order_id = $form_data['id'];
 
         $gateway = new \Braintree\Gateway([
             'environment' => env('BRAINTREE_ENV'),
@@ -98,6 +100,9 @@ class PageController extends Controller
             ]);
 
             if ($result->success) {
+
+                DB::table('orders')->where('id', $order_id)->update(['status' => $result->success]);
+
                 return view('thankyoupage');
             } else {
                 return view('rejectpayment');
@@ -126,6 +131,19 @@ class PageController extends Controller
         $new_order = new Order();
         $new_order->fill($order_data);
         $new_order->save();
+
+        $order_data['id'] = $new_order->id;
+
+        foreach ($order_data['cart'] as $cart_item) {
+            DB::table('dish_order')->insert([
+
+                'dish_id' => $cart_item['id'],
+                'order_id' => $new_order->id,
+
+                'total_price' => $cart_item['quantity'] * $cart_item['price'],
+                'quantity' => $cart_item['quantity'],
+            ]);
+        }
 
         $success = true;
 

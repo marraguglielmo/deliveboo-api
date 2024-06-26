@@ -10,9 +10,7 @@ use Faker\Generator as Faker;
 
 class OrderTableSeeder extends Seeder
 {
-    /**
 
-Run the database seeds.*/
     public function run(Faker $faker): void
     {
         for ($i = 0; $i < 20; $i++) {
@@ -27,6 +25,7 @@ Run the database seeds.*/
             $new_order->address = "Via Roma " . ($i + 1);
             $new_order->note = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit";
             $new_order->date = $faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d H:i:s');
+            $new_order->status = true;
             $new_order->save();
         }
     }
