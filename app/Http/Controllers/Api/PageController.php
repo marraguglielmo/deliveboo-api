@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\OrderRequest;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Restaurant;
@@ -110,7 +111,7 @@ class PageController extends Controller
         }
     }
 
-    public function store(Request $request)
+    public function store(OrderRequest $request)
     {
         $order_data = $request->all();
 
