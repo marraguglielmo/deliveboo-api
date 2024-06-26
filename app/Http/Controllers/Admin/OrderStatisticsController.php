@@ -8,36 +8,107 @@ use App\Models\Restaurant;
 use Carbon\Carbon;
 use DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class OrderStatisticsController extends Controller
 {
     public function index()
     {
-        // Recupera il numero di ordini per ristorante per ogni mese usando Eloquent
-        $orders = Order::with('dishes')
-            ->selectRaw('dishes.restaurant_id, MONTH(orders.date) as month, COUNT(orders.id) as total_orders')
-            ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
-            ->join('dishes', 'dish_order.dish_id', '=', 'dishes.id')
-            ->groupBy('dishes.restaurant_id', 'month')
-            ->get();
+        // Ordini univoci fatti al ristorante loggato
+        $orders = Order::whereHas('dishes', function ($query) {
+            $query->where('restaurant_id', Auth::user()->id);
+        })->with('dishes')->get();
 
-        // Recupera tutti i ristoranti
-        $restaurants = Restaurant::all();
+        $monthsOrders = [
+            [
+                'year' => '23',
+                'month' => '06',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '23',
+                'month' => '07',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '23',
+                'month' => '08',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '23',
+                'month' => '09',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '23',
+                'month' => '10',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '23',
+                'month' => '11',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '23',
+                'month' => '12',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '24',
+                'month' => '01',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '24',
+                'month' => '02',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '24',
+                'month' => '03',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '24',
+                'month' => '04',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '24',
+                'month' => '05',
+                'quantity' => 0,
+            ],
+            [
+                'year' => '24',
+                'month' => '06',
+                'quantity' => 0,
+            ]
+        ];
 
-        // Prepara i dati per le statistiche
-        $statistics = [];
-        foreach ($restaurants as $restaurant) {
-            $monthlyOrders = array_fill(1, 12, 0); // Inizializza tutti i mesi a 0
-            foreach ($orders as $order) {
-                if ($order->restaurant_id == $restaurant->id) {
-                    $monthlyOrders[$order->month] = $order->total_orders;
+        foreach ($orders as $order) {
+            $timestamp = strtotime($order->date);
+            $month = date('m', $timestamp);
+            $year = date('y', $timestamp);
+
+            foreach ($monthsOrders as &$monthOrder) {
+                if ($year == $monthOrder['year'] && $month == $monthOrder['month']) {
+                    $monthOrder['quantity']++;
+                    break;
                 }
             }
-            $statistics[] = [
-                'restaurant' => $restaurant->business_name,
-                'orders' => $monthlyOrders,
-            ];
         }
+
+        $orders_num = [];
+
+        foreach ($monthsOrders as &$monthOrder) {
+            array_push($orders_num, $monthOrder['quantity']);
+        }
+
+        $statistics = [
+            'orders' => $orders_num,
+        ];
 
         // Passa i dati alla vista
         return view('statistics.index', compact('statistics'));

@@ -1,58 +1,39 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.admin')
 
-<head>
-    <title>Order Statistics</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
-<body>
-    <div>
-        <canvas id="orderChart"></canvas>
+@section('content')
+    <div class="container">
+        <h2>Grafici</h2>
+        <div>
+            <canvas id="orderChart"></canvas>
+        </div>
     </div>
 
     <script>
-        var ctx = document.getElementById('orderChart').getContext('2d');
-        var statistics = @json($statistics);
+        let ctx = document.getElementById('orderChart');
 
-        var labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
-            'November', 'December'
-        ];
+        let datasets = [];
+        const statistics = @json($statistics);
 
-        var datasets = [];
-        // Assuming statistics is an array of objects with properties 'restaurant' and 'orders'
-        statistics.forEach(function(stat, index) {
-            datasets.push({
-                label: 'Dataset ' + (index + 1),
-                data: stat.orders,
-                borderColor: index === 0 ? 'rgba(255, 99, 132, 1)' : 'rgba(54, 162, 235, 1)',
-                backgroundColor: index === 0 ? 'rgba(255, 99, 132, 0.5)' : 'rgba(54, 162, 235, 0.5)',
-                type: index === 0 ? 'bar' : 'line',
-                stack: 'combined'
-            });
-        });
-
-        var myChart = new Chart(ctx, {
+        new Chart(ctx, {
+            type: 'bar',
             data: {
-                labels: labels.slice(0, statistics[0].orders.length),
-                datasets: datasets
+                labels: ['Giugno 2023', 'Luglio 2023', 'Agosto 2023', 'Settembre 2023', 'Ottobre 2023',
+                    'Novembre 2023', 'Dicembre 2023', 'Gennaio 2024',
+                    'Febbraio 2024', 'Marzo 2024', 'Aprile 2024', 'Maggio 2024', 'Giugno 2024'
+                ],
+                datasets: [{
+                    label: 'numero di ordini',
+                    data: statistics.orders,
+                    borderWidth: 1
+                }]
             },
             options: {
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Chart.js Stacked Line/Bar Chart'
-                    }
-                },
                 scales: {
                     y: {
-                        stacked: true,
                         beginAtZero: true
                     }
                 }
             }
         });
     </script>
-</body>
-
-</html>
+@endsection

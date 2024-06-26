@@ -25,7 +25,7 @@
             <tbody>
                 @forelse ($orders as $order)
                     <tr class="text-center">
-                        <td scope="row">{{ Helper::formatDate($order->updated_at) }}</td>
+                        <td scope="row">{{ Helper::formatDate($order->date) }}</td>
                         <td>{{ $order->name }}</td>
                         <td>{{ $order->surname }}</td>
                         <td>{{ str_replace('.', ',', $order->total_price) }}</td>
