@@ -65,38 +65,38 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Napoli Delight",
-        "address" => "Viale Piave 38",
-        "phone_number" => "0254857262",
-        "image" => "https://images.unsplash.com/photo-1579751626657-72bc17010498?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["pizzeria", "italiano"],
-        "dishes" => [
-            [
-                "name" => "Pizza Marinara",
-                "price" => 8.50,
-                "ingredients" => ["pomodoro", "origano"],
-                "image" => "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
+    // [
+    //     "business_name" => "Napoli Delight",
+    //     "address" => "Viale Piave 38",
+    //     "phone_number" => "0254857262",
+    //     "image" => "https://images.unsplash.com/photo-1579751626657-72bc17010498?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["pizzeria", "italiano"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Pizza Marinara",
+    //             "price" => 8.50,
+    //             "ingredients" => ["pomodoro", "origano"],
+    //             "image" => "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
 
-            ],
-            [
-                "name" => "Pizza Capricciosa",
-                "price" => 9.00,
-                "ingredients" => ["pomodoro", "mozzarella", "prosciutto cotto", "funghi", "olive", "carciofini"],
-                "image" => "https://images.unsplash.com/photo-1632641736168-3a77815a6384?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
+    //         ],
+    //         [
+    //             "name" => "Pizza Capricciosa",
+    //             "price" => 9.00,
+    //             "ingredients" => ["pomodoro", "mozzarella", "prosciutto cotto", "funghi", "olive", "carciofini"],
+    //             "image" => "https://images.unsplash.com/photo-1632641736168-3a77815a6384?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
 
-            ],
-            [
-                "name" => "Pizza Quattro Formaggi",
-                "price" => 8.50,
-                "ingredients" => ["pomodoro", "mozzarella", "salame piccante"],
-                "image" => "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    //         ],
+    //         [
+    //             "name" => "Pizza Quattro Formaggi",
+    //             "price" => 8.50,
+    //             "ingredients" => ["pomodoro", "mozzarella", "salame piccante"],
+    //             "image" => "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Pizza e Passione",
         "address" => "Via Savona 23",
@@ -161,38 +161,38 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Panda Palace",
-        "address" => "Via Luigi Canonica 12",
-        "phone_number" => "02898572479",
-        "image" => "https://images.unsplash.com/photo-1559667709-eabb5b50117a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["cinese"],
-        "dishes" => [
-            [
-                "name" => "Anatra alla Pechinese",
-                "price" => 12.50,
-                "ingredients" => ["anatra", "miele", "sake", "zenzero", "cipolla verde", "zucchero di canna"],
-                "image" => "https://images.unsplash.com/photo-1543362426-39c5b9067c0f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
+    // [
+    //     "business_name" => "Panda Palace",
+    //     "address" => "Via Luigi Canonica 12",
+    //     "phone_number" => "02898572479",
+    //     "image" => "https://images.unsplash.com/photo-1559667709-eabb5b50117a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["cinese"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Anatra alla Pechinese",
+    //             "price" => 12.50,
+    //             "ingredients" => ["anatra", "miele", "sake", "zenzero", "cipolla verde", "zucchero di canna"],
+    //             "image" => "https://images.unsplash.com/photo-1543362426-39c5b9067c0f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
 
-            ],
-            [
-                "name" => "Gamberi in Salsa Piccante",
-                "price" => 10.00,
-                "ingredients" => ["gamberi", "peperoncino", "aglio", "salsa di soia", "ketchup"],
-                "image" => "https://images.unsplash.com/photo-1535400255456-984241443b29?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
+    //         ],
+    //         [
+    //             "name" => "Gamberi in Salsa Piccante",
+    //             "price" => 10.00,
+    //             "ingredients" => ["gamberi", "peperoncino", "aglio", "salsa di soia", "ketchup"],
+    //             "image" => "https://images.unsplash.com/photo-1535400255456-984241443b29?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
 
-            ],
-            [
-                "name" => "Zuppa di Wonton",
-                "price" => 6.50,
-                "ingredients" => ["pasta di wonton", "carne di maiale", "gamberetti", "cipolla verde", "zenzero", "salsa di soia"],
-                "image" => "https://images.unsplash.com/photo-1504669221159-56caf7b07f57?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => false
-            ],
-        ]
-    ],
+    //         ],
+    //         [
+    //             "name" => "Zuppa di Wonton",
+    //             "price" => 6.50,
+    //             "ingredients" => ["pasta di wonton", "carne di maiale", "gamberetti", "cipolla verde", "zenzero", "salsa di soia"],
+    //             "image" => "https://images.unsplash.com/photo-1504669221159-56caf7b07f57?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => false
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Mandarin Magic",
         "address" => "Via Sirtori 14",
@@ -257,38 +257,38 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Sakura Sushi",
-        "address" => "Corso Magenta 12",
-        "phone_number" => "02848587769",
-        "image" => "https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["giapponese"],
-        "dishes" => [
-            [
-                "name" => "Sushi Misto",
-                "price" => 21.50,
-                "ingredients" => ["riso", "gamberi", "salmone", "tonno", "avocado", "alga nori", "wasabi", "zenzero marinato"],
-                "image" => "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => false
+    // [
+    //     "business_name" => "Sakura Sushi",
+    //     "address" => "Corso Magenta 12",
+    //     "phone_number" => "02848587769",
+    //     "image" => "https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["giapponese"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Sushi Misto",
+    //             "price" => 21.50,
+    //             "ingredients" => ["riso", "gamberi", "salmone", "tonno", "avocado", "alga nori", "wasabi", "zenzero marinato"],
+    //             "image" => "https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => false
 
-            ],
-            [
-                "name" => "Sashimi di Tonno",
-                "price" => 6.00,
-                "ingredients" => ["tonno", "wasabi", "zenzero marinato", "salsa di soia"],
-                "image" => "https://images.unsplash.com/photo-1490052048947-f6d652c8512a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
+    //         ],
+    //         [
+    //             "name" => "Sashimi di Tonno",
+    //             "price" => 6.00,
+    //             "ingredients" => ["tonno", "wasabi", "zenzero marinato", "salsa di soia"],
+    //             "image" => "https://images.unsplash.com/photo-1490052048947-f6d652c8512a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
 
-            ],
-            [
-                "name" => "Uramaki California",
-                "price" => 8.00,
-                "ingredients" => ["riso", "salmone", "avocado", "surimi", "cetriolo", "semi di sesamo"],
-                "image" => "https://images.unsplash.com/photo-1617196035154-1e7e6e28b0db?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    //         ],
+    //         [
+    //             "name" => "Uramaki California",
+    //             "price" => 8.00,
+    //             "ingredients" => ["riso", "salmone", "avocado", "surimi", "cetriolo", "semi di sesamo"],
+    //             "image" => "https://images.unsplash.com/photo-1617196035154-1e7e6e28b0db?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Tokyo Tempura",
         "address" => "Via Monte Rosa 4",
@@ -445,66 +445,66 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Cantina Mexicana",
-        "address" => "Piazza della Repubblica 8",
-        "phone_number" => "0236598741",
-        "image" => "https://images.unsplash.com/photo-1625167171750-419e95f877d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["messicano"],
-        "dishes" => [
-            [
-                "name" => "Burrito de Carne Asada",
-                "price" => 9.00,
-                "ingredients" => ["tortilla di farina", "manzo", "fagioli neri", "riso", "formaggio", "salsa"],
-                "image" => "https://images.unsplash.com/photo-1562059390-a761a084768e?q=80&w=2019&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Nachos con Queso",
-                "price" => 6.00,
-                "ingredients" => ["tortilla chips", "formaggio fuso", "jalapeños", "fagioli", "salsa"],
-                "image" => "https://images.unsplash.com/photo-1582169296194-e4d644c48063?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Tostadas de Tinga",
-                "price" => 7.50,
-                "ingredients" => ["tostadas", "pollo", "pomodoro", "cipolla", "lattuga", "panna acida"],
-                "image" => "https://images.unsplash.com/photo-1613585435238-5577aa11505f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
-    [
-        "business_name" => "Taqueria El Sol",
-        "address" => "Via Torino 20",
-        "phone_number" => "0245896321",
-        "image" => "https://plus.unsplash.com/premium_photo-1681406994502-bb673c265877?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["messicano"],
-        "dishes" => [
-            [
-                "name" => "Tacos de Barbacoa",
-                "price" => 8.00,
-                "ingredients" => ["tortilla di mais", "agnello", "cipolla", "coriandolo", "salsa roja"],
-                "image" => "https://plus.unsplash.com/premium_photo-1661730314652-911662c0d86e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Sopes con Chorizo",
-                "price" => 7.00,
-                "ingredients" => ["masa", "chorizo", "fagioli", "lattuga", "formaggio", "panna acida"],
-                "image" => "https://images.unsplash.com/photo-1700629622456-13d722217d29?q=80&w=1997&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Elote",
-                "price" => 4.50,
-                "ingredients" => ["pannocchia", "maionese", "formaggio cotija", "peperoncino", "lime"],
-                "image" => "https://images.unsplash.com/photo-1619719015141-8f5c1b8dfedf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    // [
+    //     "business_name" => "Cantina Mexicana",
+    //     "address" => "Piazza della Repubblica 8",
+    //     "phone_number" => "0236598741",
+    //     "image" => "https://images.unsplash.com/photo-1625167171750-419e95f877d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["messicano"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Burrito de Carne Asada",
+    //             "price" => 9.00,
+    //             "ingredients" => ["tortilla di farina", "manzo", "fagioli neri", "riso", "formaggio", "salsa"],
+    //             "image" => "https://images.unsplash.com/photo-1562059390-a761a084768e?q=80&w=2019&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Nachos con Queso",
+    //             "price" => 6.00,
+    //             "ingredients" => ["tortilla chips", "formaggio fuso", "jalapeños", "fagioli", "salsa"],
+    //             "image" => "https://images.unsplash.com/photo-1582169296194-e4d644c48063?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Tostadas de Tinga",
+    //             "price" => 7.50,
+    //             "ingredients" => ["tostadas", "pollo", "pomodoro", "cipolla", "lattuga", "panna acida"],
+    //             "image" => "https://images.unsplash.com/photo-1613585435238-5577aa11505f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
+    // [
+    //     "business_name" => "Taqueria El Sol",
+    //     "address" => "Via Torino 20",
+    //     "phone_number" => "0245896321",
+    //     "image" => "https://plus.unsplash.com/premium_photo-1681406994502-bb673c265877?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["messicano"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Tacos de Barbacoa",
+    //             "price" => 8.00,
+    //             "ingredients" => ["tortilla di mais", "agnello", "cipolla", "coriandolo", "salsa roja"],
+    //             "image" => "https://plus.unsplash.com/premium_photo-1661730314652-911662c0d86e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Sopes con Chorizo",
+    //             "price" => 7.00,
+    //             "ingredients" => ["masa", "chorizo", "fagioli", "lattuga", "formaggio", "panna acida"],
+    //             "image" => "https://images.unsplash.com/photo-1700629622456-13d722217d29?q=80&w=1997&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Elote",
+    //             "price" => 4.50,
+    //             "ingredients" => ["pannocchia", "maionese", "formaggio cotija", "peperoncino", "lime"],
+    //             "image" => "https://images.unsplash.com/photo-1619719015141-8f5c1b8dfedf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Taj Mahal",
         "address" => "Via Dante 14",
@@ -595,36 +595,36 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Curry Express",
-        "address" => "Corso Como 15",
-        "phone_number" => "0236478510",
-        "image" => "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["indiano"],
-        "dishes" => [
-            [
-                "name" => "Lamb Vindaloo",
-                "price" => 13.00,
-                "ingredients" => ["agnello", "aceto", "spezie", "patate", "pomodoro"],
-                "image" => "https://images.unsplash.com/photo-1628294897055-a9bfca0f47ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Aloo Gobi",
-                "price" => 7.50,
-                "ingredients" => ["patate", "cavolfiore", "spezie", "pomodoro", "coriandolo"],
-                "image" => "https://images.unsplash.com/photo-1652545296893-ff9227b3512e?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Mango Lassi",
-                "price" => 3.50,
-                "ingredients" => ["mango", "yogurt", "zucchero", "cardamomo"],
-                "image" => "https://images.unsplash.com/photo-1688458297155-228a3b1e5b49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    // [
+    //     "business_name" => "Curry Express",
+    //     "address" => "Corso Como 15",
+    //     "phone_number" => "0236478510",
+    //     "image" => "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["indiano"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Lamb Vindaloo",
+    //             "price" => 13.00,
+    //             "ingredients" => ["agnello", "aceto", "spezie", "patate", "pomodoro"],
+    //             "image" => "https://images.unsplash.com/photo-1628294897055-a9bfca0f47ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Aloo Gobi",
+    //             "price" => 7.50,
+    //             "ingredients" => ["patate", "cavolfiore", "spezie", "pomodoro", "coriandolo"],
+    //             "image" => "https://images.unsplash.com/photo-1652545296893-ff9227b3512e?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Mango Lassi",
+    //             "price" => 3.50,
+    //             "ingredients" => ["mango", "yogurt", "zucchero", "cardamomo"],
+    //             "image" => "https://images.unsplash.com/photo-1688458297155-228a3b1e5b49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Seoul Garden",
         "address" => "Via Roma 45",
@@ -685,36 +685,36 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Kimchi Palace",
-        "address" => "Via Dante 89",
-        "phone_number" => "0273648591",
-        "image" => "https://images.unsplash.com/photo-1693429308125-3be7b105ad56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["coreano", "giapponese"],
-        "dishes" => [
-            [
-                "name" => "Kimchi Bokkeumbap",
-                "price" => 9.00,
-                "ingredients" => ["riso", "kimchi", "uovo", "verdure", "carne di maiale"],
-                "image" => "https://images.unsplash.com/photo-1679844795701-4c7864627456?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Sundubu Jjigae",
-                "price" => 8.00,
-                "ingredients" => ["tofu morbido", "frutti di mare", "uovo", "cipolla verde", "brodo"],
-                "image" => "https://images.unsplash.com/photo-1601974915460-f55ea921f8ad?q=80&w=1989&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Haemul Pajeon",
-                "price" => 7.50,
-                "ingredients" => ["farina", "uova", "cipolla verde", "frutti di mare", "salsa di soia"],
-                "image" => "https://images.unsplash.com/photo-1668283653825-37b80f055b05?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    // [
+    //     "business_name" => "Kimchi Palace",
+    //     "address" => "Via Dante 89",
+    //     "phone_number" => "0273648591",
+    //     "image" => "https://images.unsplash.com/photo-1693429308125-3be7b105ad56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["coreano", "giapponese"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Kimchi Bokkeumbap",
+    //             "price" => 9.00,
+    //             "ingredients" => ["riso", "kimchi", "uovo", "verdure", "carne di maiale"],
+    //             "image" => "https://images.unsplash.com/photo-1679844795701-4c7864627456?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Sundubu Jjigae",
+    //             "price" => 8.00,
+    //             "ingredients" => ["tofu morbido", "frutti di mare", "uovo", "cipolla verde", "brodo"],
+    //             "image" => "https://images.unsplash.com/photo-1601974915460-f55ea921f8ad?q=80&w=1989&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Haemul Pajeon",
+    //             "price" => 7.50,
+    //             "ingredients" => ["farina", "uova", "cipolla verde", "frutti di mare", "salsa di soia"],
+    //             "image" => "https://images.unsplash.com/photo-1668283653825-37b80f055b05?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Han River",
         "address" => "Piazza Duomo 15",
@@ -775,36 +775,36 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Saigon Street Food",
-        "address" => "Corso Venezia 55",
-        "phone_number" => "0245678901",
-        "image" => "https://images.unsplash.com/photo-1693429308125-3be7b105ad56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["vietnamita"],
-        "dishes" => [
-            [
-                "name" => "Bun Cha",
-                "price" => 9.00,
-                "ingredients" => ["maiale grigliato", "vermicelli di riso", "erbe aromatiche", "salsa di pesce"],
-                "image" => "https://images.unsplash.com/photo-1676813904943-c67e000fb0d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Cha Gio",
-                "price" => 6.50,
-                "ingredients" => ["involtini primavera", "maiale", "gamberi", "verdure", "salsa di pesce"],
-                "image" => "https://images.unsplash.com/photo-1695712641388-87c0f9c2d36e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Com Tam",
-                "price" => 7.50,
-                "ingredients" => ["riso spezzato", "maiale alla griglia", "uovo fritto", "verdure in salamoia"],
-                "image" => "https://images.unsplash.com/photo-1648421331147-9fcfab29536e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    // [
+    //     "business_name" => "Saigon Street Food",
+    //     "address" => "Corso Venezia 55",
+    //     "phone_number" => "0245678901",
+    //     "image" => "https://images.unsplash.com/photo-1693429308125-3be7b105ad56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["vietnamita"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Bun Cha",
+    //             "price" => 9.00,
+    //             "ingredients" => ["maiale grigliato", "vermicelli di riso", "erbe aromatiche", "salsa di pesce"],
+    //             "image" => "https://images.unsplash.com/photo-1676813904943-c67e000fb0d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Cha Gio",
+    //             "price" => 6.50,
+    //             "ingredients" => ["involtini primavera", "maiale", "gamberi", "verdure", "salsa di pesce"],
+    //             "image" => "https://images.unsplash.com/photo-1695712641388-87c0f9c2d36e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Com Tam",
+    //             "price" => 7.50,
+    //             "ingredients" => ["riso spezzato", "maiale alla griglia", "uovo fritto", "verdure in salamoia"],
+    //             "image" => "https://images.unsplash.com/photo-1648421331147-9fcfab29536e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Little Hanoi",
         "address" => "Via Marconi 12",
@@ -955,36 +955,36 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Siam Square",
-        "address" => "Piazza San Marco 28",
-        "phone_number" => "0254893765",
-        "image" => "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["thailandese", "cinese"],
-        "dishes" => [
-            [
-                "name" => "Red Curry",
-                "price" => 9.00,
-                "ingredients" => ["pollo", "latte di cocco", "peperoncino rosso", "basilico thai", "zucchine"],
-                "image" => "https://images.unsplash.com/photo-1627366422957-3efa9c6df0fc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Pad See Ew",
-                "price" => 8.00,
-                "ingredients" => ["noodles di riso", "uovo", "broccoli cinesi", "salsa di soia", "maiale"],
-                "image" => "https://images.unsplash.com/photo-1553621043-f607bfbf6640?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Tod Mun Pla",
-                "price" => 6.50,
-                "ingredients" => ["pesce", "curry rosso", "fagiolini", "foglie di kaffir", "salsa di pesce"],
-                "image" => "https://images.unsplash.com/photo-1587040690786-b091531837a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    // [
+    //     "business_name" => "Siam Square",
+    //     "address" => "Piazza San Marco 28",
+    //     "phone_number" => "0254893765",
+    //     "image" => "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["thailandese", "cinese"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Red Curry",
+    //             "price" => 9.00,
+    //             "ingredients" => ["pollo", "latte di cocco", "peperoncino rosso", "basilico thai", "zucchine"],
+    //             "image" => "https://images.unsplash.com/photo-1627366422957-3efa9c6df0fc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Pad See Ew",
+    //             "price" => 8.00,
+    //             "ingredients" => ["noodles di riso", "uovo", "broccoli cinesi", "salsa di soia", "maiale"],
+    //             "image" => "https://images.unsplash.com/photo-1553621043-f607bfbf6640?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Tod Mun Pla",
+    //             "price" => 6.50,
+    //             "ingredients" => ["pesce", "curry rosso", "fagiolini", "foglie di kaffir", "salsa di pesce"],
+    //             "image" => "https://images.unsplash.com/photo-1587040690786-b091531837a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Le Petit Bistro",
         "address" => "Via Montenapoleone 12",
@@ -1075,36 +1075,36 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Café de Paris",
-        "address" => "Piazza del Duomo 3, Milano",
-        "phone_number" => "0456789012",
-        "image" => "https://images.unsplash.com/photo-1579712267685-42da80f60aa4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["francese"],
-        "dishes" => [
-            [
-                "name" => "Lumache al burro",
-                "price" => 15.00,
-                "ingredients" => ["lumache", "burro", "aglio", "prezzemolo"],
-                "image" => "https://img.freepik.com/foto-premium/escargots-de-bourgogne-lumache-con-burro-alle-erbe-mangiare-sano-cibo-francese_97840-2962.jpg",
-                "available" => true
-            ],
-            [
-                "name" => "Anatra all'arancia",
-                "price" => 19.50,
-                "ingredients" => ["anatra", "arancia", "vino bianco", "brodo di pollo", "burro"],
-                "image" => "https://images.unsplash.com/photo-1607403217872-27422b4ece0b?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Profiteroles",
-                "price" => 7.50,
-                "ingredients" => ["pasta choux", "crema pasticcera", "caramello"],
-                "image" => "https://images.unsplash.com/photo-1625735562355-0a1d3173fbb1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-        ]
-    ],
+    // [
+    //     "business_name" => "Café de Paris",
+    //     "address" => "Piazza del Duomo 3, Milano",
+    //     "phone_number" => "0456789012",
+    //     "image" => "https://images.unsplash.com/photo-1579712267685-42da80f60aa4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["francese"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Lumache al burro",
+    //             "price" => 15.00,
+    //             "ingredients" => ["lumache", "burro", "aglio", "prezzemolo"],
+    //             "image" => "https://img.freepik.com/foto-premium/escargots-de-bourgogne-lumache-con-burro-alle-erbe-mangiare-sano-cibo-francese_97840-2962.jpg",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Anatra all'arancia",
+    //             "price" => 19.50,
+    //             "ingredients" => ["anatra", "arancia", "vino bianco", "brodo di pollo", "burro"],
+    //             "image" => "https://images.unsplash.com/photo-1607403217872-27422b4ece0b?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Profiteroles",
+    //             "price" => 7.50,
+    //             "ingredients" => ["pasta choux", "crema pasticcera", "caramello"],
+    //             "image" => "https://images.unsplash.com/photo-1625735562355-0a1d3173fbb1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "El Patio de Flamenco",
         "address" => "Via Torino 21",
@@ -1195,36 +1195,36 @@ return [
             ],
         ]
     ],
-    [
-        "business_name" => "Tapas y Vino",
-        "address" => "Piazza Gae Aulenti 3",
-        "phone_number" => "0456789012",
-        "image" => "https://images.unsplash.com/photo-1542986151-13ecf8e0453e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "types" => ["spagnolo"],
-        "dishes" => [
-            [
-                "name" => "Prosciutto Ibérico",
-                "price" => 20.00,
-                "ingredients" => ["prosciutto iberico", "pane", "olio d'oliva"],
-                "image" => "https://images.unsplash.com/photo-1640703935633-ca20bef6c38f?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Crocchette di prosciutto",
-                "price" => 12.00,
-                "ingredients" => ["prosciutto", "besciamella", "farina", "uova", "pangrattato"],
-                "image" => "https://images.unsplash.com/photo-1674480367370-4e4bd64eb3c5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                "available" => true
-            ],
-            [
-                "name" => "Torta di Santiago",
-                "price" => 7.00,
-                "ingredients" => ["mandorle", "zucchero", "uova", "limone", "cannella"],
-                "image" => "https://primochef.it/wp-content/uploads/2021/05/SH_torta_di_santiago.jpg",
-                "available" => true
-            ],
-        ]
-    ],
+    // [
+    //     "business_name" => "Tapas y Vino",
+    //     "address" => "Piazza Gae Aulenti 3",
+    //     "phone_number" => "0456789012",
+    //     "image" => "https://images.unsplash.com/photo-1542986151-13ecf8e0453e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     "types" => ["spagnolo"],
+    //     "dishes" => [
+    //         [
+    //             "name" => "Prosciutto Ibérico",
+    //             "price" => 20.00,
+    //             "ingredients" => ["prosciutto iberico", "pane", "olio d'oliva"],
+    //             "image" => "https://images.unsplash.com/photo-1640703935633-ca20bef6c38f?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Crocchette di prosciutto",
+    //             "price" => 12.00,
+    //             "ingredients" => ["prosciutto", "besciamella", "farina", "uova", "pangrattato"],
+    //             "image" => "https://images.unsplash.com/photo-1674480367370-4e4bd64eb3c5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //             "available" => true
+    //         ],
+    //         [
+    //             "name" => "Torta di Santiago",
+    //             "price" => 7.00,
+    //             "ingredients" => ["mandorle", "zucchero", "uova", "limone", "cannella"],
+    //             "image" => "https://primochef.it/wp-content/uploads/2021/05/SH_torta_di_santiago.jpg",
+    //             "available" => true
+    //         ],
+    //     ]
+    // ],
     [
         "business_name" => "Poke Paradise",
         "address" => "Via Dante 15",

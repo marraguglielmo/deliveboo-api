@@ -13,7 +13,7 @@ class OrderTableSeeder extends Seeder
 
     public function run(Faker $faker): void
     {
-        for ($i = 0; $i < 150; $i++) {
+        for ($i = 0; $i < 350; $i++) {
             $new_order = new Order();
             $new_order->shipping_price = mt_rand(2, 5);
             $new_order->total_price = mt_rand(10, 50);
