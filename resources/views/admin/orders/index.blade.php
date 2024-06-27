@@ -51,6 +51,9 @@
                 @endforelse
             </tbody>
         </table>
+        <div class="container pagination-container">
+            {{ $orders->links('pagination::bootstrap-5') }}
+        </div>
 
     </div>
 @endsection
