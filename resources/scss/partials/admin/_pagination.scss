@@ -1,0 +1,22 @@
+.pagination{
+    background-color: transparent;
+    .page-link{
+        color: #001A23;
+        border-radius: 5px;
+        &:focus{
+            box-shadow: none;
+        }
+        &:hover{
+            color: #001A23;
+        }
+    }
+    .page-item.active .page-link{
+        background-color: $color-primary;
+        color: white;
+        cursor: pointer;
+    }
+    .page-item .page-link{
+        border-color: transparent;
+        margin: 0 2px;
+    }
+}

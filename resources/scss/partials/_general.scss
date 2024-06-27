@@ -24,6 +24,7 @@ a {
 }
 
 .table-custom {
+    border-radius: 25px !important;
     thead {
         th {
             background-color: $color-primary;
@@ -34,6 +35,9 @@ a {
     tbody {
         td {
             vertical-align: middle;
+        }
+        tr{
+            height: 82px !important;
         }
     }
 }
