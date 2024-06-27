@@ -1345,11 +1345,274 @@ return [
             ],
         ]
     ],
-
-
-
-
-
-
-
+    [
+        "business_name" => "Ethiopian Delights",
+        "address" => "Via Paolo Sarpi 30",
+        "phone_number" => "0123456789",
+        "image" => "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["etiope"],
+        "dishes" => [
+            [
+                "name" => "Doro Wat",
+                "price" => 15.00,
+                "ingredients" => ["pollo", "cipolle", "burro chiarificato", "peperoni etiopici", "spezie"],
+                "image" => "https://www.foodandwine.com/thmb/NUUBSTe1QLuCkIeRoT9puQGnNwU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Doro-Wat-FT-RECIPE1123-3039296a65154fc5a079ac208c7cee05.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Injera",
+                "price" => 12.00,
+                "ingredients" => ["farina di teff", "lievito naturale", "acqua", "sale"],
+                "image" => "https://cdn.britannica.com/13/250513-050-1304A5E6/Injera-Ethiopian-bread.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Misir Wat",
+                "price" => 11.50,
+                "ingredients" => ["lenticchie rosse", "cipolle", "burro chiarificato", "peperoni etiopici", "spezie"],
+                "image" => "https://i0.wp.com/mealsbymavis.com/wp-content/uploads/2019/09/misirwat_2.png?fit=1200%2C800&ssl=1",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Taste of Ethiopia",
+        "address" => "Via Washington 5",
+        "phone_number" => "0234567890",
+        "image" => "https://images.unsplash.com/photo-1634650947274-0c3fa9d8ee8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["etiope"],
+        "dishes" => [
+            [
+                "name" => "Kitfo",
+                "price" => 16.50,
+                "ingredients" => ["manzo macinato crudo", "burro chiarificato", "peperoni etiopici", "spezie"],
+                "image" => "https://d1c8xu194km6ge.cloudfront.net/assets/421893/kefetohero_HD1280.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Shiro",
+                "price" => 10.00,
+                "ingredients" => ["cicerchie in polvere", "cipolle", "burro chiarificato", "peperoni etiopici", "spezie"],
+                "image" => "https://www.africarivista.it/wp-content/uploads/2021/05/shir%C2%A6-2.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Gomen Wat",
+                "price" => 12.00,
+                "ingredients" => ["spinaci", "cipolle", "burro chiarificato", "peperoni etiopici", "spezie"],
+                "image" => "https://i.pinimg.com/736x/68/8d/48/688d48006c7d59067af8b06dc67eb746.jpg",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Ethiopian Flavors",
+        "address" => "Via Solferino 10",
+        "phone_number" => "0345678901",
+        "image" => "https://images.unsplash.com/photo-1528451635828-f28cd48439a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["etiope"],
+        "dishes" => [
+            [
+                "name" => "Tibs",
+                "price" => 14.00,
+                "ingredients" => ["manzo", "cipolle", "peperoni etiopici", "burro chiarificato", "spezie"],
+                "image" => "https://blog.bauer.it/wp-content/uploads/2022/05/tibs-e1651503312862.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Firfir",
+                "price" => 11.50,
+                "ingredients" => ["injera sbriciolata", "burro chiarificato", "peperoni etiopici", "spezie"],
+                "image" => "https://ethiopiandish.com/wp-content/uploads/2022/01/sega-firfir-e1642674757942.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Atkilt Wat",
+                "price" => 12.50,
+                "ingredients" => ["verdure miste", "cipolle", "burro chiarificato", "peperoni etiopici", "spezie"],
+                "image" => "https://cloudinary-cdn.whisk.com/image/upload/g_auto,c_fill,q_60,f_auto,h_630,w_1200/v1685546292/recipe/f46764392c2d0866a3973ae67c63ad0a.jpg",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Santorini",
+        "address" => "Via Montenapoleone 10",
+        "phone_number" => "0123456789",
+        "image" => "https://images.unsplash.com/photo-1597075561373-cf8898ec7290?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["greco"],
+        "dishes" => [
+            [
+                "name" => "Moussaka",
+                "price" => 14.50,
+                "ingredients" => ["melanzane", "carne macinata di agnello", "patate", "salsa bechamel", "formaggio grattugiato"],
+                "image" => "https://images.unsplash.com/photo-1510693206972-df098062cb71?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Souvlaki",
+                "price" => 12.00,
+                "ingredients" => ["spiedini di carne di maiale", "cipolla", "peperoni", "pomodoro", "tzatziki"],
+                "image" => "https://images.unsplash.com/photo-1573126161855-f9633aa8a9f0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Horiatiki Salad",
+                "price" => 10.00,
+                "ingredients" => ["pomodori", "cetrioli", "cipolla rossa", "olive nere", "feta", "origano"],
+                "image" => "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Olympus",
+        "address" => "Via Manzoni 15",
+        "phone_number" => "0234567890",
+        "image" => "https://images.unsplash.com/photo-1583057341912-a0df64b8da4d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["greco"],
+        "dishes" => [
+            [
+                "name" => "Spanakopita",
+                "price" => 11.50,
+                "ingredients" => ["spinaci", "feta", "cipolla", "erbe aromatiche", "sfoglia croccante"],
+                "image" => "https://images.unsplash.com/photo-1612477491914-a2f46ef8586e?q=80&w=2091&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Gyros",
+                "price" => 13.00,
+                "ingredients" => ["carne di maiale", "cipolla", "pomodoro", "patatine fritte", "tzatziki"],
+                "image" => "https://images.unsplash.com/photo-1646488643615-84b4f85bb2c5?q=80&w=2056&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Kleftiko",
+                "price" => 16.00,
+                "ingredients" => ["agnello", "patate", "cipolla", "aglio", "limone", "erbe aromatiche"],
+                "image" => "https://images.unsplash.com/photo-1514516345957-556ca7d90a29?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Greek Taverna Milos",
+        "address" => "Via Dante 20",
+        "phone_number" => "0345678901",
+        "image" => "https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["greco"],
+        "dishes" => [
+            [
+                "name" => "Dolmades",
+                "price" => 10.50,
+                "ingredients" => ["foglie di vite", "riso", "carne macinata", "erbe aromatiche", "limone"],
+                "image" => "https://blog.giallozafferano.it/lareginadelfocolare/wp-content/uploads/2022/04/Dolmades-greci-or.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Taramosalata",
+                "price" => 9.00,
+                "ingredients" => ["uova di pesce", "patate", "cipolla", "limone", "olio d'oliva"],
+                "image" => "https://wips.plug.it/cips/buonissimo.org/cms/2011/09/taramosalata-5.jpg?w=713&a=c&h=407",
+                "available" => true
+            ],
+            [
+                "name" => "Loukoumades",
+                "price" => 8.00,
+                "ingredients" => ["pasta lievitata", "miele", "noci", "cannella"],
+                "image" => "https://www.foodandwine.com/thmb/L9e3eDtrUvz0FYQ9lfrunhThDAM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Loukoumades-FT-RECIPE1123-02e0684c1d43401cb37ef53f654513d4.jpg",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Beirut Lounge",
+        "address" => "Via Solferino 25",
+        "phone_number" => "0123456789",
+        "image" => "https://images.unsplash.com/photo-1542528180-a1208c5169a5?q=80&w=2077&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["libanese", "italiano"],
+        "dishes" => [
+            [
+                "name" => "Hummus",
+                "price" => 8.50,
+                "ingredients" => ["ceci", "tahini", "aglio", "limone", "olio d'oliva"],
+                "image" => "https://images.unsplash.com/photo-1637949385162-e416fb15b2ce?q=80&w=2052&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Falafel",
+                "price" => 9.00,
+                "ingredients" => ["ceci", "prezzemolo", "cipolla", "aglio", "spezie"],
+                "image" => "https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Tabbouleh",
+                "price" => 10.00,
+                "ingredients" => ["prezzemolo", "pomodori", "cetrioli", "menta", "couscous", "limone", "olio d'oliva"],
+                "image" => "https://images.unsplash.com/photo-1542528180-0c79567c66de?q=80&w=2057&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Levant Cuisine",
+        "address" => "Via Montenapoleone 15",
+        "phone_number" => "0234567890",
+        "image" => "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["libanese"],
+        "dishes" => [
+            [
+                "name" => "Kibbeh",
+                "price" => 12.50,
+                "ingredients" => ["carne macinata", "bulgur", "cipolla", "noci", "spezie"],
+                "image" => "https://falasteenifoodie.com/wp-content/uploads/2022/11/Fried-Lebanese-Kibbeh-Recipe.jpeg",
+                "available" => true
+            ],
+            [
+                "name" => "Moujadara",
+                "price" => 11.00,
+                "ingredients" => ["lenticchie", "riso", "cipolla", "spezie"],
+                "image" => "https://images.unsplash.com/photo-1630409349416-24884761a307?q=80&w=2094&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Baba Ghanoush",
+                "price" => 9.50,
+                "ingredients" => ["melanzane arrostite", "tahini", "aglio", "limone", "olio d'oliva"],
+                "image" => "https://www.seriouseats.com/thmb/nhgfDG68_YXD-qz-0b1C9L45lmE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__02__20140225-baba-ganoush-recipe-food-lab-vegan-primary-3-30d3fa6c920a4c3dafce66e140a35905.jpg",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Cedars of Lebanon",
+        "address" => "Via Manzoni 20",
+        "phone_number" => "0345678901",
+        "image" => "https://images.unsplash.com/photo-1534824394572-a24ff25bbb5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["libanese"],
+        "dishes" => [
+            [
+                "name" => "Shawarma",
+                "price" => 13.00,
+                "ingredients" => ["carne di pollo", "aglio", "limone", "spezie", "pane pita", "insalata"],
+                "image" => "https://images.unsplash.com/photo-1638537125835-82acb38d3531?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Hummus Beiruti",
+                "price" => 8.00,
+                "ingredients" => ["ceci", "tahini", "aglio", "peperoncino", "limone", "prezzemolo", "olio d'oliva"],
+                "image" => "https://images.unsplash.com/photo-1547516453-01c9910aafbf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Fattoush",
+                "price" => 10.50,
+                "ingredients" => ["insalata mista", "pomodori", "cetrioli", "cipolla", "peperoni", "pane pita croccante", "sumac"],
+                "image" => "https://images.unsplash.com/photo-1595786802424-d6efbc413db5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+        ]
+    ],
 ];
