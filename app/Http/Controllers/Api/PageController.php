@@ -106,6 +106,8 @@ class PageController extends Controller
 
                 return view('thankyoupage');
             } else {
+
+                DB::table('orders')->where('id', $order_id)->update(['status' => $result->success]);
                 return view('rejectpayment');
             }
         }
