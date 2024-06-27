@@ -1,3 +1,7 @@
+@php
+    use App\Functions\Helper;
+@endphp
+
 @extends('layouts.admin')
 
 @section('content')
@@ -18,7 +22,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Nome: {{ $order->name }}</h5>
                         <h5 class="card-title">Cognome: {{ $order->surname }}</h5>
-                        <p class="card-text"><span class="fst-italic">Data: </span>{{ $order->date }}</p>
+                        <p class="card-text"><span class="fst-italic">Data: </span>{{ Helper::formatDate($order->date) }}</p>
                         <p class="card-text"><span class="fst-italic">Prezzo Totale:
                             </span>{{ str_replace('.', ',', $order->total_price) }} &euro;</p>
                         <p class="card-text"><span class="fst-italic">Piatti:
