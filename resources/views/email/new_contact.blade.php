@@ -1,3 +1,7 @@
+@php
+    use App\Functions\Helper;
+@endphp
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,8 +85,8 @@
                     <td>{{ $lead->address }}</td>
                 </tr>
                 <tr>
-                    <th>Data</th>
-                    <td>{{ $lead->date }}</td>
+                    <th>Data - Orario</th>
+                    <td>{{ Helper::formatDate($lead->date) }}</td>
                 </tr>
                 <tr>
                     <th>Metodo di Pagamento</th>
@@ -90,7 +94,7 @@
                 </tr>
                 <tr>
                     <th>Prezzo Totale</th>
-                    <td>{{ $lead->total_price }}</td>
+                    <td>{{ str_replace('.', ',', $lead->total_price) }} &euro;</td>
                 </tr>
                 <tr>
                     <th>Note</th>
