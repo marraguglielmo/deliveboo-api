@@ -25,7 +25,7 @@ class OrderRequest extends FormRequest
             'name' => 'required|min:4|max:50',
             'surname' => 'required|min:4|max:50',
             'email' => 'required|max:50',
-            'phone_number' => 'required|integer|digits:11',
+            'phone_number' => 'required|integer|digits:10',
             'address' => 'required|min:8|max:100'
         ];
     }

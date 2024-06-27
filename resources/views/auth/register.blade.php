@@ -372,11 +372,11 @@
             } else if (!/^\d+$/.test(phoneNumber.value)) {
                 errorPhoneNumber.innerHTML = 'Il campo Telefono può contenere solo numeri';
                 phoneNumber.classList.add('is-invalid');
-            } else if (phoneNumber.value.trim().length < 11) {
-                errorPhoneNumber.innerHTML = 'Il campo Telefono non deve avere meno di 11 numeri';
+            } else if (phoneNumber.value.trim().length < 10) {
+                errorPhoneNumber.innerHTML = 'Il campo Telefono non deve avere meno di 10 numeri';
                 phoneNumber.classList.add('is-invalid');
-            } else if (phoneNumber.value.trim().length > 11) {
-                errorPhoneNumber.innerHTML = 'Il campo Telefono non deve avere più di 11 numeri';
+            } else if (phoneNumber.value.trim().length > 10) {
+                errorPhoneNumber.innerHTML = 'Il campo Telefono non deve avere più di 10 numeri';
                 phoneNumber.classList.add('is-invalid');
             }
 
