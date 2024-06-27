@@ -19,7 +19,7 @@
             </li>
             <li>
                 <i class="fa-solid fa-chart-simple"></i>
-                <a href="#">Statistiche</a>
+                <a href="{{ route('admin.statistics.index') }}">Statistiche</a>
             </li>
         </ul>
     </nav>
