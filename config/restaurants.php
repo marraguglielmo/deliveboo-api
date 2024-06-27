@@ -865,6 +865,127 @@ return [
             ],
         ]
     ],
+    [
+        "business_name" => "Bangkok Bites",
+        "address" => "Via Torino 34",
+        "phone_number" => "0293485712",
+        "image" => "https://images.unsplash.com/photo-1559847844-5315695dadae?q=80&w=2058&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["thailandese"],
+        "dishes" => [
+            [
+                "name" => "Pad Thai",
+                "price" => 10.00,
+                "ingredients" => ["noodles di riso", "gamberi", "tofu", "uovo", "arachidi", "germogli di soia"],
+                "image" => "https://images.unsplash.com/photo-1565976469640-8c764ce9721c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Tom Yum Goong",
+                "price" => 8.50,
+                "ingredients" => ["gamberi", "fungo", "lemongrass", "lime", "foglie di kaffir", "peperoncino"],
+                "image" => "https://images.unsplash.com/photo-1589563340504-3d0eb8ee3697?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Som Tum",
+                "price" => 7.00,
+                "ingredients" => ["papaya verde", "pomodoro", "arachidi", "lime", "salsa di pesce", "peperoncino"],
+                "image" => "https://images.unsplash.com/photo-1648421331147-9fcfab29536e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Thai Spice",
+        "address" => "Corso Buenos Aires 88",
+        "phone_number" => "0246893571",
+        "image" => "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["thailandese", "indiano"],
+        "dishes" => [
+            [
+                "name" => "Green Curry",
+                "price" => 9.50,
+                "ingredients" => ["pollo", "latte di cocco", "melanzane", "basilico thai", "peperoncino verde"],
+                "image" => "https://images.unsplash.com/photo-1631452180539-96aca7d48617?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Pad Kra Pao",
+                "price" => 8.00,
+                "ingredients" => ["carne macinata", "basilico thai", "aglio", "peperoncino", "uovo fritto"],
+                "image" => "https://images.services.kitchenstories.io/MRxcM_KNscGAJaphGq57qFKQWJ8=/3840x0/filters:quality(85)/images.kitchenstories.io/wagtailOriginalImages/R2592-final-photo.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Mango Sticky Rice",
+                "price" => 6.50,
+                "ingredients" => ["riso glutinoso", "latte di cocco", "mango", "zucchero", "sale"],
+                "image" => "https://images.unsplash.com/photo-1582878827114-c6bb4e6eb0de?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Golden Thai",
+        "address" => "Via Garibaldi 15",
+        "phone_number" => "0265748392",
+        "image" => "https://images.unsplash.com/photo-1548943487-a2e4e43b4853?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["thailandese"],
+        "dishes" => [
+            [
+                "name" => "Massaman Curry",
+                "price" => 9.00,
+                "ingredients" => ["manzo", "latte di cocco", "patate", "arachidi", "cipolla"],
+                "image" => "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Tom Kha Gai",
+                "price" => 8.50,
+                "ingredients" => ["pollo", "latte di cocco", "lemongrass", "galanga", "foglie di kaffir"],
+                "image" => "https://recipecontent.fooby.ch/15049_3-2_480-320.jpg",
+                "available" => true
+            ],
+            [
+                "name" => "Larb Gai",
+                "price" => 7.50,
+                "ingredients" => ["pollo macinato", "lime", "menta", "cipolla", "peperoncino"],
+                "image" => "https://inquiringchef.com/wp-content/uploads/2020/02/Recipe-24.jpg",
+                "available" => true
+            ],
+        ]
+    ],
+    [
+        "business_name" => "Siam Square",
+        "address" => "Piazza San Marco 28",
+        "phone_number" => "0254893765",
+        "image" => "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "types" => ["thailandese", "cinese"],
+        "dishes" => [
+            [
+                "name" => "Red Curry",
+                "price" => 9.00,
+                "ingredients" => ["pollo", "latte di cocco", "peperoncino rosso", "basilico thai", "zucchine"],
+                "image" => "https://images.unsplash.com/photo-1627366422957-3efa9c6df0fc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Pad See Ew",
+                "price" => 8.00,
+                "ingredients" => ["noodles di riso", "uovo", "broccoli cinesi", "salsa di soia", "maiale"],
+                "image" => "https://images.unsplash.com/photo-1553621043-f607bfbf6640?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+            [
+                "name" => "Tod Mun Pla",
+                "price" => 6.50,
+                "ingredients" => ["pesce", "curry rosso", "fagiolini", "foglie di kaffir", "salsa di pesce"],
+                "image" => "https://images.unsplash.com/photo-1587040690786-b091531837a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "available" => true
+            ],
+        ]
+    ],
+
 
 
 
