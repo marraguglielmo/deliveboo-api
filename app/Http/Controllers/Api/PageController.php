@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderRequest;
+use App\Models\Lead;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Restaurant;
@@ -11,6 +12,8 @@ use App\Models\Type;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewContact;
 
 class PageController extends Controller
 {
@@ -103,6 +106,22 @@ class PageController extends Controller
             if ($result->success) {
 
                 DB::table('orders')->where('id', $order_id)->update(['status' => $result->success]);
+
+                $mail_order = DB::table('orders')->where('id', $order_id)->first();
+
+                if ($mail_order) {
+                    /* Mail */
+                    $new_lead = new Lead();
+                    $new_lead->fill((array) $mail_order);
+                    $new_lead->save();
+
+                    //Ristoratore
+                    Mail::to(env('MAIL_FROM_ADDRESS'))->send(new NewContact($new_lead));
+
+                    //Cliente
+                    Mail::to($new_lead->email)->send(new NewContact($new_lead));
+                    /* /Mail */
+                }
 
                 return view('thankyoupage');
             } else {
