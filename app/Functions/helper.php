@@ -32,7 +32,21 @@ class Helper
 
     public static function formatDate($data)
     {
+        // Imposta il fuso orario a Roma
+        date_default_timezone_set('Europe/Rome');
+
+        // Crea un oggetto DateTime a partire dalla stringa $data
         $date = date_create($data);
-        return $date_format = date_format($date, 'd/m/Y - h:m');
+
+        // Verifica se la creazione dell'oggetto DateTime è andata a buon fine
+        if ($date === false) {
+            throw new \InvalidArgumentException("Data non valida: $data");
+        }
+
+        // Formatta la data nel formato desiderato
+        $formattedDate = date_format($date, 'd/m/Y - H:i');
+
+        // Restituisci la data formattata
+        return $formattedDate;
     }
 }
