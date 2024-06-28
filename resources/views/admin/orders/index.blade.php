@@ -5,6 +5,12 @@
 @extends('layouts.admin')
 
 @section('content')
+    <style>
+        td > i{
+            color: #2ec4b6;
+        }
+    </style>
+
     <div class="container d-flex flex-column align-items-center">
 
         <h2 class="mb-4">Lista ordini</h2>
@@ -12,30 +18,32 @@
         <table class="table table-hover table-custom">
             <thead>
                 <tr>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Recapiti</th>
+                    <th scope="col">Indirizzo</th>
                     <th scope="col">Data</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Cognome</th>
                     <th scope="col">Prezzo Totale (€)</th>
-                    <th scope="col">Piatti</th>
-                    <th scope="col">Azioni</th>
+                    {{-- <th scope="col">Piatti</th> --}}
+                    <th scope="col">Riepilogo</th>
                     {{-- <th scope="col">Dettaglio</th> --}}
                 </tr>
             </thead>
 
             <tbody>
                 @forelse ($orders as $order)
-                    <tr class="text-center">
-                        <td scope="row">{{ Helper::formatDate($order->date) }}</td>
-                        <td>{{ $order->name }}</td>
-                        <td>{{ $order->surname }}</td>
-                        <td>{{ str_replace('.', ',', $order->total_price) }}</td>
-                        <td>
+                    <tr>
+                        <td scope="row">{{ $order->name }} {{ $order->surname }}</td>
+                        <td><i class="fa-solid fa-envelope"></i> {{ $order->email }}<br><i class="fa-solid fa-phone"></i> {{ $order->phone_number }}</td>
+                        <td><i class="fa-solid fa-location-dot"></i> {{ $order->address }}</td>
+                        <td class="text-center"><i class="fa-regular fa-calendar"></i> {{ Helper::formatDate($order->date) }}</td>
+                        <td class="text-center">{{ str_replace('.', ',', $order->total_price) }}</td>
+                        {{-- <td>
                             <ul class="text-center list-unstyled">
                                 @foreach ($order->dishes as $dish)
                                     <li> {{ $dish->name }} x {{ $dish->pivot->quantity }}</li>
                                 @endforeach
                             </ul>
-                        </td>
+                        </td> --}}
                         <td class="text-center">
                             <a href="{{ route('admin.orders.show', $order) }}">
                                 <button class="btn btn-custom-primary">

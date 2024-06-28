@@ -33,7 +33,7 @@
                             </span>{{ $restaurant->email }}</p>
                         <p class="card-text"><span class="fst-italic"><i class="fa-solid fa-phone"></i>Contatto telefonico:
                             </span>
-                            + 39 {{ $restaurant->phone_number }}
+                            +39 {{ $restaurant->phone_number }}
                         </p>
                         <p class="card-text"><span class="fst-italic"><i class="fa-solid fa-id-card-clip"></i>P.IVA:
                             </span>{{ $restaurant->vat_number }}</p>
