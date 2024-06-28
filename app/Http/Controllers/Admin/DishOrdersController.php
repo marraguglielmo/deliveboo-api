@@ -18,7 +18,7 @@ class DishOrdersController extends Controller
     {
         $orders = Order::whereHas('dishes', function ($query) {
             $query->where('restaurant_id', Auth::user()->id);
-        })->with('dishes')->orderBy('created_at', 'desc')->paginate(6);
+        })->with('dishes')->orderBy('date', 'desc')->paginate(6);
 
         return view('admin.orders.index', compact('orders'));
     }
