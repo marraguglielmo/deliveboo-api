@@ -220,7 +220,7 @@
                             {{-- btn register --}}
                             <div class="mb-4 row mb-0">
                                 <div class="col-md-12 d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-primary btn-register">
+                                    <button type="submit" class="btn btn-custom-primary w-auto btn-register">
                                         {{ __('Registrati') }}
                                     </button>
                                 </div>

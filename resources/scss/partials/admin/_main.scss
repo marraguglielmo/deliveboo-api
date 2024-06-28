@@ -1,6 +1,6 @@
-.card {
+.card-restaurant {
     .card-img-box {
-        height: 250px;
+        height: 350px;
         overflow: hidden;
 
         img {
@@ -13,6 +13,17 @@
     .badge-container {
         text-align: right;
         margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-top: 20px;
+
+        i {
+            color: $color-primary;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
     }
 }
 

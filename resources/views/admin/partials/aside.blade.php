@@ -1,26 +1,33 @@
 <aside>
-    <nav>
-        <ul>
-            <li>
-                <i class="fa-solid fa-house"></i>
-                <a href="{{ route('admin.home') }}">Home</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-utensils"></i>
-                <a href="{{ route('admin.dishes.index') }}">Menù</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-plus"></i>
-                <a href="{{ route('admin.dishes.create') }}">Aggiungi piatto</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-list-ul"></i>
-                <a href="{{ route('admin.orders.index') }}">I tuoi ordini</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chart-simple"></i>
-                <a href="{{ route('admin.statistics.index') }}">Statistiche</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="d-flex flex-column justify-content-between h-100">
+        <nav>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="{{ route('admin.home') }}">Home</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-utensils"></i>
+                    <a href="{{ route('admin.dishes.index') }}">Menù</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-plus"></i>
+                    <a href="{{ route('admin.dishes.create') }}">Aggiungi piatto</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <a href="{{ route('admin.orders.index') }}">I tuoi ordini</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <a href="{{ route('admin.statistics.index') }}">Statistiche</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="logo-box">
+            <img src="{{ Vite::asset('resources/img/logo_1_def.png') }}">
+        </div>
+    </div>
+
 </aside>
