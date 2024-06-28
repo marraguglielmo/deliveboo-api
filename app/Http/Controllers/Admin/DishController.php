@@ -142,5 +142,4 @@ class DishController extends Controller
     }
 
     /* FUNZIONI CUSTOM */
-
 }

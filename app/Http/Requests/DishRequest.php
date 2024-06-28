@@ -32,7 +32,7 @@ class DishRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Il campo Nome è obbligatorio',
+            'name.required' => 'Il campo mamma è obbligatorio',
             'name.min' => 'Il campo Nome non deve avere meno di :min caratteri',
             'name.max' => 'Il campo Nome non deve avere più di :max caratteri',
 
@@ -41,6 +41,10 @@ class DishRequest extends FormRequest
             'price.max' => 'Il campo prezzo non deve avere più di :max caratteri',
 
             'description.required' => 'Il campo descrizione è obbligatorio',
+
+            'image.image' => 'Il file selezionato non è un\'immagine',
+            'image.mimes' => 'I formati consentiti sono: png, jpg, jpeg, webp',
+            'image.max' => 'Il file non può superare i 20 MB'
         ];
     }
 }
