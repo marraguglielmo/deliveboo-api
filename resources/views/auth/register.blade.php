@@ -74,6 +74,11 @@
                                     <div class="col-12">
                                         <small id="error-types" class="text-danger fw-semibold"></small>
                                     </div>
+                                    @error('types')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             {{-- tipologie --}}
@@ -285,11 +290,11 @@
             const errorPasswordConfirm = document.getElementById('error-password_confirm');
 
             btnRegister.addEventListener('click', function(event) {
+                // Reset degli errori
+                resetErrors();
                 event.preventDefault();
                 let isValid = true;
 
-                // Reset degli errori
-                resetErrors();
 
                 // Validazione nome utente
                 if (name.value.trim().length === 0) {
@@ -446,7 +451,9 @@
             function resetErrors() {
                 const errorMessages = document.querySelectorAll('.invalid-feedback');
                 const invalidInputs = document.querySelectorAll('.is-invalid');
+                const smallTags = document.querySelectorAll('small');
 
+                smallTags.forEach((error) => error.innerHTML = '');
                 errorMessages.forEach((error) => error.innerHTML = '');
                 invalidInputs.forEach((input) => input.classList.remove('is-invalid'));
             }

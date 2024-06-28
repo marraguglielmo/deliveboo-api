@@ -16,6 +16,7 @@ use Illuminate\View\View;
 use App\Models\Type;
 use App\Functions\Helper;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rules\Password;
 
 class RegisteredUserController extends Controller
 {
@@ -38,16 +39,66 @@ class RegisteredUserController extends Controller
     {
         $request->validate(
             [
-                'business_name' => ['required', 'string', 'max:255'],
+                'name' => ['required', 'string', 'min:4', 'max:50'],
+                'business_name' => ['required', 'min:4', 'max:50'],
                 'types' => ['required'],
-                'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
                 'image' => ['image', 'mimes:jpg, png, webp', 'max:20480'],
-                'vat_number' => ['required', 'string', 'max:11'],
-                'phone_number' => ['string', 'max:15'],
-                'password' => ['required', 'confirmed', Rules\Password::defaults()],
-                'address' => ['required', 'min:8', 'max:255']
+                'address' => ['required', 'min:8', 'max:255'],
+                'phone_number' => ['required', 'integer', 'digits:10'],
+                'vat_number' => ['required', 'integer', 'digits:11'],
+                'email' => ['required', 'string', 'lowercase', 'email', 'max:50', 'unique:' . User::class],
+                'password' => [
+                    'required',
+                    'confirmed',
+                    Rules\Password::defaults(),
+                    Password::min(8)
+                        ->mixedCase() // richiede almeno una lettera maiuscola e una minuscola
+                        ->numbers()   // richiede almeno un numero
+                        ->symbols()   // richiede almeno un simbolo
+                ],
             ],
-            []
+            [
+                'name.required' => 'Il campo Nome Utente è obbligatorio',
+                'name.string' => 'Il campo Nome utente deve contenere delle lettere',
+                'name.min' => 'Il campo Nome utente deve avere almeno :min caratteri',
+                'name.max' => 'Il campo Nome utente non deve avere più di :max caratteri',
+
+                'business_name.required' => 'Il campo Nome ristorante è obbligatorio',
+                'business_name.min' => 'Il campo Nome ristorante deve avere almeno :min caratteri',
+                'business_name.max' => 'Il campo Nome ristorante non deve avere più di :max caratteri',
+
+                'types.required' => 'Il campo Tipologie è obbligatorio',
+
+                'image.image' => 'Il file inserito non è un\'immagine',
+                'image.mimes' => 'I file consentiti sono: png, jpg, jpeg, webp',
+                'image.max' => 'Il file immagine non può superare i 20 MB',
+
+                'address.required' => 'Il campo Indirizzo è obbligatorio',
+                'address.min' => 'Il campo Indirizzo deve avere almeno :min caratteri',
+                'address.max' => 'Il campo Indirizzo non deve avere più di :max caratteri',
+
+                'phone_number.required' => 'Il campo Telefono è obbligatorio',
+                'phone_number.integer' => 'Il campo Telefono può avere solo numeri',
+                'phone_number.digits' => 'Il campo Telefono deve avere :digits numeri',
+
+                'vat_number.required' => 'Il campo P.IVA è obbligatorio',
+                'vat_number.integer' => 'Il campo P.IVA può avere solo numeri',
+                'vat_number.digits' => 'Il campo P.IVA deve avere :digits numeri',
+
+                'email.required' => 'Il campo Email è obbligatorio',
+                'email.email' => 'Il campo Email deve essere un indirizzo email valido',
+                'email.unique' => 'Questa email è già in uso',
+                'email.lowercase' => 'Il campo Email non deve avere lettere maiuscole',
+                'email.max' => 'Il campo Email non può avere più di :max caratteri',
+
+                'password.required' => 'Il campo Password è obbligatorio',
+                'password.confirmed' => 'La conferma della Password non corrisponde',
+                'password.min' => 'Il campo Password deve avere almeno :min caratteri',
+                'password.mixedCase' => 'Il campo Password deve contenere almeno una lettera maiuscola e una minuscola',
+                'password.numbers' => 'Il campo Password deve contenere almeno un numero',
+                'password.symbols' => 'Il campo Password deve contenere almeno un simbolo',
+
+            ]
         );
 
         $user = User::create([
