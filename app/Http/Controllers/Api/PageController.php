@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NewContact;
+use App\Mail\NewOrder;
 
 class PageController extends Controller
 {
@@ -110,16 +111,24 @@ class PageController extends Controller
                 $mail_order = DB::table('orders')->where('id', $order_id)->first();
 
                 if ($mail_order) {
+                    $restaurant_email = DB::table('orders')
+                    ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
+                    ->join('dishes', 'dish_order.dish_id', '=', 'dishes.id')
+                    ->join('restaurants', 'dishes.restaurant_id', '=', 'restaurants.id')
+                    ->where('orders.id', $order_id)
+                    ->value('restaurants.email');
+
                     /* Mail */
                     $new_lead = new Lead();
                     $new_lead->fill((array) $mail_order);
                     $new_lead->save();
 
                     //Ristoratore
-                    Mail::to(env('MAIL_FROM_ADDRESS'))->send(new NewContact($new_lead));
+                    // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new NewContact($new_lead));
+                    Mail::to($restaurant_email)->send(new NewContact($new_lead));
 
                     //Cliente
-                    Mail::to($new_lead->email)->send(new NewContact($new_lead));
+                    Mail::to($new_lead->email)->send(new NewOrder($new_lead));
                     /* /Mail */
                 }
 
