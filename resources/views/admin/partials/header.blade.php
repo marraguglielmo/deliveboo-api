@@ -6,7 +6,7 @@
             <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center ">
                     <i class="fa-solid fa-globe"></i>
-                    <a class="ms-2" href="{{ env('APP_FRONTEND_URL') }}" target="_blank">Vai al sito pubblico</a>
+                    <a class="ms-2" href="{{ env('APP_FRONTEND_URL') }}">Vai al sito pubblico</a>
                 </div>
             </div>
 
