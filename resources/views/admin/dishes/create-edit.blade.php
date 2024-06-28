@@ -124,7 +124,6 @@
                 errorImage.innerHTML = '';
                 image.classList.remove('is-invalid');
 
-                // Validation checks
                 // nome
                 if (name.value.trim().length === 0) {
                     errorName.innerHTML = 'Il campo Nome piatto è obbligatorio';
