@@ -7,7 +7,7 @@
 @section('content')
     <div class="container d-flex flex-column align-items-center">
 
-        <h2>Lista ordini</h2>
+        <h2 class="mb-4">Lista ordini</h2>
 
         <table class="table table-hover table-custom">
             <thead>
@@ -54,6 +54,5 @@
         <div class="container pagination-container">
             {{ $orders->links('pagination::bootstrap-5') }}
         </div>
-
     </div>
 @endsection

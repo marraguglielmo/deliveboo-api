@@ -1017,7 +1017,7 @@ return [
     ],
     [
         "business_name" => "Chez Marie",
-        "address" => "Corso Buenos Aires 76, Milano",
+        "address" => "Corso Buenos Aires 76",
         "phone_number" => "0234567890",
         "image" => "https://images.unsplash.com/photo-1642231877874-ce3e205f39c0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "types" => ["francese"],
@@ -1047,7 +1047,7 @@ return [
     ],
     [
         "business_name" => "La Belle Époque",
-        "address" => "Via della Moscova 98, Milano",
+        "address" => "Via della Moscova 98",
         "phone_number" => "0345678901",
         "image" => "https://images.unsplash.com/photo-1607403218119-83b4df4c0959?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "types" => ["francese", "italiano"],
@@ -1077,7 +1077,7 @@ return [
     ],
     // [
     //     "business_name" => "Café de Paris",
-    //     "address" => "Piazza del Duomo 3, Milano",
+    //     "address" => "Piazza del Duomo 3",
     //     "phone_number" => "0456789012",
     //     "image" => "https://images.unsplash.com/photo-1579712267685-42da80f60aa4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     //     "types" => ["francese"],
@@ -1257,7 +1257,7 @@ return [
     ],
     [
         "business_name" => "Aloha Poke",
-        "address" => "Corso Garibaldi 20, Milano",
+        "address" => "Corso Garibaldi 20",
         "phone_number" => "0234567890",
         "image" => "https://images.unsplash.com/photo-1604259597308-5321e8e4789c?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "types" => ["poke"],
@@ -1287,7 +1287,7 @@ return [
     ],
     [
         "business_name" => "Pacific Poke",
-        "address" => "Via Solferino 42, Milano",
+        "address" => "Via Solferino 42",
         "phone_number" => "0345678901",
         "image" => "https://images.unsplash.com/photo-1556041081-888e5afc8c69?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "types" => ["poke"],
