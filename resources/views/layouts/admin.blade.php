@@ -18,7 +18,7 @@
 
     @vite(['resources/js/app.js'])
 
-    <title>DeliveBoo | Backoffice</title>
+    <title>DeliveBoo | Back Office</title>
 </head>
 
 <body>
