@@ -15,6 +15,12 @@
                 <div class="mx-3"><i class="fa-solid fa-user-shield"></i> {{ Auth::user()->name }} |
                     {{ Auth::user()->restaurant->business_name }}</div>
 
+                <form action="{{ route('profile.edit') }}" class="me-2">
+                    <button type="submit" class="btn btn-custom-primary d-flex-center">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                </form>
+
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-custom-primary">
