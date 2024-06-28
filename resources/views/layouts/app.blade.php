@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>DeliveBoo | Backoffice</title>
 
     {{-- fontawesome --}}
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css'
@@ -25,10 +25,6 @@
 
 <body>
     <div id="app">
-
-
-
-
         <main class="">
             @yield('content')
         </main>

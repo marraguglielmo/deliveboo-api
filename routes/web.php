@@ -20,7 +20,7 @@ use App\Http\Controllers\Admin\OrderStatisticsController;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/', [PageController::class, 'index'])->name('login');
 
 Route::middleware(['auth', 'verified'])
     ->prefix('admin')

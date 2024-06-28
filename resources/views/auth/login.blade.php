@@ -4,15 +4,17 @@
     <div class="container-fluid login_container d-flex flex-column justify-content-center align-items-center h-100 vh-100">
         <div class="row justify-content-center mb-2 w-100">
             <div class="btn-container text-end col-md-8">
-                <a href="{{ env('APP_FRONTEND_URL') }}" class="btn btn-primary py-2 px-3">Vai al sito
+                <a href="{{ env('APP_FRONTEND_URL') }}" class="btn btn-custom-secondary w-auto">Vai al sito
                     pubblico</a>
             </div>
         </div>
         <div class="row justify-content-center w-100">
             <div class="col-md-8">
                 <div class="card">
-
-                    <div class="card-body h-100">
+                    <div class="card-body h-100 d-flex flex-column">
+                        <div class="logo-box mb-4">
+                            <img src="{{ Vite::asset('resources/img/logo_1_def.png') }}">
+                        </div>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="input-box">
@@ -72,12 +74,12 @@
                                 <div class="col-md-12 btn-container">
                                     <div class="d-flex flex-column">
 
-                                        <button type="submit" class="btn btn-primary m-auto mb-3">
+                                        <button type="submit" class="btn btn-custom-primary-outline m-auto mb-4">
                                             {{ __('Login') }}
                                         </button>
                                         <div class="m-auto text-center">
                                             <p class="mb-1 text-white">Non hai un account?</p>
-                                            <a href="{{ route('register') }}" class="btn btn-primary m-auto">
+                                            <a href="{{ route('register') }}" class="btn btn-custom-primary-outline w-auto">
                                                 {{ __('Crea nuovo account') }}
                                             </a>
                                         </div>

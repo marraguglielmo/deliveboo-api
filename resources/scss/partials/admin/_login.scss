@@ -1,25 +1,37 @@
-body{
+body {
     background: lighten($color-primary, 40%);
 }
 
-.login_container{
-    .card{
+.login_container {
+    .card {
         border: none !important;
         overflow: hidden;
-        .card-body{
+        .card-body {
             background: lighten($color-primary, 10%);
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 30px 0px ;
-            form{
+            padding: 30px 0px;
+
+            .logo-box {
+                height: 250px;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            form {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 width: 80%;
                 height: 250px !important;
                 input[type="email"],
-                input[type="password"]{
+                input[type="password"] {
                     height: 100%;
                     border-radius: 0px;
                     border: none;
@@ -27,18 +39,18 @@ body{
                     box-shadow: none;
                     padding-left: 0;
                 }
-                .row{
-                    .input-col{
+                .row {
+                    .input-col {
                         margin: 0 auto;
                         // border: 1px solid red;
                         max-height: 50px;
-                        .input-box{
+                        .input-box {
                             width: 70%;
                             height: 100%;
                             border-radius: 5px;
                             overflow: hidden;
                         }
-                        .input-icon{
+                        .input-icon {
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -47,24 +59,8 @@ body{
                             display: inline-block;
                             padding: 10px 15px;
                         }
-
                     }
                 }
-            }
-        }
-    }
-    .btn-container{
-        button,a{
-            background: darken($color-primary, 10%);
-            border: none;
-            &:hover{
-                background: darken($color-primary, 20%);
-            }
-        }
-        a#forgot-psw{
-            background: transparent !important;
-            &:hover{
-                text-decoration: underline;
             }
         }
     }

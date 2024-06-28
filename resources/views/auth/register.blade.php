@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container register-container mt-4 mb-4">
+    <div class="logo-box-register">
+        <img src="{{ Vite::asset('resources/img/logo_1_def.png') }}">
+    </div>
+    <div class="container register-container mt-2 mb-4">
+
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Registra il tuo ristorante') }}</div>
-
+                    <div class="card-header card-header-register">{{ __('Registra il tuo ristorante') }}</div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                             @csrf
