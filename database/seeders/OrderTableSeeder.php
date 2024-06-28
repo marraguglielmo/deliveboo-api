@@ -21,7 +21,7 @@ class OrderTableSeeder extends Seeder
             $new_order->payment_method = "card";
             $new_order->name = $faker->firstName();
             $new_order->surname = $faker->lastName();
-            $new_order->email = Helper::generateEmail($new_order->name, $new_order->surname);
+            $new_order->email = Helper::generateEmailSeeder($new_order->name, $new_order->surname);
             $new_order->phone_number = "+39 " . $faker->numberBetween(3000000000, 3999999999);
             $new_order->address = $faker->streetAddress;
             $new_order->note = $faker->text();
