@@ -6,7 +6,7 @@
             <i class="fa-solid fa-circle-check"></i>
             <h3>Il pagamento è avvenuto con successo!</h3>
             <p>Grazie per aver scelto DeliveBoo, torna a trovarci</p>
-            <a href="{{ env('APP_FRONTEND_URL') }}" class="btn btn-custom-secondary w-auto">Torna al sito</a>
+            <a href="{{ env('APP_FRONTEND_URL') }}?payment=success" class="btn btn-custom-secondary w-auto">Torna al sito</a>
         </div>
     </div>
 @endsection
