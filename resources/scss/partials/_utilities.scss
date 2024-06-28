@@ -32,6 +32,15 @@
             color: white;
         }
     }
+
+    &-primary-outline {
+        background-color: white;
+        color: $color-primary;
+        &:hover {
+            background-color: rgba(277, 277, 277, 0.9);
+            color: darken($color-primary, 8%);
+        }
+    }
 }
 
 #btn-width {
@@ -55,6 +64,6 @@
     border-color: $color-primary;
 }
 
-.input-required{
+.input-required {
     color: $color-secondary;
 }

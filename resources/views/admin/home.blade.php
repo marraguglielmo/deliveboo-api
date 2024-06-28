@@ -7,7 +7,11 @@
                 <div class="card">
                     <div class="card-img-top card-img-box">
                         @if ($restaurant->image)
-                            <img src="{{ $restaurant->image }}" alt="{{ $restaurant->business_name }}">
+                            @if (Str::startsWith($restaurant->image, ['http://', 'https://']))
+                                <img src="{{ $restaurant->image }}" alt="{{ $restaurant->business_name }}">
+                            @else
+                                <img src="{{ asset('storage/' . $restaurant->image) }}" alt="{{ $restaurant->name }}">
+                            @endif
                         @else
                             <img src="{{ Vite::asset('resources/img/placeholder.jpg') }}">
                         @endif
