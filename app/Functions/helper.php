@@ -25,9 +25,10 @@ class Helper
         return $slug;
     }
 
-    public static function generateEmail($name)
+    public static function generateEmail($name, $surname)
     {
-        return strtolower(str_replace(" ", "", $name)) . '@gmail.com';
+        // return strtolower(str_replace(" ", "", $name)) . '@gmail.com';
+        return strtolower(str_replace(' ', '.', $name)) . '.' . strtolower(str_replace(' ', '.', $surname)) . '@gmail.com';
     }
 
     public static function formatDate($data)
