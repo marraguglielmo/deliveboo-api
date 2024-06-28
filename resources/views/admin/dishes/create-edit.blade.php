@@ -3,7 +3,7 @@
     <div class="container">
         <h2 class="text-center">{{ $title }} {{ $dish?->name }}</h2>
 
-        <form action="{{ $route }}" method="POST" enctype="multipart/form-data" class="mx-5">
+        <form id="dish-form" action="{{ $route }}" method="POST" enctype="multipart/form-data" class="mx-5">
             @csrf
             @method($method)
             {{-- nome --}}
@@ -61,7 +61,7 @@
             <div class="mb-3">
                 <label for="image" class="form-label">Foto piatto</label>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
-                    name="image" value="{{ old('image', $dish?->description) }}">
+                    name="image" value="{{ old('image', $dish?->image) }}">
 
                 <small id="error-image" class="text-danger fw-semibold"></small>
 
@@ -77,7 +77,7 @@
             <div class="mb-3">
                 <div class="form-check form-switch">
                     <input name="available" class="form-check-input" type="checkbox" role="switch" id="available"
-                        value="{{ old('available') }}" @if ($dish?->available) checked @endif>
+                        value="1" @if (old('available', $dish?->available)) checked @endif>
                     <label class="form-check-label" for="available">Disponibile</label>
                 </div>
             </div>
@@ -92,97 +92,111 @@
 
 
     <script>
-        // btn create
-        const btnCreate = document.getElementById('btn-add');
-        // nome
-        const name = document.getElementById('name');
-        const errorName = document.getElementById('error-name');
-        // prezzo
-        const price = document.getElementById('price');
-        const errorPrice = document.getElementById('error-price');
-        // ingredienti
-        const description = document.getElementById('description');
-        const errorDescription = document.getElementById('error-description');
-        // foto piatto
-        const image = document.getElementById('image');
-        const errorImage = document.getElementById('error-image');
+        document.addEventListener('DOMContentLoaded', function() {
+            // btn create
+            const btnCreate = document.getElementById('btn-add');
+            const form = document.getElementById('dish-form');
 
-
-
-        btnCreate.addEventListener('click', function(event) {
-            event.preventDefault();
-            // FIXME:STAMPA VALIDAZIONE
-            errorName.innerHTML = '';
-            name.classList.remove('is-invalid');
-            errorPrice.innerHTML = '';
-            price.classList.remove('is-invalid');
-            errorDescription.innerHTML = '';
-            description.classList.remove('is-invalid');
-            file = image.files[0];
-            errorImage.innerHTML = '';
-            image.classList.remove('is-invalid');
-
-            // controlli nome
-            if (name.value.trim().length === 0) {
-                errorName.innerHTML = 'Il campo Nome piatto è obbligatorio';
-                name.classList.add('is-invalid');
-            } else if (name.value.trim().length < 4) {
-                errorName.innerHTML = 'Il campo Nome piatto deve avere almeno 4 caratteri';
-                name.classList.add('is-invalid');
-            } else if (name.value.trim().length > 50) {
-                errorName.innerHTML = 'Il campo Nome piatto non deve avere più di 50 caratteri';
-                name.classList.add('is-invalid');
-            }
-
-            // controlli prezzo
-            let priceValue = parseFloat(price.value.replace(',', '.'));
-            let pricePattern = /^-?\d+([,.]\d{1,2})?$/;
-
-            if (price.value.trim().length === 0) {
-                errorPrice.innerHTML = 'Il campo Prezzo è obbligatorio'
-                price.classList.add('is-invalid');
-            } else if (priceValue < 0) {
-                errorPrice.innerHTML = 'Inserisci un prezzo valido (es. 10.50)';
-                price.classList.add('is-invalid');
-            } else if (!pricePattern.test(price.value)) {
-                errorPrice.innerHTML = 'Il campo Prezzo contiene solo numeri';
-                price.classList.add('is-invalid');
-            } else {
-                // Assegna il valore formattato (con punto) al campo
-                price.value = priceValue.toFixed(2); // Imposta due decimali
-            }
-
-            // description
-            if (description.value.trim().length === 0) {
-                errorDescription.innerHTML = 'Il campo Descrizione è obbligatorio'
-                description.classList.add('is-invalid');
-            } else if (description.value.trim().length < 4) {
-                errorDescription.innerHTML = 'Il campo Descrizione deve avere almeno 4 caratteri'
-                description.classList.add('is-invalid');
-            } else if (description.value.trim().length > 255) {
-                errorDescription.innerHTML = 'Il campo Descrizione non deve avere più di 255 caratteri'
-                description.classList.add('is-invalid');
-            }
-
+            // nome
+            const name = document.getElementById('name');
+            const errorName = document.getElementById('error-name');
+            // prezzo
+            const price = document.getElementById('price');
+            const errorPrice = document.getElementById('error-price');
+            // ingredienti
+            const description = document.getElementById('description');
+            const errorDescription = document.getElementById('error-description');
             // foto piatto
-            const maxSize = 20480;
-            const allowedTypes = ['image/png', 'image/jpg', 'image/jpeg', 'image/webp'];
+            const image = document.getElementById('image');
+            const errorImage = document.getElementById('error-image');
 
-            if (file) {
-                if (!allowedTypes.includes(file.type)) {
-                    errorImage.innerHTML = 'I formati consentiti sono: png, jpg, jpeg, webp'
-                    image.classList.add('is-invalid');
-                } else if (file.size > maxSize) {
-                    errorImage.innerHTML = 'La dimensione massima del file è 20 mb';
-                    image.classList.add('is-invalid');
-                } else {
-                    errorImage.innerHTML = ''
+            btnCreate.addEventListener('click', function(event) {
+                event.preventDefault();
+                let isValid = true;
+
+                // Reset errors
+                errorName.innerHTML = '';
+                name.classList.remove('is-invalid');
+                errorPrice.innerHTML = '';
+                price.classList.remove('is-invalid');
+                errorDescription.innerHTML = '';
+                description.classList.remove('is-invalid');
+                errorImage.innerHTML = '';
+                image.classList.remove('is-invalid');
+
+                // Validation checks
+                // nome
+                if (name.value.trim().length === 0) {
+                    errorName.innerHTML = 'Il campo Nome piatto è obbligatorio';
+                    name.classList.add('is-invalid');
+                    isValid = false;
+                } else if (name.value.trim().length < 4) {
+                    errorName.innerHTML = 'Il campo Nome piatto deve avere almeno 4 caratteri';
+                    name.classList.add('is-invalid');
+                    isValid = false;
+                } else if (name.value.trim().length > 50) {
+                    errorName.innerHTML = 'Il campo Nome piatto non deve avere più di 50 caratteri';
+                    name.classList.add('is-invalid');
+                    isValid = false;
                 }
-            }
 
-            file = null;
+                // prezzo
+                let priceValue = parseFloat(price.value.replace(',', '.'));
+                let pricePattern = /^-?\d+([,.]\d{1,2})?$/;
 
+                if (price.value.trim().length === 0) {
+                    errorPrice.innerHTML = 'Il campo Prezzo è obbligatorio';
+                    price.classList.add('is-invalid');
+                    isValid = false;
+                } else if (priceValue < 0) {
+                    errorPrice.innerHTML = 'Inserisci un prezzo valido (es. 10.50)';
+                    price.classList.add('is-invalid');
+                    isValid = false;
+                } else if (!pricePattern.test(price.value)) {
+                    errorPrice.innerHTML = 'Il campo Prezzo contiene solo numeri';
+                    price.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    // Assegna il valore formattato (con punto) al campo
+                    price.value = priceValue.toFixed(2); // Imposta due decimali
+                }
 
-        })
+                // description
+                if (description.value.trim().length === 0) {
+                    errorDescription.innerHTML = 'Il campo Descrizione è obbligatorio';
+                    description.classList.add('is-invalid');
+                    isValid = false;
+                } else if (description.value.trim().length < 4) {
+                    errorDescription.innerHTML = 'Il campo Descrizione deve avere almeno 4 caratteri';
+                    description.classList.add('is-invalid');
+                    isValid = false;
+                } else if (description.value.trim().length > 255) {
+                    errorDescription.innerHTML = 'Il campo Descrizione non deve avere più di 255 caratteri';
+                    description.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                // foto piatto
+                const file = image.files[0];
+                const maxSize = 20480 * 1024;
+                const allowedTypes = ['image/png', 'image/jpg', 'image/jpeg', 'image/webp'];
+
+                if (file) {
+                    if (!allowedTypes.includes(file.type)) {
+                        errorImage.innerHTML = 'I formati consentiti sono: png, jpg, jpeg, webp';
+                        image.classList.add('is-invalid');
+                        isValid = false;
+                    } else if (file.size > maxSize) {
+                        errorImage.innerHTML = 'La dimensione massima del file è 20 mb';
+                        image.classList.add('is-invalid');
+                        isValid = false;
+                    }
+                }
+
+                if (isValid) {
+                    form.submit();
+                }
+            });
+        });
     </script>
 @endsection
