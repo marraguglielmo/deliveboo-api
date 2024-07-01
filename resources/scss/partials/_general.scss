@@ -48,3 +48,24 @@ a {
     border-radius: 20px;
     margin: 20px 0;
 }
+
+
+@media (max-width:768px){
+    .table-custom{
+        th.th-description,
+        td.td-description{
+            display: none;
+        }
+    }
+}
+
+
+// @media (max-width: 980px){
+//     .table-custom{
+//         th.th-description,
+//         td.td-description{
+//             display: none;
+//         }
+//     }
+// }
+

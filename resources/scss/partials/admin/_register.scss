@@ -66,3 +66,29 @@
         }
     }
 }
+
+// @media (max-width: 1000px){
+//     form{
+//         .row{
+//             .col-md-6:last-child{
+//                 // width: 60% !important;
+//                 background: red !important;
+//             }
+//         }
+//     }
+// }
+
+@media (max-width: 768px){
+
+
+    .row-types{
+        flex-direction: column;
+        // background-color: green !important;
+        .btn-group{
+            width: 100%;
+        }
+    }
+}
+
+
+// 576 mobile
