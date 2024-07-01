@@ -62,7 +62,7 @@
                             {{-- tipologie --}}
                             <div class="row row-cols-2 mb-3 row-types">
                                 <div class="col-md-4">Tipologie<span class="input-required fw-bold">*</span></div>
-                                <div class="btn-group col-6 flex-wrap" role="group">
+                                <div class="btn-group col-md-6 flex-wrap" role="group">
                                     @foreach ($types as $type)
                                         <input value="{{ $type->id }}" type="checkbox" class="btn-check"
                                             id="type{{ $type->id }}" name="types[]"

@@ -21,7 +21,7 @@
                     <th scope="col">Immagine</th>
                     <th scope="col">Piatto</th>
                     <th scope="col" class="text-nowrap">Prezzo (&euro;)</th>
-                    <th scope="col">Descrizione</th>
+                    <th class="th-description" scope="col">Descrizione</th>
                     <th scope="col">Disponibilità</th>
                     <th scope="col">Azioni</th>
                 </tr>
@@ -46,7 +46,7 @@
 
                         <td>{{ $dish->name }}</td>
                         <td>{{ str_replace('.', ',', $dish->price) }}</td>
-                        <td class="text-start">{{ $dish->description }}</td>
+                        <td class="text-start td-description">{{ $dish->description }}</td>
 
                         <td class="text-center">
                             @if ($dish->available)
