@@ -11,11 +11,12 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 30px 0px;
+            padding: 30px 0px 40px 0px;
 
             .logo-box {
                 height: 250px;
                 overflow: hidden;
+                margin-bottom: 30px;
 
                 img {
                     height: 100%;
@@ -64,4 +65,8 @@ body {
             }
         }
     }
+}
+
+.is_invalid{
+    border: 1px solid red !important;
 }
