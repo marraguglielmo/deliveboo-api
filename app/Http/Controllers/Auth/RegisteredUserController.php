@@ -137,4 +137,49 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function update(Request $request): RedirectResponse
+{
+    // Validazione dei campi
+    $request->validate(
+        [
+            'image' => ['required', 'image', 'mimes:jpg,png,webp', 'max:20480'],
+            'id' => ['required']
+        ],
+        [
+            'image.required' => 'Il campo Immagine è obbligatorio',
+            'image.image' => 'Il file inserito non è un\'immagine',
+            'image.mimes' => 'I file consentiti sono: png, jpg, jpeg, webp',
+            'image.max' => 'Il file immagine non può superare i 20 MB',
+        ]
+    );
+
+    // Recupera l'id dal parametro della richiesta
+    $id = $request->input('id');
+
+    // Recupera il ristorante esistente usando l'id
+    $restaurant = Restaurant::findOrFail($id);
+
+    // Aggiornamento dell'immagine
+    if ($request->hasFile('image')) {
+        // Rimuovi l'immagine precedente se esiste
+        if ($restaurant->image) {
+            Storage::delete($restaurant->image);
+        }
+
+        // Salva la nuova immagine
+        $path = Storage::put('uploads', $request->image);
+        $original_name = $request->file('image')->getClientOriginalName();
+
+        $restaurant->image = $path;
+        $restaurant->original_image = $original_name;
+    }
+
+    // Salva il ristorante aggiornato
+    $restaurant->save();
+
+    // Reindirizza l'utente a una pagina appropriata
+    return redirect()->back()->with('success', 'Immagine aggiornata con successo');
+}
+
 }

@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\DishController;
 use App\Http\Controllers\Admin\DishOrdersController;
 use App\Http\Controllers\Admin\OrderStatisticsController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,7 @@ Route::middleware(['auth', 'verified'])
         Route::resource('orders', DishOrdersController::class);
         // Rotte custom
         Route::get('/statistics', [OrderStatisticsController::class, 'index'])->name('statistics.index');
+        Route::put('/user/update', [RegisteredUserController::class, 'update'])->name('user.update');
     });
 
 Route::middleware('auth')->group(function () {
