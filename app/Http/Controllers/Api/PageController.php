@@ -121,6 +121,7 @@ class PageController extends Controller
                     /* Mail */
                     $new_lead = new Lead();
                     $new_lead->fill((array) $mail_order);
+                    // dd($new_lead);
                     $new_lead->save();
 
                     //Ristoratore
