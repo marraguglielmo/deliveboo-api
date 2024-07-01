@@ -43,7 +43,7 @@ class PageController extends Controller
             if (Str::startsWith($restaurant->image, ['http://', 'https://'])) {
                 $restaurant->image = $restaurant->image;
             } else if ($restaurant->image) {
-                $restaurant->image = Storage::url($restaurant->img);
+                $restaurant->image = Storage::url($restaurant->image);
             } else {
                 $restaurant->image = Storage::url('resources/img/placeholder.jpg');
             }
