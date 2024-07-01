@@ -45,7 +45,7 @@ class RegisteredUserController extends Controller
                 'image' => ['image', 'mimes:jpg, png, webp', 'max:20480'],
                 'address' => ['required', 'min:8', 'max:255'],
                 'phone_number' => ['required', 'integer', 'digits:10'],
-                'vat_number' => ['required', 'integer', 'digits:11'],
+                'vat_number' => ['required', 'regex:/^\d{11}$/', 'digits:11'],
                 'email' => ['required', 'string', 'lowercase', 'email', 'max:50', 'unique:' . User::class],
                 'password' => [
                     'required',
@@ -82,7 +82,7 @@ class RegisteredUserController extends Controller
                 'phone_number.digits' => 'Il campo Telefono deve avere :digits numeri',
 
                 'vat_number.required' => 'Il campo P.IVA è obbligatorio',
-                'vat_number.integer' => 'Il campo P.IVA può avere solo numeri',
+                'vat_number.regex' => 'Il campo P.IVA può avere solo numeri',
                 'vat_number.digits' => 'Il campo P.IVA deve avere :digits numeri',
 
                 'email.required' => 'Il campo Email è obbligatorio',
