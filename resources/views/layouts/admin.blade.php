@@ -28,7 +28,7 @@
 
         @include('admin.partials.aside')
 
-        <div class="overflow-y-auto flex-grow-1 m-4">
+        <div class="overflow-y-auto flex-grow-1 p-4">
             @yield('content')
         </div>
 
