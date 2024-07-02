@@ -5,8 +5,11 @@
             {{-- Left-side --}}
             <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center ">
-                    <i class="fa-solid fa-globe"></i>
-                    <a class="ms-2" href="{{ env('APP_FRONTEND_URL') }}">Vai al sito pubblico</a>
+
+                    <a href="{{ env('APP_FRONTEND_URL') }}">
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="d-none d-md-inline ms-1">Vai al sito pubblico</span>
+                    </a>
                 </div>
             </div>
 

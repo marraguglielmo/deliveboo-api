@@ -5,5 +5,16 @@ header {
     .navbar-custom {
         height: 100%;
         padding: 0 16px;
+        .container-fluid{
+            padding: 0 24px !important;
+        }
+    }
+}
+
+@media (max-width:576px){
+    header{
+        .navbar-custom{
+            padding: 0 8px;
+        }
     }
 }
