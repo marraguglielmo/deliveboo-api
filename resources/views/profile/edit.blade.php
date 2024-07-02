@@ -4,8 +4,12 @@
         {{-- <h2 class="fs-4 text-secondary my-4">
         {{ __('Profile') }}
     </h2> --}}
+        <div class="mt-4">
+            <button class="btn btn-custom-primary w-auto">
+                <a href="{{ route('admin.home') }}">Torna alla home</a>
+            </button>
+        </div>
         <div class="card p-4 my-4 bg-white shadow rounded-lg">
-
             @include('profile.partials.update-profile-information-form')
 
         </div>
