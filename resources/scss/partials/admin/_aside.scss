@@ -32,10 +32,10 @@
                     transition: transform 0.3s ease;
                     &:hover {
                         background-color: rgba(255, 255, 255, 0.3);
-                        transition: background-color .2s;
+                        transition: background-color 0.2s;
                     }
-                    &:not(:hover){
-                        transition: background-color .2s;
+                    &:not(:hover) {
+                        transition: background-color 0.2s;
                     }
                     i {
                         display: flex;
@@ -51,7 +51,6 @@
                         margin-left: 10px;
                     }
                 }
-
             }
         }
 
@@ -91,17 +90,19 @@
 
         &.expanded {
             width: 180px !important;
-            ul{
-                li{
-                    a{
-                    transform: translateX(0); /* Mostrare il testo durante l'espansione */
-                        i{
-                            animation: slideIn .4s ease forwards;
+            ul {
+                li {
+                    a {
+                        transform: translateX(
+                            0
+                        ); /* Mostrare il testo durante l'espansione */
+                        i {
+                            animation: slideIn 0.4s ease forwards;
                         }
-                    span {
-                        display: inline-block; /* Mostrare il testo quando l'aside è espansa */
-                        animation: fadeIn .5s ease forwards;
-                }
+                        span {
+                            display: inline-block; /* Mostrare il testo quando l'aside è espansa */
+                            animation: fadeIn 0.5s ease forwards;
+                        }
                     }
                 }
             }
@@ -117,11 +118,10 @@
 
         ul {
             li {
-
                 a {
                     justify-content: start;
                     // transform: translateX(-20px); /* Nascondere il testo quando è chiuso */
-                    i{
+                    i {
                         margin: 0 !important;
                     }
                     span {
@@ -140,12 +140,12 @@
                 color: white;
                 transition: transform 0.3s ease; /* Applicare transizione a transform */
             }
-            &:hover{
+            &:hover {
                 transform: scale(1.08);
-                transition: transform .1s;
+                transition: transform 0.1s;
             }
-            &:not(:hover){
-                transition: transform .1s;
+            &:not(:hover) {
+                transition: transform 0.1s;
             }
         }
 
@@ -154,7 +154,6 @@
         }
     }
 }
-
 
 @keyframes fadeIn {
     0% {
@@ -165,14 +164,15 @@
     }
 }
 
-
 @keyframes slideIn {
     0% {
         transform: translateX(15px); /* Sposta il testo verso sinistra */
         // opacity: 0; /* Il testo è completamente nascosto all'inizio dell'animazione */
     }
     100% {
-        transform: translateX(0); /* Il testo ritorna nella posizione originale */
+        transform: translateX(
+            0
+        ); /* Il testo ritorna nella posizione originale */
         // opacity: 1; /* Alla fine dell'animazione, il testo è completamente visibile */
     }
 }
