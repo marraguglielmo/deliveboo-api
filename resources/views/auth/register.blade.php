@@ -232,8 +232,11 @@
                             </div>
                             {{-- btn register --}}
                         </form>
-                        <div>
+                        <div class="d-flex justify-content-between">
                             <p><span class="input-required">*</span> campi obbligatori</p>
+                            <button class="btn btn-custom-secondary w-auto">
+                                <a href="{{ route('login') }}">Torna al login</a>
+                            </button>
                         </div>
                     </div>
                 </div>
