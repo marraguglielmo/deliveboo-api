@@ -2,7 +2,7 @@
 
 return [
     [
-        "business_name" => "Pizzeria Paradiso",
+        "business_name" => "Salentum",
         "address" => "Via Balestrieri 6",
         "phone_number" => "0234637286",
         "image" => "https://images.unsplash.com/photo-1571757392712-7c1052de7ce5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -98,7 +98,7 @@ return [
     //     ]
     // ],
     [
-        "business_name" => "Pizza e Passione",
+        "business_name" => "Passione pizza",
         "address" => "Via Savona 23",
         "phone_number" => "0289857262",
         "image" => "https://images.unsplash.com/photo-1619853618139-fe43aff572fa?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -194,7 +194,7 @@ return [
     //     ]
     // ],
     [
-        "business_name" => "Mandarin Magic",
+        "business_name" => "Mandarin ",
         "address" => "Via Sirtori 14",
         "phone_number" => "02896562469",
         "image" => "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -656,7 +656,7 @@ return [
         ]
     ],
     [
-        "business_name" => "Korean BBQ House",
+        "business_name" => "Korean House",
         "address" => "Corso Vittorio Emanuele 23",
         "phone_number" => "0245879632",
         "image" => "https://plus.unsplash.com/premium_photo-1669687759596-8d6d8836f480?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1106,7 +1106,7 @@ return [
     //     ]
     // ],
     [
-        "business_name" => "El Patio de Flamenco",
+        "business_name" => "El Patio",
         "address" => "Via Torino 21",
         "phone_number" => "0123456789",
         "image" => "https://images.unsplash.com/photo-1630175860333-5131bda75071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1316,7 +1316,7 @@ return [
         ]
     ],
     [
-        "business_name" => "Poke Bowl Heaven",
+        "business_name" => "Poke Heaven",
         "address" => "Piazza del Duomo 5",
         "phone_number" => "0456789012",
         "image" => "https://images.unsplash.com/photo-1561954468-49af576e1d7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1346,7 +1346,7 @@ return [
         ]
     ],
     [
-        "business_name" => "Ethiopian Delights",
+        "business_name" => "Selam",
         "address" => "Via Paolo Sarpi 30",
         "phone_number" => "0123456789",
         "image" => "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1376,7 +1376,7 @@ return [
         ]
     ],
     [
-        "business_name" => "Taste of Ethiopia",
+        "business_name" => "Taste Ethiopia",
         "address" => "Via Washington 5",
         "phone_number" => "0234567890",
         "image" => "https://images.unsplash.com/photo-1634650947274-0c3fa9d8ee8a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1406,7 +1406,7 @@ return [
         ]
     ],
     [
-        "business_name" => "Ethiopian Flavors",
+        "business_name" => "Ethiopian vibes",
         "address" => "Via Solferino 10",
         "phone_number" => "0345678901",
         "image" => "https://images.unsplash.com/photo-1528451635828-f28cd48439a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1496,7 +1496,7 @@ return [
         ]
     ],
     [
-        "business_name" => "Greek Taverna Milos",
+        "business_name" => "Greek Milos",
         "address" => "Via Dante 20",
         "phone_number" => "0345678901",
         "image" => "https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -1586,7 +1586,7 @@ return [
         ]
     ],
     [
-        "business_name" => "Cedars of Lebanon",
+        "business_name" => "Lebanon",
         "address" => "Via Manzoni 20",
         "phone_number" => "0345678901",
         "image" => "https://images.unsplash.com/photo-1534824394572-a24ff25bbb5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

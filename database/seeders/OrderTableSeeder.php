@@ -14,7 +14,7 @@ class OrderTableSeeder extends Seeder
     {
         $faker = FakerFactory::create('it_IT'); // Specifica la localizzazione italiana
 
-        for ($i = 0; $i < 350; $i++) {
+        for ($i = 0; $i < 500; $i++) {
             $new_order = new Order();
             $new_order->shipping_price = mt_rand(2, 5);
             $new_order->total_price = mt_rand(10, 50);
