@@ -36,7 +36,7 @@ a {
         td {
             vertical-align: middle;
         }
-        tr{
+        tr {
             height: 82px !important;
         }
     }
@@ -49,23 +49,11 @@ a {
     margin: 20px 0;
 }
 
-
-@media (max-width:768px){
-    .table-custom{
+@media (max-width: 768px) {
+    .table-custom {
         th.th-description,
-        td.td-description{
+        td.td-description {
             display: none;
         }
     }
 }
-
-
-// @media (max-width: 980px){
-//     .table-custom{
-//         th.th-description,
-//         td.td-description{
-//             display: none;
-//         }
-//     }
-// }
-
