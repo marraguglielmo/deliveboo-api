@@ -66,27 +66,33 @@ class PageController extends Controller
     public function getClientToken()
     {
         $success = false;
+        // Creazione di un'istanza di Braintree Gateway (credenziali da file env)
         $gateway = new \Braintree\Gateway([
             'environment' => env('BRAINTREE_ENV'),
             'merchantId' => env("BRAINTREE_MERCHANT_ID"),
             'publicKey' => env("BRAINTREE_PUBLIC_KEY"),
             'privateKey' => env("BRAINTREE_PRIVATE_KEY")
         ]);
+
+        // Generazione del client token
         $clientToken = $gateway->clientToken()->generate();
         if ($clientToken) {
             $success = true;
         }
 
+        // Restituzione al fe del client token e dello stato
         return response()->json(compact('success', 'clientToken'));
     }
 
     public function paymentRequest(Request $request)
     {
+        // Recupero dati da form di pagamento a fe
         $form_data = $request->all();
         $nonceFromTheClient = $form_data["payment_method_nonce"];
         $total_amount = $form_data['total_order'];
         $order_id = $form_data['id'];
 
+        // Creazione di un'istanza di Braintree Gateway (credenziali da file env)
         $gateway = new \Braintree\Gateway([
             'environment' => env('BRAINTREE_ENV'),
             'merchantId' => env("BRAINTREE_MERCHANT_ID"),
@@ -94,8 +100,10 @@ class PageController extends Controller
             'privateKey' => env("BRAINTREE_PRIVATE_KEY")
         ]);
 
+        // Verifica validità nonce ricevuto dal client
         if ($nonceFromTheClient != null) {
 
+            // Se valido, richiesta di transazione tramite Braintree
             $result = $gateway->transaction()->sale([
                 'amount' => $total_amount,
                 'paymentMethodNonce' => $nonceFromTheClient,
@@ -106,29 +114,30 @@ class PageController extends Controller
 
             if ($result->success) {
 
+                // Se positiva, aggiornamento stato dell'ordine nella tabella 'orders'
                 DB::table('orders')->where('id', $order_id)->update(['status' => $result->success]);
 
+                // Recupero dell'email dell'ordine e poi dei dati necessari
                 $mail_order = DB::table('orders')->where('id', $order_id)->first();
 
                 if ($mail_order) {
                     $restaurant_email = DB::table('orders')
-                    ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
-                    ->join('dishes', 'dish_order.dish_id', '=', 'dishes.id')
-                    ->join('restaurants', 'dishes.restaurant_id', '=', 'restaurants.id')
-                    ->where('orders.id', $order_id)
-                    ->value('restaurants.email');
+                        ->join('dish_order', 'orders.id', '=', 'dish_order.order_id')
+                        ->join('dishes', 'dish_order.dish_id', '=', 'dishes.id')
+                        ->join('restaurants', 'dishes.restaurant_id', '=', 'restaurants.id')
+                        ->where('orders.id', $order_id)
+                        ->value('restaurants.email');
 
                     /* Mail */
                     $new_lead = new Lead();
                     $new_lead->fill((array) $mail_order);
-                    // dd($new_lead);
                     $new_lead->save();
 
-                    //Ristoratore
+                    //Invio email al ristoratore
                     // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new NewContact($new_lead));
                     Mail::to($restaurant_email)->send(new NewContact($new_lead));
 
-                    //Cliente
+                    //Invio email al cliente
                     Mail::to($new_lead->email)->send(new NewOrder($new_lead));
                     /* /Mail */
                 }
